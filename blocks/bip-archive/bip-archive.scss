@@ -1,0 +1,16 @@
+@import "../../src/css/scss/variable";
+
+.bip-archive{
+    .bip-archive-content{
+        height: 0px;
+        overflow: hidden;
+    }
+    .bip-archive-content.active{
+        height: auto;
+        overflow: hidden;
+    }
+    .btn-revers{
+        display: inline-block;
+        margin: 20px 0;
+    }
+}

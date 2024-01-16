@@ -1,0 +1,43 @@
+:root {
+  --main: #0A326D;
+  --main2: #D54D27;
+  --main3: #ECF8FF;
+  --black: #122239;
+  --light-black: #5C5C5D;
+  --gray: #B2B9C5;
+  --light: #f7f8fb;
+  --white: #fff;
+  --white-opacity: rgba(255, 255, 255, 0.14);
+  --red: red;
+}
+
+.contrast-high {
+  --main: #ffeb87;
+  --main2: #ffeb87;
+  --main3: #ffeb87;
+  --black: #ffeb87;
+  --light-black: #ffeb87;
+  --gray: #B2B9C5;
+  --light: #f7f8fb;
+  --white: #2b2a29;
+  --red: #ffeb87;
+}
+
+.event-list {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 10px;
+}
+@media only screen and (max-width: 1300px) {
+  .event-list {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+@media only screen and (max-width: 460px) {
+  .event-list {
+    grid-template-columns: 1fr;
+  }
+}
+.event-list .entry-title {
+  font-size: 1.2em !important;
+}/*# sourceMappingURL=wydarzenia-list.css.map */

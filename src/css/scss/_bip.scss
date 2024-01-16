@@ -1,0 +1,102 @@
+body.single-bip{
+    background-color: var(--main3);
+}
+body.single-bip.contrast-high{
+    background-color: #000000c2!important;
+}
+.bip-single{
+    margin-top: 20px;
+    .bip-single__wrap{
+        display: flex;
+        @media #{$sm} {
+            flex-wrap: wrap;
+        }
+        .bip-single__nav{
+            padding: 50px 30px 50px;
+            width: 25%;
+            
+            @media #{$sm} {
+                order:2;
+                width: 100%;
+                padding: 0;
+            }
+            img{
+                width: 100%;
+                height: auto;
+            }
+            ul{
+                list-style: none;
+                padding: 0;
+                position: -webkit-sticky;
+                position: sticky;
+                top: 100px;
+                li{
+                    a{
+                        font-size: 0.75em;
+                        text-decoration: none;
+                        color: var(--black);
+                        padding: 8px 5px;
+                        display: block;
+                        @media #{$md} {
+                            font-size: 1em;
+                        }
+                        &:hover{
+                            color:var(--main2)
+                        }
+                    }
+                }
+                .current-menu-item{
+                    a{
+                        position: relative;
+                        font-weight: bold;
+                        color: var(--main2);
+                        padding-left: 20px;
+                        &:before{
+                            content:"";
+                            position: absolute;
+                            left: 0px;
+                            top: 0px;
+                            width: 3px;
+                            height: 100%;
+                            background-color: var(--main2);
+                        }
+                    }
+                }
+            }
+        }
+        .bip-single__content{
+            background-color: var(--white);
+            border-top-left-radius: 50px;
+            width: 75%;
+            padding: 50px;
+            position: relative;
+            @media #{$sm} {
+                padding: 50px 15px;
+                width: 100%;
+                order: 1;
+                border-bottom-left-radius: 50px;
+                margin-bottom: 50px;
+            }
+            &::after{
+                content:"";
+                height: 100%;
+                width: 50%;
+                position: absolute;
+                right: -50%;
+                top: 0;
+                background-color: var(--white);
+            }
+             .entry-title {
+                font-size: 3.1em;
+                margin-bottom: 50px;
+                @media #{$sm} {
+                    font-size: 1.9em;
+                    margin-bottom: 30px;
+                }
+            }
+            .entry-content{
+                margin: 0px;
+            }
+        }
+    }
+}

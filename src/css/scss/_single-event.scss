@@ -1,0 +1,60 @@
+.mw_event-template-default{
+    .post-single-two__wrap{
+        @media #{$sm} {
+        flex-direction: column-reverse;
+        }
+    }
+}
+
+
+.form-subs{
+    padding: 50px 0;
+    position: relative;
+    #zapisy{
+        height: 0px;
+        width: 100px;
+        display: block;
+        background-color: red;
+        position: relative;
+        top:0px;
+        transform: translate(0, -100px);
+    }
+    .header{
+        padding-top: 50px;
+        margin-bottom: 30px;
+        font-size: 1.8em;
+        position: relative;
+        display: inline-block;
+          
+        &:before{
+            content: "";
+            position: absolute;
+            bottom: 0px;
+            width: 50%;
+            height: 1px;
+            background-color: var(--main2);
+        }
+        
+    }
+    iframe{
+        min-height: 500!important;
+        height: 600px!important;
+        width: 100%;
+    }
+}
+
+.class_color{
+    background-color: green;
+    padding: 2px 10px;
+    display: inline-block;
+    border-radius: 3px;
+    color: var(--white);
+    text-transform: uppercase;
+    font-size: 0.8em;
+}
+
+.contrast-high {
+    .class_color{
+        background-color: var(--main)!important;
+    }
+}

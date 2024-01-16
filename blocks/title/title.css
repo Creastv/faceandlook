@@ -1,0 +1,43 @@
+:root {
+  --main: #0A326D;
+  --main2: #D54D27;
+  --main3: #ECF8FF;
+  --black: #122239;
+  --light-black: #5C5C5D;
+  --gray: #B2B9C5;
+  --light: #f7f8fb;
+  --white: #fff;
+  --white-opacity: rgba(255, 255, 255, 0.14);
+  --red: red;
+}
+
+.contrast-high {
+  --main: #ffeb87;
+  --main2: #ffeb87;
+  --main3: #ffeb87;
+  --black: #ffeb87;
+  --light-black: #ffeb87;
+  --gray: #B2B9C5;
+  --light: #f7f8fb;
+  --white: #2b2a29;
+  --red: #ffeb87;
+}
+
+.title {
+  position: relative;
+}
+.title .title__tag {
+  padding-bottom: 20px;
+  margin-bottom: 30px;
+  font-size: 1.8em;
+  position: relative;
+  display: inline-block;
+}
+.title .title__tag:before {
+  content: "";
+  position: absolute;
+  bottom: 0px;
+  width: 50%;
+  height: 1px;
+  background-color: var(--main2);
+}/*# sourceMappingURL=title.css.map */

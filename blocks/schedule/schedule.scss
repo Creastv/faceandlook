@@ -1,0 +1,171 @@
+@import "../../src/css/scss/variable";
+
+#schedule{
+    .schedule__wrap{
+        .sch-nav{
+            list-style: none;
+            padding: 0;
+            display: flex;
+            flex-wrap: wrap;
+            align-items: center;
+            justify-content: center;
+            gap: 10px;
+            margin-bottom: 50px;
+            li{
+                span{
+                    transition: all 0.3s linear;
+                    display: block;
+                    font-size: 1em;
+                    text-decoration: none;
+                    padding: 10px 15px;
+                    border: 1px solid var(--main);
+                    border-radius: 6px;
+                    background-color: var(--white);
+                    color: var(--main);
+                    cursor: pointer;
+                    &:hover{
+                        background-color: var(--main2);
+                        border: 1px solid var(--main2);
+                        color:var(--white);
+                    }
+                    @media #{$sm} {
+                        font-size: 0.8em;
+                        text-decoration: none;
+                        padding: 5px 10px;
+                    }
+                }
+            }
+            li.active{
+                span{
+                    background-color: var(--main);
+                        color:var(--white);
+                }
+            }
+        }
+        .tabcontent {
+            display: none;
+            border-top: none;
+          }
+        
+          .tabcontent.active{
+            display: block;
+          }
+    }
+}
+
+.sch-content{
+    margin-bottom: 50px;
+}
+
+.kal_wrap{  display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+    grid-template-rows: 0.2fr ;
+    grid-auto-columns: 1fr;
+    gap: 0px 0px;
+    grid-auto-flow: row;
+    grid-template-areas:
+      "pon wt sr czw pt sob nd";
+      @media #{$sm} {
+        display: block;
+      }
+  }
+  
+  .pon { grid-area: pon; }
+  
+  .wt { grid-area: wt; }
+  
+  .sr { grid-area: sr; }
+  
+  .czw { grid-area: czw; }
+  
+  .pt { grid-area: pt; }
+  
+  .sob { grid-area: sob; }
+  
+  .nd { grid-area: nd; }
+
+.kal-head{
+    @media #{$sm} {
+        display: none;
+    }
+    .tr{
+        background-color: var(--main);
+        span{
+            display: block;
+            color: var(--white);
+            padding: 10px;
+            border:1px solid  var(--white);
+            text-align: center;
+        }
+    }
+}
+.kal-body{
+    .tr-mobile{
+        display: none;
+        border-radius: 6px;
+        margin-bottom: 15px;
+        margin-top: 15px;
+        @media #{$sm} {
+            display: block;
+            background-color: var(--main);
+            span{
+                display: block;
+                color: var(--white);
+                padding: 10px;
+                text-align: center;
+            }
+        }
+    }
+    .tr{
+        padding: 2px;
+        border:1px solid  var(--main3);
+        @media #{$sm} {
+            border:none;
+        }
+        .ev{
+            transition: all 0.2s linear;
+            margin-bottom: 3px;
+            padding: 5px;
+            border-radius: 6px;
+            border:1px solid  var(--main3);
+            background-color: var(--main3);
+            &:hover{
+                box-shadow: 0 0 10px 0 rgba(0,0,0, 0.09);
+                border:1px solid  var(--main);
+            }
+            h5{
+               font-size: 1em;
+                margin: 0;
+                margin-bottom: 5px;
+                color: var(--black);
+            }
+            span{
+                display: block;
+                margin-bottom: 5px;
+                font-size: 0.8em;
+                color: var(--main);
+            }
+            p{
+                font-size: 0.7em;
+                margin-bottom: 5px;
+                padding: 0;
+                color: var(--black);
+            }
+            a{
+                font-size: 0.7em;
+                display: block;
+                margin-bottom: 5px;
+                color: var(--main);
+                &:hover{
+                    color:var(--main2)
+                }
+            }
+        }
+    }
+}
+.contrast-high{
+    .kal-body .tr .ev{
+        border: none;
+        background-color:rgba(68, 64, 64, 0.7) !important;
+    }
+}

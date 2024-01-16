@@ -1,0 +1,46 @@
+@import "../../src/css/scss/variable";
+.posts-list{
+    .card-list{
+        display: flex;
+        // align-items: center;
+        border-bottom: 1px solid var(--light);
+        margin: 20px 0;
+        padding-bottom: 20px;
+        @media #{$sm} {
+            flex-wrap: wrap;
+        }
+        .img-list{
+            width: 150px;
+            @media #{$sm} {
+                width: 100%;
+            }
+            img{
+                width: 100%;
+                height: auto;
+            }
+        }
+        .content-list{
+            width: calc(100% - 150px);
+            padding: 0px 0 0px 20px;
+            @media #{$sm} {
+                width: 100%;
+                padding: 15px;
+            }
+            .meta-group{
+                font-size: 0.7em;
+                color: var(--main);
+            }
+            h2{
+                font-size: 1.2em;
+                a{
+                    color: var(--black);
+                    text-decoration: none;
+                }
+            }
+            p{
+                font-size: 0.8em;
+            }
+        }
+
+    }
+}

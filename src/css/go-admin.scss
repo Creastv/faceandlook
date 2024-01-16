@@ -1,0 +1,180 @@
+@import "scss/variable";
+@import "scss/typo";
+@import "scss/global";
+@import "scss/footer";
+@import "scss/header";
+@import "scss/page";
+// @import "scss/single";
+@import "scss/archive";
+@import "scss/btn";
+@import "scss/card-post";
+@import "scss/card-person";
+@import "scss/card-wynajem";
+@import "scss/card-class";
+@import "scss/card_event";
+@import "scss/recomended-posts";
+@import "scss/events-recommended";
+.wp-block-spacer {
+  background-color: #eeeef0 !important;
+}
+
+.kotwica {
+  height: 100px;
+  background-color: #eeeef0 !important;
+  border-radius: 6px;
+  position: relative !important;
+  z-index: 1 !important;
+  margin-top: 0 !important;
+  width: 100% !important;
+  padding: 10px;
+  &:before {
+    content: "Anchor point";
+    position: absolute;
+    color: $main;
+    background-color: $main;
+    border-radius: 6px;
+    padding: 5px 10px;
+    font-size: 14px;
+    color: #fff;
+  }
+}
+.bip-archive{
+  // height: 100px;
+  background-color: #eeeef0 !important;
+  border-radius: 6px;
+  position: relative !important;
+  z-index: 1 !important;
+  margin-top: 0 !important;
+  width: 100% !important;
+  padding: 10px;
+  &:before {
+    content: "Archiwum";
+    position: absolute;
+    color: $main;
+    background-color: $main;
+    border-radius: 6px;
+    padding: 5px 10px;
+    font-size: 14px;
+    color: #fff;
+  }
+  .bip-archive-content{
+    height: auto!important;
+    overflow: inherit!important;
+  }
+  .btn-revers{
+    display: none!important;}
+}
+.wp-block {
+  max-width: 90%;
+}
+/* Width of "wide" blocks */
+.wp-block[data-align="wide"] {
+  max-width: 100%;
+}
+/* Width of "full-width" blocks */
+.wp-block[data-align="full"] {
+  max-width: none;
+}
+
+html :where(.wp-block)[data-align="right"] > * {
+  float: none !important;
+}
+
+html :where(.wp-block)[data-align="left"] > * {
+  float: none !important;
+}
+
+html :where(.wp-block)[data-align="left"],
+html :where(.wp-block)[data-align="right"] {
+  width: 100%;
+  height: initial !important;
+}
+
+.search-resoults-info {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px 0;
+}
+@media only screen and (max-width: 768px) {
+  .search-resoults-info {
+    flex-wrap: wrap;
+    gap: 20px;
+  }
+}
+.search-resoults-info .swicher-results-display {
+  display: flex;
+  gap: 15px;
+  cursor: pointer;
+}
+.search-resoults-info .swicher-results-display .swicher {
+  transition: all 0.3s linear;
+}
+.search-resoults-info .swicher-results-display .swicher:hover path,
+.search-resoults-info .swicher-results-display .swicher:hover rect,
+.search-resoults-info .swicher-results-display .swicher:hover text {
+  transition: all 0.3s linear;
+  fill: #528abf;
+}
+.search-resoults-info path,
+.search-resoults-info rect,
+.search-resoults-info text {
+  transition: all 0.3s linear;
+  fill: #e2e2e2;
+}
+.search-resoults-info .active {
+  cursor: auto;
+}
+.search-resoults-info .active path,
+.search-resoults-info .active rect,
+.search-resoults-info .active text {
+  fill: black;
+}
+.search-resoults-info .active:hover path,
+.search-resoults-info .active:hover rect,
+.search-resoults-info .active:hover text {
+  fill: black !important;
+}
+
+.search-filter-disabled {
+  opacity: 0.2 !important;
+}
+
+[data-name="punkty"] .acf-input .canvas {
+  display: none;
+}
+
+.acf-block-preview {
+  .go-map {
+    .row {
+      flex-wrap: wrap;
+      .col {
+        width: 100% !important;
+      }
+    }
+  }
+  #map,
+  .col-map {
+    display: none !important;
+  }
+}
+
+
+// hero
+.acf-block-preview{
+  .home-slider, .b-events, .last-posts, .last-projects, .bg-centrum-person, .bg-centrum-lokalizacja{
+    position: relative!important;
+    width: 100%!important;
+    left: 0!important;
+    margin-left: 0!important;
+  }
+  
+    //   .swiper-slide {
+    //    display: none;
+    // }
+  
+ 
+}
+.bg-home-project:after, .bg-home-posts:after, .bg-centrum-lokalizacja:after{
+  display: none;
+}

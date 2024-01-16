@@ -1,0 +1,35 @@
+@import "../../src/css/scss/variable";
+
+.local{
+    position: relative;
+    width: 100vw;
+    left: -50vw;
+    margin-left: 50%;
+    padding: 30px 0;
+    margin-top: 50px;
+    &:before {
+        content: "";
+        position: absolute;
+        left: -100%;
+        top: 0;
+        width: 130%;
+        height: 1px;
+        background-color: var(--main2);
+    }
+    .local_wrap{
+
+    }
+}
+
+.bg-centrum-lokalizacja{
+    position: relative;
+    &:after{
+        content: "";
+        position: absolute;
+        z-index: -1;
+        width: 40%;
+        height: 100%;
+        top: -30%;
+        background-color: var(--main3);
+    }
+}

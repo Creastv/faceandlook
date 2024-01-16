@@ -1,0 +1,144 @@
+body {
+  font-family: 'Roboto', sans-serif;
+  font-weight: 300;
+  font-size: 100%;
+  line-height: 1.2;
+  color: $black;
+}
+.entry-header .entry-title {
+   font-size: 3.1em; 
+}
+.home-slider .swiper-slide .slide .copy .copy__title {
+  font-size: 4em;
+  line-height: 1.1;
+}
+.section-tite {
+  font-size: 3.2em;
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+.h1,
+.h2,
+.h3,
+.h4,
+.h5,
+.h6 {
+  font-family: 'Mulish', sans-serif;
+  margin: 0;
+  padding: 0;
+  margin-bottom: 20px;
+  // color: $black;
+  color:  var(--black);
+  font-weight: 900;
+  transition: all 0.3s;
+}
+
+p {
+  padding: 0;
+  margin: 0;
+  margin-bottom: 20px;
+  font-size: 1em;
+  line-height: 1.5;
+  color:var(--light-black);
+  transition: all 0.3s;
+}
+b,
+strong {
+  font-weight: 700;
+}
+a {
+  color: var(--main);
+  transition: all 0.3s;
+  font-weight: bold;
+  &:hover {
+    // opacity: 0.8;
+    color: var(--main2);
+  }
+}
+
+.entry-header {
+  width: 100%;
+  padding: 20px 0;
+  @media #{$sm} {
+    padding: 30px 0;
+  }
+  .entry-title {
+    font-size: 3.1em;
+    @media #{$sm} {
+      font-size: 1.9em;
+    }
+  }
+}
+
+.title-page-big {
+  font-size: 52px;
+  margin-bottom: 20px;
+  @media #{$sm} {
+    font-size: 31px;
+  }
+}
+
+.text-center {
+  text-align: center;
+}
+.text-right {
+  text-align: right;
+}
+.text-left {
+  text-align: left;
+}
+
+.aligncenter {
+  text-align: center;
+}
+
+.wp-block-embed__wrapper {
+  iframe {
+    max-width: 100%;
+    width: 715px;
+    height: 400px;
+  }
+}
+
+.wp-block-columns {
+  margin-bottom: 20px;
+}
+
+@media only screen and (max-width: 998px) {
+  .meeting {
+    padding-bottom: 20px;
+    gap: 0px;
+  }
+  .meeting .btn-wraper {
+    display: block;
+    text-align: left;
+  }
+  .bg-section-normal {
+    padding-left: 10px;
+    padding-right: 10px;
+  }
+}
+
+
+// .contrast-high{
+//   background-color: #2b2a29;
+//   h1, h2, h3, h4, h5, h6{
+//       color:  var(--blue)
+//   }
+  
+// }
+
+
+.section-tite{
+  font-size: 3.2em;
+  
+    @media #{$sm} {
+      // padding: 20px 0;
+      font-size: 1.6em;
+  
+  }
+}

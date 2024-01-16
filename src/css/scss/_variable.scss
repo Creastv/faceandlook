@@ -1,0 +1,56 @@
+// Query
+$xx: "only screen and (max-width: 350px)";
+$xs: "only screen and (max-width: 460px)";
+$sm: "only screen and (max-width: 768px)";
+$md: "only screen and (max-width: 998px)";
+$slg: "only screen and (max-width: 1200px)";
+$lg: "only screen and (max-width: 1300px)";
+$xlg: "only screen and (max-width: 1400px)";
+$xxlg: "only screen and (max-width: 1500px)";
+
+$main: #0A326D;
+$main2: #D54D27;
+$main3: #ECF8FF;
+
+$black: #122239;
+$light-black: #5C5C5D;
+$gray: #B2B9C5;
+$light: #f7f8fb;
+
+:root {
+    --main: #0A326D;
+    --main2: #D54D27;
+    --main3: #ECF8FF;
+
+    --black: #122239;
+    --light-black: #5C5C5D;
+    --gray: #B2B9C5;
+    --light: #f7f8fb;
+    --white: #fff;
+    --white-opacity: rgba(255, 255, 255, 0.14);
+    --red: red;
+}
+.contrast-high {
+    --main: #ffeb87;
+    --main2: #ffeb87;
+    --main3: #ffeb87;
+
+    --black: #ffeb87;
+    --light-black: #ffeb87;
+    --gray: #B2B9C5;
+    --light: #f7f8fb;
+    --white: #2b2a29;
+    --red: #ffeb87;
+    
+}
+// .contrast-high{
+//     $main: #ffed00!important;
+//     $main2: #ffed00;
+//     $main3: #ECF8FF;
+
+//     $black: #122239;
+//     $light-black: #5C5C5D;
+//     $gray: #B2B9C5;
+//     $light: #f7f8fb;
+// }
+

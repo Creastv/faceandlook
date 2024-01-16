@@ -1,0 +1,29 @@
+@import "../../src/css/scss/variable";
+
+.nav-anchor{
+    padding: 0 0 20px 0;
+    ul{
+        list-style: none;
+        padding: 0;
+        display: flex;
+        align-items: center;
+        flex-wrap:wrap;
+        li{
+            margin: 5px;
+            a{
+                display: block;
+                font-size: 1em;
+                text-decoration: none;
+                padding: 3px 10px;
+                border: 1px solid var(--main);
+                border-radius: 6px;
+                background-color: var(--white);
+                &:hover{
+                    background-color: var(--main2);
+                    border: 1px solid var(--main2);
+                    color: var(--white);
+                }
+            }
+        }
+    }
+}

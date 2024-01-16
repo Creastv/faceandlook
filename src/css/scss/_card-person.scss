@@ -1,0 +1,28 @@
+.card-post{
+    .entry-title{
+        margin: 20px 0;
+        font-size: 1.4em;
+        
+        color: var(--black);
+        text-decoration: none;
+        
+    }
+    img{
+        width: 100%;
+        height: auto;
+    }
+    .entry-content{
+        p{
+            font-size: 0.8em;
+        }
+    }
+    .meta-pub{
+        font-size: 0.8em;
+        margin: 20px 0;
+       
+        span{
+            color: var(--main);
+        }
+    }
+
+}

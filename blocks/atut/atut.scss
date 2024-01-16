@@ -1,0 +1,74 @@
+@import "../../src/css/scss/variable";
+
+.atut{
+    position: relative;
+    z-index: 2;
+    .atut_wrap{
+        display: flex;
+        align-items: center;
+        @media #{$sm} {
+            flex-wrap: wrap;
+        }
+        .img{
+            width: 45%;
+            align-self: stretch;
+            overflow: hidden;
+            // width: 50%;
+            position: relative;
+            z-index: -1;
+            min-height: 300px;
+            @media #{$sm} {
+                width: 100%;
+            }
+            img{
+                max-width: 100%;
+                // height: auto;
+
+                width: 100%;
+                height: 100%;
+                display: block;
+                object-fit: cover;
+                position: absolute;
+                top: 50%;
+                left: 50%;
+                transform: translate(-50%, -50%);
+            }
+        }
+        .desc{
+            padding: 50px 30px;
+            width: 65%;
+            margin-left: -10%;
+            @media #{$sm} {
+                width: 100%;
+                padding: 15px;
+                margin-left: 0;
+                margin-top: -50px;
+            }
+            .desc_wrap {
+                background-color: var(--white);
+                // margin: 30px 0;
+                padding: 30px;
+                @media #{$sm} {
+                    padding: 15px ;
+                }
+
+            }
+        }
+    }
+    .atut_wrap.left{
+        .img{
+            order:2;
+            @media #{$sm} {
+                order:1
+            }
+        }
+        .desc{
+            order:1;
+            margin-left: 0%;
+            margin-right: -10%;
+            @media #{$sm} {
+                order:2
+            }
+        }
+    }
+}
