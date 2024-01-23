@@ -1,28 +1,3 @@
-:root {
-  --main: #0A326D;
-  --main2: #D54D27;
-  --main3: #ECF8FF;
-  --black: #122239;
-  --light-black: #5C5C5D;
-  --gray: #B2B9C5;
-  --light: #f7f8fb;
-  --white: #fff;
-  --white-opacity: rgba(255, 255, 255, 0.14);
-  --red: red;
-}
-
-.contrast-high {
-  --main: #ffeb87;
-  --main2: #ffeb87;
-  --main3: #ffeb87;
-  --black: #ffeb87;
-  --light-black: #ffeb87;
-  --gray: #B2B9C5;
-  --light: #f7f8fb;
-  --white: #2b2a29;
-  --red: #ffeb87;
-}
-
 .bip-archive .bip-archive-content {
   height: 0px;
   overflow: hidden;

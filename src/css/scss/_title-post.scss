@@ -1,11 +1,12 @@
-.entry-header{
-    padding:100px 0;
-    @media #{$sm} {
-        padding: 50px 0;
-    }
+.entry-header {
+  padding: 50px 0;
+  text-align: center;
+  @media #{$sm} {
+    padding: 50px 0;
+  }
 }
-.page-description, .taxonomy-description{
-    width: 970px;
-    max-width: 100%;
-   
+.page-description,
+.taxonomy-description {
+  width: 970px;
+  max-width: 100%;
 }

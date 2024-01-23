@@ -3,17 +3,8 @@
 @import "scss/global";
 @import "scss/footer";
 @import "scss/header";
-@import "scss/page";
-// @import "scss/single";
-@import "scss/archive";
 @import "scss/btn";
-@import "scss/card-post";
-@import "scss/card-person";
-@import "scss/card-wynajem";
-@import "scss/card-class";
-@import "scss/card_event";
-@import "scss/recomended-posts";
-@import "scss/events-recommended";
+
 .wp-block-spacer {
   background-color: #eeeef0 !important;
 }
@@ -38,7 +29,7 @@
     color: #fff;
   }
 }
-.bip-archive{
+.bip-archive {
   // height: 100px;
   background-color: #eeeef0 !important;
   border-radius: 6px;
@@ -57,12 +48,13 @@
     font-size: 14px;
     color: #fff;
   }
-  .bip-archive-content{
-    height: auto!important;
-    overflow: inherit!important;
+  .bip-archive-content {
+    height: auto !important;
+    overflow: inherit !important;
   }
-  .btn-revers{
-    display: none!important;}
+  .btn-revers {
+    display: none !important;
+  }
 }
 .wp-block {
   max-width: 90%;
@@ -159,22 +151,26 @@ html :where(.wp-block)[data-align="right"] {
   }
 }
 
-
 // hero
-.acf-block-preview{
-  .home-slider, .b-events, .last-posts, .last-projects, .bg-centrum-person, .bg-centrum-lokalizacja{
-    position: relative!important;
-    width: 100%!important;
-    left: 0!important;
-    margin-left: 0!important;
+.acf-block-preview {
+  .home-slider,
+  .b-events,
+  .last-posts,
+  .last-projects,
+  .bg-centrum-person,
+  .bg-centrum-lokalizacja {
+    position: relative !important;
+    width: 100% !important;
+    left: 0 !important;
+    margin-left: 0 !important;
   }
-  
-    //   .swiper-slide {
-    //    display: none;
-    // }
-  
- 
+
+  //   .swiper-slide {
+  //    display: none;
+  // }
 }
-.bg-home-project:after, .bg-home-posts:after, .bg-centrum-lokalizacja:after{
+.bg-home-project:after,
+.bg-home-posts:after,
+.bg-centrum-lokalizacja:after {
   display: none;
 }

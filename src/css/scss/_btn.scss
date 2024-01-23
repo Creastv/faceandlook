@@ -7,13 +7,12 @@
   text-align: center;
   padding: 5px 15px;
   border: 1px solid var(--main);
-  border-radius:6px;
+  border-radius: 6px;
   transition: all 0.3s linear;
   white-space: nowrap;
-  &:hover{
+  &:hover {
     background-color: var(--main2);
     color: var(--main2);
-
   }
 }
 .btn-revers {
@@ -23,35 +22,20 @@
   text-decoration: none;
   padding: 5px 15px;
   border: 1px solid var(--main);
-  border-radius:6px;
+  border-radius: 6px;
   transition: all 0.3s linear;
   white-space: nowrap;
-  &:hover{
+  &:hover {
     background-color: var(--main2);
     border: 1px solid var(--main2);
     color: var(--white);
-
   }
-} 
-.btn-small{
+}
+.btn-small {
   padding: 5px 5px;
   font-size: 0.7em;
 }
-.btn-big{
+.btn-big {
   padding: 5px 20px;
   font-size: 1.5em;
-}
-
-
-.contrast-high {
-  .btn {
-    background-color: var(--main);
-    color: var(--white);
-    &:hover{
-      background-color: var(--white)!important;
-      color: var(--black)!important;
-      // opacity: 0.8;
-  
-    }
-  }
 }

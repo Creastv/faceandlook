@@ -15,15 +15,12 @@ body {
   // padding-top: 188px;
 }
 
-body.scroll-off{
-  overflow: hidden;
-}
-
 .container {
-  max-width: 1480px;
+  // max-width: 1480px;
+  width: 100%;
   margin: 0 auto;
-  padding-left: 30px;
-  padding-right: 30px;
+  padding-left: 100px;
+  padding-right: 100px;
   @media #{$sm} {
     padding-left: 20px;
     padding-right: 20px;
@@ -60,26 +57,26 @@ body.scroll-off{
   height: 45px;
   background-repeat: no-repeat;
   background-position: center;
-  transform:  translate(0, 100px);
+  transform: translate(0, 100px);
   padding: 11px;
   transition: all 0.3s linear;
-  svg{
-    path{
-      fill:var(--main2)
+  svg {
+    path {
+      fill: var(--main2);
     }
   }
   &:hover {
     background-color: var(--main2);
-    svg{
-      path{
-        fill:var(--white)
+    svg {
+      path {
+        fill: var(--white);
       }
     }
   }
 }
 
 #go-to-top.active {
-  transform:  translate(0, 0);
+  transform: translate(0, 0);
 }
 
 .go-pagination {
@@ -90,161 +87,42 @@ body.scroll-off{
   display: flex;
   justify-content: center;
   gap: 20px;
-  a{
+  a {
     padding: 5px 1px;
     text-decoration: none;
-    &:hover{
-      color:var(--main2);
+    &:hover {
+      color: var(--main2);
     }
   }
-  span.current{
+  span.current {
     background-color: var(--black);
-    color:var(--white);
+    color: var(--white);
     padding: 5px 5px;
     border-radius: 3px;
   }
 }
 
+.rank-math-breadcrumb {
+  p {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    // justify-content: center;
+    gap: 10px;
+    font-size: 0.8em;
 
-
-.rank-math-breadcrumb{
-  p{
-      display: flex;
-      flex-wrap: wrap;
-      align-items: center;
-      // justify-content: center;
-      gap: 10px;
-      font-size: 0.8em;
-    
-    span{
-      &:last-child{
-      color: var(--black);
-      font-size: 1em;
-      display: inline-block;
-      max-width: 250px;
-      white-space: nowrap;
-      overflow: hidden;
-      text-overflow: ellipsis;
-      text-overflow: "----";
-      text-align: left;
+    span {
+      &:last-child {
+        color: var(--black);
+        font-size: 1em;
+        display: inline-block;
+        max-width: 250px;
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        text-overflow: "----";
+        text-align: left;
       }
     }
-  }
-}
-
-hr{
-  border: none;
-  border-top: 1px solid var(--main3)
-}
-
-.contrast-high {
-  .mw-event__nav__wrap {
-    background: none!important;
-    &:before, &:after{
-      display: none;
-    }
-  }
-  .mw-class .mw-class__wraper .mw-class__nav__wrap h3, .mw-class .mw-class__wraper .mw-class__nav__wrap h4, .mw-class .mw-class__wraper .mw-class__nav__wrap a {
-    color: var(--white);
-}
-  #footer{
-    background-color: #2b2a29;
-    .f-col-one, .f-col-one:before{
-      background-color: #2b2a29;
-    }
-    *{
-      color:var(--black)
-    }
-    svg{
-      path{
-      fill: var(--black);
-      }
-    }
-  }
-  .f-newsletter{
-    *{
-      color:#2b2a29;
-    }
-  }
-  .bg-home-project::after, .slide:after, .bg-centrum-lokalizacja:after, .bg-centrum-person:after{
-    display: none;
-  }
-  .mega-menu{
-    *{
-      color:#2b2a29!important;
-    }
-    a{
-      &:hover{
-        text-decoration: underline;
-        // color:#2b2a29;
-      }
-    }
-    .current-menu-item{
-      a{
-        color:#2b2a29;
-        &:before{
-          background-color: #2b2a29;
-        }
-      }
-    }
-  }
-  .recommended-posts{
-    background-color: #2b2a29;
-  }
-  .mega-menu{
-    background-color: rgba(#ffeb87, 0.98);
-  }
-  .post-single-two .post-single-two__wrap .sidebar .siderbar_wrap .info {
-      background-color: #ffeb8714;
-      padding: 10px 50px 10px 10px;
-  }
-  .info__item svg path{
-    fill: var(--black);
-  }
-  .card-mw-room .card-mw-room__content .entry-title{
-    color: var(--black);
-  }
-}
-
-.swiper-pagination{
-  span{
-    background-color: var(--main);
-    width: 16px;
-    height: 16px;
-  }
-  .swiper-pagination-bullet-active{
-    background-color: var(--main2);
-  }
-  
-}
-
-
-#ui-datepicker-div{
-  .ui-datepicker-header{
-    background: var(--main);
-    color:var(--white);
-  }
-  .ui-datepicker-calendar{
-    thead{
-      tr{
-        background: var(--main);
-        span{
-        color: var(--white);
-        }
-      }
-    }
-  }
-  // .ui-datepicker-title{
-    select{
-      min-height: initial!important;
-      color: var(--black)!important;
-      padding: 5px;
-    }
-  // }
-}
-
-.fc-event-container{
-  .fc-time{
-    display: none;
   }
 }

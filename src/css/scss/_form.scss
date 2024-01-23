@@ -1,14 +1,13 @@
-
 input,
 textarea,
 select {
   width: 100%;
   border: 1px solid transparent;
-  background-color: var(--white)!important;
+  background-color: $light !important;
   min-height: 50px;
   padding: 20px 10px;
   border: none;
-  border: 1px solid var(--light-black)!important;
+  border: 1px solid $light !important;
   font-size: 12px;
   outline: 0 !important;
   color: #757575;
@@ -24,29 +23,29 @@ select {
   outline: 0px !important;
   background: none;
 }
-.wpforms-form label{
-  color:var(--black)!important;
+.wpforms-form label {
+  color: var(--black) !important;
 }
-.wpforms-field-checkbox{
-  input{
-    border:none!important;
+.wpforms-field-checkbox {
+  input {
+    border: none !important;
   }
-  .wpforms-disclaimer-description{
-    background-color: var(--white)!important;
-    color: var(--black)!important;
+  .wpforms-disclaimer-description {
+    background-color: var(--white) !important;
+    color: var(--black) !important;
   }
 }
-.wpforms-submit{
-  background-color: var(--main2)!important;
-  color: var(--white)!important;
+.wpforms-submit {
+  background-color: var(--main2) !important;
+  color: var(--white) !important;
 }
 .form-group {
   margin-bottom: 30px;
   display: block;
-  sup{
-    color:red;
+  sup {
+    color: red;
   }
-  label{
+  label {
     color: var(--black);
     > span {
       display: block;
@@ -54,10 +53,10 @@ select {
     }
   }
 }
-.col-1{
+.col-1 {
   width: 100%;
 }
-.col-2{
+.col-2 {
   width: 50%;
   @media #{$sm} {
     width: 100%;
@@ -92,9 +91,9 @@ select {
     line-height: 14px;
     margin: 0;
     text-align: justify;
-    color:var(--black);
+    color: var(--black);
     a {
-      color:var(--main2);
+      color: var(--main2);
     }
   }
   input {
@@ -138,6 +137,6 @@ select {
   position: absolute;
 }
 
-::placeholder{
-  color:var(--black)!important;
+::placeholder {
+  color: var(--black) !important;
 }

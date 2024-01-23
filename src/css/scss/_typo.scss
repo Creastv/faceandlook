@@ -1,12 +1,13 @@
 body {
-  font-family: 'Roboto', sans-serif;
+  font-family: "Poppins", sans-serif;
   font-weight: 300;
+  font-style: normal;
   font-size: 100%;
   line-height: 1.2;
   color: $black;
 }
 .entry-header .entry-title {
-   font-size: 3.1em; 
+  font-size: 3.1em;
 }
 .home-slider .swiper-slide .slide .copy .copy__title {
   font-size: 4em;
@@ -27,13 +28,14 @@ h6,
 .h4,
 .h5,
 .h6 {
-  font-family: 'Mulish', sans-serif;
+  font-family: "Poppins", sans-serif;
+  font-weight: 700;
+  font-style: normal;
   margin: 0;
   padding: 0;
   margin-bottom: 20px;
   // color: $black;
-  color:  var(--black);
-  font-weight: 900;
+  color: var(--black);
   transition: all 0.3s;
 }
 
@@ -43,21 +45,30 @@ p {
   margin-bottom: 20px;
   font-size: 1em;
   line-height: 1.5;
-  color:var(--light-black);
+  color: var(--light-black);
   transition: all 0.3s;
 }
 b,
 strong {
-  font-weight: 700;
+  font-family: "Poppins", sans-serif;
+  font-weight: 500;
+  font-style: normal;
 }
 a {
   color: var(--main);
   transition: all 0.3s;
-  font-weight: bold;
+  font-family: "Poppins", sans-serif;
+  font-weight: 500;
+  font-style: normal;
   &:hover {
     // opacity: 0.8;
     color: var(--main2);
   }
+}
+span {
+  font-family: "Poppins", sans-serif;
+  font-weight: 300;
+  font-style: normal;
 }
 
 .entry-header {
@@ -122,23 +133,11 @@ a {
     padding-right: 10px;
   }
 }
-
-
-// .contrast-high{
-//   background-color: #2b2a29;
-//   h1, h2, h3, h4, h5, h6{
-//       color:  var(--blue)
-//   }
-  
-// }
-
-
-.section-tite{
+.section-tite {
   font-size: 3.2em;
-  
-    @media #{$sm} {
-      // padding: 20px 0;
-      font-size: 1.6em;
-  
+
+  @media #{$sm} {
+    // padding: 20px 0;
+    font-size: 1.6em;
   }
 }
