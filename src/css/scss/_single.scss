@@ -29,12 +29,13 @@ body.single {
     }
     img {
       width: 100%;
+      max-width: 1000px;
       height: auto;
     }
   }
 
   .entry-content {
-    max-width: 920px;
+    max-width: 760px;
     width: 100%;
     margin: 0 auto;
     // text-align: justify;
@@ -51,12 +52,12 @@ body.single {
 
 // bio
 #author-bio {
-  margin-top: 30px;
   padding: 20px 20px;
-  border-top: 1px solid var(--main3);
-  border-bottom: 1px solid var(--main3);
+  border-top: 1px solid $main2;
+  border-bottom: 1px solid $main2;
   display: flex;
   gap: 10px;
+  margin-bottom: 50px;
   @media #{$sm} {
     flex-wrap: wrap;
   }
@@ -86,18 +87,15 @@ body.single {
   padding: 20px 0;
   display: flex;
   align-items: center;
-  justify-content: space-between;
-  @media #{$sm} {
-    text-align: center;
-    flex-wrap: wrap;
-    justify-content: center;
-    gap: 20px;
-  }
+  justify-content: center;
+  border-top: 1px solid $main2;
+  text-align: center;
+
   .kk-ata__wraper {
     span {
       display: block;
       font-size: 12px;
-      margin-bottom: 5px;
+      margin-bottom: 10px;
       color: var(--black);
     }
   }

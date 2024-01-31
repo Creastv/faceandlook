@@ -11,9 +11,38 @@
   padding: 0 0 50px 0;
 }
 article.page {
+  .entry-header {
+    .rank-math-breadcrumb {
+      p {
+        justify-content: center;
+      }
+    }
+  }
   .entry-content {
     max-width: 920px;
     width: 100%;
     margin: 0 auto;
+  }
+}
+body.page-template-page-wide {
+  .entry-content {
+    max-width: 100% !important;
+    width: 100%;
+  }
+}
+
+body.blog,
+body.archive {
+  .entry-header {
+    text-align: left;
+    .rank-math-breadcrumb {
+      p {
+        justify-content: flex-start !important;
+      }
+    }
+  }
+  .entry-content {
+    max-width: 100% !important;
+    width: 100%;
   }
 }

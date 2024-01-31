@@ -22,8 +22,13 @@
             <?php get_template_part('templates-parts/header/header', 'burger'); ?>
             <?php get_template_part('templates-parts/header/header', 'icons'); ?>
             <?php get_template_part('templates-parts/header/header', 'card'); ?>
-
         </div>
+        <?php
+        if (is_shop() || is_product() || is_product_category()) {
+            get_template_part('templates-parts/header/header', 'nav-wc');
+        }
+        ?>
+        <?php get_template_part('templates-parts/header/header', 'socialmedia'); ?>
     </header>
     <main id="main">
         <div class="container">

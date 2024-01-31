@@ -1,0 +1,19 @@
+.wc-products-wraper {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  .card-product {
+    list-style: none;
+    max-width: calc(25% - 20px);
+    gap: 0px;
+    h2 {
+      a {
+        text-decoration: none;
+      }
+    }
+  }
+}
+
+.wc-recent-viewed {
+  padding: 50px 0;
+}

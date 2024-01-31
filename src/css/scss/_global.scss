@@ -10,7 +10,7 @@ html {
 body {
   margin: 0;
   padding: 0;
-  background-color: var(--white);
+  background-color: #ffff;
   overflow-x: hidden;
   // padding-top: 188px;
 }
@@ -19,11 +19,15 @@ body {
   // max-width: 1480px;
   width: 100%;
   margin: 0 auto;
-  padding-left: 100px;
-  padding-right: 100px;
+  padding-left: 90px;
+  padding-right: 90px;
+  @media #{$md} {
+    padding-left: 15px;
+    padding-right: 90px;
+  }
   @media #{$sm} {
-    padding-left: 20px;
-    padding-right: 20px;
+    padding-left: 15px;
+    padding-right: 15px;
   }
 }
 
@@ -62,14 +66,14 @@ body {
   transition: all 0.3s linear;
   svg {
     path {
-      fill: var(--main2);
+      fill: $main;
     }
   }
   &:hover {
-    background-color: var(--main2);
+    background-color: $main2;
     svg {
       path {
-        fill: var(--white);
+        fill: $main;
       }
     }
   }
@@ -91,12 +95,12 @@ body {
     padding: 5px 1px;
     text-decoration: none;
     &:hover {
-      color: var(--main2);
+      color: $main2;
     }
   }
   span.current {
-    background-color: var(--black);
-    color: var(--white);
+    background-color: $black;
+    color: #ffff;
     padding: 5px 5px;
     border-radius: 3px;
   }
@@ -113,7 +117,7 @@ body {
 
     span {
       &:last-child {
-        color: var(--black);
+        color: $black;
         font-size: 1em;
         display: inline-block;
         max-width: 250px;

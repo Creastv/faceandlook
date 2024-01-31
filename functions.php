@@ -9,6 +9,7 @@ if (!function_exists('go_register_nav_menu')) {
 		register_nav_menus(array(
 			'primary_menu' => __('Primary Menu', 'go'),
 			'secundary_menu' => __('Footer', 'go'),
+			'triari_menu' => __('Sklep', 'go'),
 		));
 	}
 	add_action('after_setup_theme', 'go_register_nav_menu', 0);
@@ -16,6 +17,15 @@ if (!function_exists('go_register_nav_menu')) {
 
 function go_widgets_init()
 {
+	register_sidebar(array(
+		'name'          => __('sidebar', 'go'),
+		'id'            => 'sidebar',
+		'before_widget' => '<div id="%1$s" class="calaps widget %2$s">',
+		'after_widget'  => '</div>',
+		'before_title'  => '<h4 class="widget-title">',
+		'after_title'   => '</h4>',
+	));
+
 	register_sidebar(array(
 		'name'          => __('footer one', 'go'),
 		'id'            => 'footer-1',
@@ -40,14 +50,35 @@ function go_widgets_init()
 		'before_title'  => '<h4 class="widget-title">',
 		'after_title'   => '</h4>',
 	));
+	register_sidebar(array(
+		'name'          => __('footer four', 'go'),
+		'id'            => 'footer-4',
+		'before_widget' => '<div id="%1$s" class=" widget %2$s">',
+		'after_widget'  => '</div>',
+		'before_title'  => '<h4 class="widget-title">',
+		'after_title'   => '</h4>',
+	));
+	register_sidebar(array(
+		'name'          => __('footer five', 'go'),
+		'id'            => 'footer-5',
+		'before_widget' => '<div id="%1$s" class=" widget %2$s">',
+		'after_widget'  => '</div>',
+		'before_title'  => '<h4 class="widget-title">',
+		'after_title'   => '</h4>',
+	));
 }
 add_action('widgets_init', 'go_widgets_init');
 
+
+
+
 require_once get_template_directory() . '/func/enqueue-styles.php';
 require_once get_template_directory() . '/func/enqueue-scripts.php';
+require_once  get_template_directory() . '/func/woocommerce.php';
 require get_template_directory() . '/func/clean-up.php';
 require get_template_directory() . '/func/cpt.php';
 require get_template_directory() . '/blocks/blocks.php';
+
 
 // gutenberg editor
 function add_block_editor_assets()
@@ -98,20 +129,55 @@ if (function_exists('acf_add_options_page')) {
 
 
 // Dodanie zdecia wyrózniającego dla postów w tabeli
-add_filter('manage_posts_columns', 'add_img_column');
-add_filter('manage_posts_custom_column', 'manage_img_column', 10, 2);
-add_filter('manage_pages_custom_column', 'manage_img_column', 10, 2);
+// add_filter('manage_posts_columns', 'add_img_column');
+// add_filter('manage_posts_custom_column', 'manage_img_column', 10, 2);
+// add_filter('manage_pages_custom_column', 'manage_img_column', 10, 2);
 
-function add_img_column($columns)
-{
-	$columns = array_slice($columns, 0, 1, true) + array("links" => "Image") + array_slice($columns, 1, count($columns) - 1, true);
-	return $columns;
-}
+// function add_img_column($columns)
+// {
+// 	$columns = array_slice($columns, 0, 1, true) + array("links" => "Image") + array_slice($columns, 1, count($columns) - 1, true);
+// 	return $columns;
+// }
 
-function manage_img_column($column_name, $post_id)
+// function manage_img_column($column_name, $post_id)
+// {
+// 	if ($column_name == 'links') {
+// 		echo get_the_post_thumbnail($post_id, 'thumbnail');
+// 	}
+// 	return $column_name;
+// }
+
+
+
+// Dodaj ten kod do pliku functions.php swojego motywu lub do pliku custom plugin'a.
+
+// Dodaj ten kod do pliku functions.php swojego motywu lub do pliku custom plugin'a.
+
+function zapisz_ostatnio_ogladane_produkty()
 {
-	if ($column_name == 'links') {
-		echo get_the_post_thumbnail($post_id, 'thumbnail');
+	$product = wc_get_product();
+
+	if (!is_admin()) {
+		if (!session_id()) {
+			session_start();
+		}
+		if (!is_product()) {
+			return;
+		}
+		$product_id = $product->get_id();
+
+		$viewed_products = isset($_SESSION['viewed_products']) ? $_SESSION['viewed_products'] : array();
+
+		// Dodaj obecny produkt do listy oglądanych
+		if (!in_array($product_id, $viewed_products)) {
+			array_unshift($viewed_products, $product_id);
+
+			// Ogranicz liczbę produktów w historii do np. 10
+			$viewed_products = array_slice($viewed_products, 0, 10);
+
+			$_SESSION['viewed_products'] = $viewed_products;
+		}
 	}
-	return $column_name;
 }
+
+add_action('wp', 'zapisz_ostatnio_ogladane_produkty');

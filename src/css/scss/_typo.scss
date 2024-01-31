@@ -38,15 +38,29 @@ h6,
   color: var(--black);
   transition: all 0.3s;
 }
-
+.tag-special {
+  font-family: "Sorts Mill Goudy", serif;
+  font-weight: 400;
+  font-style: normal;
+}
 p {
   padding: 0;
   margin: 0;
   margin-bottom: 20px;
   font-size: 1em;
   line-height: 1.5;
-  color: var(--light-black);
+  color: $light-black;
   transition: all 0.3s;
+}
+ul {
+  margin: 0;
+  margin-bottom: 20px;
+}
+li {
+  margin-bottom: 5px;
+  font-size: 1em;
+  line-height: 1.5;
+  color: $light-black;
 }
 b,
 strong {

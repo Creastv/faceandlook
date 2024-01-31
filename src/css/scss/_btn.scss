@@ -1,34 +1,33 @@
 .btn {
-  background-color: var(--main);
-  color: var(--white);
+  background-color: $main;
+  color: #fff;
   font-size: 1em;
   font-weight: 700;
   text-decoration: none;
   text-align: center;
   padding: 5px 15px;
-  border: 1px solid var(--main);
-  border-radius: 6px;
+  border-radius: 3px;
   transition: all 0.3s linear;
   white-space: nowrap;
   &:hover {
-    background-color: var(--main2);
-    color: var(--main2);
+    background-color: $black;
+    color: #fff !important;
   }
 }
 .btn-revers {
-  color: var(--main);
+  color: $main;
   font-size: 1em;
   text-align: center;
   text-decoration: none;
   padding: 5px 15px;
-  border: 1px solid var(--main);
+  border: 1px solid $main;
   border-radius: 6px;
   transition: all 0.3s linear;
   white-space: nowrap;
   &:hover {
-    background-color: var(--main2);
-    border: 1px solid var(--main2);
-    color: var(--white);
+    background-color: $main2;
+    border: 1px solid $main2;
+    color: #fff;
   }
 }
 .btn-small {
