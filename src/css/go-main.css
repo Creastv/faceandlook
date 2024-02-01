@@ -88,6 +88,11 @@ p {
   color: #5e5a52;
   transition: all 0.3s;
 }
+@media only screen and (max-width: 768px) {
+  p {
+    font-size: 14px;
+  }
+}
 
 ul {
   margin: 0;
@@ -274,6 +279,12 @@ body {
   background-color: #161514;
   border: 2px solid #fff;
 }
+@media only screen and (max-width: 768px) {
+  #go-to-top {
+    bottom: 60px;
+    right: 15px;
+  }
+}
 #go-to-top svg {
   margin-top: 5px;
 }
@@ -338,6 +349,11 @@ body {
   padding: 50px 0;
   margin-top: 50px;
   overflow: hidden;
+}
+@media only screen and (max-width: 768px) {
+  #footer {
+    padding-bottom: 100px;
+  }
 }
 @media only screen and (max-width: 998px) {
   #footer .container {
@@ -829,7 +845,7 @@ body {
 .js-navbar.active {
   left: 0 !important;
   position: fixed;
-  z-index: 9999;
+  z-index: 99;
   width: 100%;
   top: 0px;
   background-color: #fff;
@@ -916,7 +932,8 @@ body {
   .navbar__wc-nav {
     position: fixed;
     bottom: 0;
-    z-index: 999;
+    z-index: 99;
+    background-color: #161514;
   }
 }
 .navbar__wc-nav .navbar__wc-nav__wrap ul {
@@ -951,6 +968,11 @@ body {
   margin: 0;
   text-decoration: none;
   text-transform: uppercase;
+}
+@media only screen and (max-width: 768px) {
+  .navbar__wc-nav .navbar__wc-nav__wrap ul li a {
+    color: #fff;
+  }
 }
 .navbar__wc-nav .navbar__wc-nav__wrap ul li a:hover {
   color: #c2995e;
@@ -1828,9 +1850,14 @@ body.woocommerce-page .entry-content {
   margin-bottom: 10px;
   text-align: left;
 }
+@media only screen and (max-width: 768px) {
+  .card-product .entry-title {
+    font-size: 14px !important;
+  }
+}
 @media only screen and (max-width: 460px) {
   .card-product .entry-title {
-    font-size: 14px;
+    font-size: 14px !important;
     padding: 0 5px;
     margin-bottom: 5px;
   }
@@ -1880,12 +1907,12 @@ body.woocommerce-page .entry-content {
 }
 @media only screen and (max-width: 768px) {
   .card-product .entry-price .price {
-    font-size: 16px;
+    font-size: 16px !important;
   }
 }
 @media only screen and (max-width: 460px) {
   .card-product .entry-price .price {
-    font-size: 14px;
+    font-size: 14px !important;
   }
 }
 .card-product .entry-price .price span {
@@ -2268,6 +2295,11 @@ body.woocommerce-page .entry-content {
 .tabs {
   padding: 30px 0;
   display: none;
+}
+@media only screen and (max-width: 768px) {
+  .tabs {
+    padding: 0;
+  }
 }
 
 .tab {

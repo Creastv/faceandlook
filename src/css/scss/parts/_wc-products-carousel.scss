@@ -73,6 +73,9 @@
 .tabs {
   padding: 30px 0;
   display: none;
+  @media #{$sm} {
+    padding: 0;
+  }
 }
 .tab {
   display: flex;

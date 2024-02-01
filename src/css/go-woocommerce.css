@@ -87,6 +87,11 @@ p {
   color: #5e5a52;
   transition: all 0.3s;
 }
+@media only screen and (max-width: 768px) {
+  p {
+    font-size: 14px;
+  }
+}
 
 ul {
   margin: 0;
@@ -272,6 +277,12 @@ body {
   transition: all 0.2s linear;
   background-color: #161514;
   border: 2px solid #fff;
+}
+@media only screen and (max-width: 768px) {
+  #go-to-top {
+    bottom: 60px;
+    right: 15px;
+  }
 }
 #go-to-top svg {
   margin-top: 5px;
@@ -476,6 +487,7 @@ body {
     position: relative;
     padding-left: 0px;
     padding-right: 0px;
+    margin-bottom: 0;
   }
 }
 .wp-cat-header .wc-cat-header__wrap {
@@ -497,6 +509,11 @@ body {
     width: 100%;
   }
 }
+@media only screen and (max-width: 768px) {
+  .wp-cat-header .wc-cat-header__wrap .desc {
+    padding: 15px;
+  }
+}
 .wp-cat-header .wc-cat-header__wrap .img {
   width: 50%;
   background-size: cover;
@@ -509,9 +526,19 @@ body {
     width: 100%;
   }
 }
+@media only screen and (max-width: 768px) {
+  .wp-cat-header .wc-cat-header__wrap .img {
+    min-height: 200px;
+  }
+}
 
 .wc-wrap-custome__desc {
   padding: 50px 0;
+}
+@media only screen and (max-width: 768px) {
+  .wc-wrap-custome__desc {
+    padding: 30px 0 0 0px;
+  }
 }
 
 .archive.woocommerce-page .container {

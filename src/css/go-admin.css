@@ -87,6 +87,11 @@ p {
   color: #5e5a52;
   transition: all 0.3s;
 }
+@media only screen and (max-width: 768px) {
+  p {
+    font-size: 14px;
+  }
+}
 
 ul {
   margin: 0;
@@ -273,6 +278,12 @@ body {
   background-color: #161514;
   border: 2px solid #fff;
 }
+@media only screen and (max-width: 768px) {
+  #go-to-top {
+    bottom: 60px;
+    right: 15px;
+  }
+}
 #go-to-top svg {
   margin-top: 5px;
 }
@@ -337,6 +348,11 @@ body {
   padding: 50px 0;
   margin-top: 50px;
   overflow: hidden;
+}
+@media only screen and (max-width: 768px) {
+  #footer {
+    padding-bottom: 100px;
+  }
 }
 @media only screen and (max-width: 998px) {
   #footer .container {
@@ -828,7 +844,7 @@ body {
 .js-navbar.active {
   left: 0 !important;
   position: fixed;
-  z-index: 9999;
+  z-index: 99;
   width: 100%;
   top: 0px;
   background-color: #fff;
@@ -915,7 +931,8 @@ body {
   .navbar__wc-nav {
     position: fixed;
     bottom: 0;
-    z-index: 999;
+    z-index: 99;
+    background-color: #161514;
   }
 }
 .navbar__wc-nav .navbar__wc-nav__wrap ul {
@@ -950,6 +967,11 @@ body {
   margin: 0;
   text-decoration: none;
   text-transform: uppercase;
+}
+@media only screen and (max-width: 768px) {
+  .navbar__wc-nav .navbar__wc-nav__wrap ul li a {
+    color: #fff;
+  }
 }
 .navbar__wc-nav .navbar__wc-nav__wrap ul li a:hover {
   color: #c2995e;

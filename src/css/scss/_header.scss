@@ -219,7 +219,7 @@
 .js-navbar.active {
   left: 0 !important;
   position: fixed;
-  z-index: 9999;
+  z-index: 99;
   width: 100%;
   top: 0px;
   background-color: #fff;
@@ -305,7 +305,8 @@
   @media #{$sm} {
     position: fixed;
     bottom: 0;
-    z-index: 999;
+    z-index: 99;
+    background-color: $black;
   }
   .navbar__wc-nav__wrap {
     ul {
@@ -335,6 +336,9 @@
           margin: 0;
           text-decoration: none;
           text-transform: uppercase;
+          @media #{$sm} {
+            color: #fff;
+          }
           &:hover {
             color: $main;
           }
