@@ -1723,14 +1723,9 @@ body.woocommerce-page .entry-content {
   gap: 0px !important;
   width: calc(25% - 20px) !important;
 }
-@media only screen and (max-width: 1400px) {
-  .products.columns-4 .card-product {
-    width: calc(33.33% - 20px) !important;
-  }
-}
 @media only screen and (max-width: 1300px) {
   .products.columns-4 .card-product {
-    width: calc(50% - 20px) !important;
+    width: calc(33.33% - 20px) !important;
   }
 }
 @media only screen and (max-width: 460px) {
@@ -1849,6 +1844,11 @@ body.woocommerce-page .entry-content {
   color: #161514;
   margin-bottom: 10px;
   text-align: left;
+}
+@media only screen and (max-width: 1400px) {
+  .card-product .entry-title {
+    font-size: 14px !important;
+  }
 }
 @media only screen and (max-width: 768px) {
   .card-product .entry-title {

@@ -13,12 +13,12 @@
   .card-product {
     gap: 0px !important;
     width: calc(25% - 20px) !important;
-    @media #{$xlg} {
+    @media #{$lg} {
       width: calc(33.33% - 20px) !important;
     }
-    @media #{$lg} {
-      width: calc(50% - 20px) !important;
-    }
+    // @media #{$lg} {
+    //   width: calc(50% - 20px) !important;
+    // }
     @media #{$xs} {
       width: calc(50% - 10px) !important;
     }
@@ -150,6 +150,9 @@
     color: $black;
     margin-bottom: 10px;
     text-align: left;
+    @media #{$xlg} {
+      font-size: 14px !important;
+    }
     @media #{$sm} {
       font-size: 14px !important;
     }

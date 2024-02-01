@@ -30,12 +30,12 @@ setTimeout(  function() {
   
         },
         768: {
-            slidesPerView: 2,
+            slidesPerView: 4,
             spaceBetween: 20,
      
         },
         1200: {
-            slidesPerView: 4,
+            slidesPerView: 5,
             spaceBetween: 20,
           
         },
