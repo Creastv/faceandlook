@@ -26,4 +26,4 @@ var swiper = new Swiper(".recomended", {
       }
     }
   });
-  
+§

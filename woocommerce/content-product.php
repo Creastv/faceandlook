@@ -24,22 +24,31 @@ global $product;
 if (empty($product) || !$product->is_visible()) {
     return;
 }
+$term_list = wp_get_post_terms($post->ID, 'producent', array("fields" => "names"));
 ?>
-<li <?php wc_product_class('card-product', $product); ?>>
-    <?php $term_list = wp_get_post_terms($post->ID, 'producent', array("fields" => "names")); ?>
-
+<div <?php wc_product_class('card-product', $product); ?>>
     <div class="card-product-top">
+        <?php if($product->is_on_sale() && is_object($product) && $product->is_type('simple') && $product->is_featured() ){
+            echo '<div class="labels">';
+        } ?>
         <?php if ($product->is_on_sale()) {
             // Pobieramy etykietę promocji
             $sale_label = get_post_meta(get_the_ID(), '_sale_price_dates_to', true) ? __('Sale!', 'woocommerce') : __('Sale!', 'woocommerce');
             // Wyświetlamy etykietę promocji
             echo '<span class="label-prod label-prod--sale">' . esc_html($sale_label) . '</span>';
         } ?>
+        <?php if (is_object($product) && $product->is_type('simple') && $product->is_featured()) {
+				// Produkt jest wyróżniony
+				echo '<span class="label-prod label-prod--futured">Wyróżniony produkt</span>';
+			} ?>
+        <?php if($product->is_on_sale() && is_object($product) && $product->is_type('simple') && $product->is_featured() ){
+            echo '</div>';
+        } ?>
         <a href="<?php the_permalink(); ?>">
             <?php if (has_post_thumbnail($post->ID)) : ?>
-                <?php the_post_thumbnail('post-futured', array('alt' => get_the_title())); ?>
+            <?php the_post_thumbnail('wc-product', array('alt' => get_the_title())); ?>
             <?php else : ?>
-                <img src="<?php echo get_template_directory_uri(); ?>/src/img/thumbnail.png" alt="<?php the_title(); ?> ">
+            <img src="<?php echo get_template_directory_uri(); ?>/src/img/thumbnail.png" alt="<?php the_title(); ?> ">
             <?php endif; ?>
         </a>
         <div class="card-product-top-buttons">
@@ -52,17 +61,19 @@ if (empty($product) || !$product->is_visible()) {
         </a>
     </h2>
     <?php if (!empty($term_list)) : ?>
-        <div class="entry-term">
-            <span> <?php echo $term_list[0]; ?></span>
-        </div>
+    <div class="entry-term">
+        <span> <?php echo $term_list[0]; ?></span>
+    </div>
     <?php endif; ?>
 
     <div class="entry-price">
         <div class="price"><?php echo $product->get_price_html(); ?></div>
         <a class="btn-revers" href="<?php echo $product->add_to_cart_url(); ?>">
             <svg xmlns="http://www.w3.org/2000/svg" width="9.628" height="10.089" viewBox="0 0 9.628 10.089">
-                <path id="Trazado_39" data-name="Trazado 39" d="M2561.179-490.223h-1.513a.632.632,0,0,0-.621.524l-.242,1.412a.253.253,0,0,1-.249.21h-5.3a1.023,1.023,0,0,0-1.023,1.022,1.017,1.017,0,0,0,.03.246l.661,2.636a1.494,1.494,0,0,0,1.45,1.135h3.558a1.5,1.5,0,0,0,1.477-1.268l.759-4.446a.253.253,0,0,1,.248-.21h.768a.633.633,0,0,0,.675-.586.632.632,0,0,0-.586-.675.59.59,0,0,0-.089,0Zm-7.943,9.078a1.009,1.009,0,0,0,1.009,1.009,1.009,1.009,0,0,0,1.009-1.009,1.009,1.009,0,0,0-1.009-1.009h0A1.009,1.009,0,0,0,2553.235-481.145Zm4.035,0a1.009,1.009,0,0,0,1.009,1.009,1.008,1.008,0,0,0,1.009-1.009,1.008,1.008,0,0,0-1.009-1.009h0A1.009,1.009,0,0,0,2557.271-481.145Z" transform="translate(-2552.227 490.225)" fill="#c2995e" />
+                <path id="Trazado_39" data-name="Trazado 39"
+                    d="M2561.179-490.223h-1.513a.632.632,0,0,0-.621.524l-.242,1.412a.253.253,0,0,1-.249.21h-5.3a1.023,1.023,0,0,0-1.023,1.022,1.017,1.017,0,0,0,.03.246l.661,2.636a1.494,1.494,0,0,0,1.45,1.135h3.558a1.5,1.5,0,0,0,1.477-1.268l.759-4.446a.253.253,0,0,1,.248-.21h.768a.633.633,0,0,0,.675-.586.632.632,0,0,0-.586-.675.59.59,0,0,0-.089,0Zm-7.943,9.078a1.009,1.009,0,0,0,1.009,1.009,1.009,1.009,0,0,0,1.009-1.009,1.009,1.009,0,0,0-1.009-1.009h0A1.009,1.009,0,0,0,2553.235-481.145Zm4.035,0a1.009,1.009,0,0,0,1.009,1.009,1.008,1.008,0,0,0,1.009-1.009,1.008,1.008,0,0,0-1.009-1.009h0A1.009,1.009,0,0,0,2557.271-481.145Z"
+                    transform="translate(-2552.227 490.225)" fill="#c2995e" />
             </svg>
             Kup</a>
     </div>
-</li>
+</div>

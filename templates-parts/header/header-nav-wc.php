@@ -3,7 +3,7 @@
         <?php
         // Wyświetl menu o nazwie "Główne menu"
         wp_nav_menu(array(
-            'theme_location' => 'main-menu',
+            'theme_location' => 'triari_menu',
             'menu_class' => 'nav-menu', // Dodaj klasę do menu (możesz dostosować)
         ));
         ?>

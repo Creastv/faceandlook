@@ -16,7 +16,7 @@ body {
 }
 
 .container {
-  // max-width: 1480px;
+  max-width: 1480px;
   width: 100%;
   margin: 0 auto;
   padding-left: 90px;
@@ -55,27 +55,26 @@ body {
   position: fixed;
   text-align: center;
   z-index: 22;
-  right: 30px;
+  right: 26px;
   bottom: 30px;
-  width: 45px;
-  height: 45px;
-  background-repeat: no-repeat;
-  background-position: center;
+  width: 39px;
+  height: 39px;
+  border-radius: 100%;
   transform: translate(0, 100px);
-  padding: 11px;
-  transition: all 0.3s linear;
+  // padding: 11px;
+  transition: all 0.2s linear;
+  background-color: $black;
+  border: 2px solid #fff;
   svg {
+    margin-top: 5px;
     path {
-      fill: $main;
+      fill: #fff;
     }
   }
   &:hover {
-    background-color: $main2;
-    svg {
-      path {
-        fill: $main;
-      }
-    }
+    background-color: $main;
+    transform: translate(0, 100px), scale(1.1);
+    box-shadow: 0 0 20px 0px rgba(0, 0, 0, 0.2);
   }
 }
 

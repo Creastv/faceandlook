@@ -9,7 +9,9 @@
     <title><?php wp_title('|', true, 'right'); ?></title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;700&family=Sorts+Mill+Goudy&display=swap" rel="stylesheet">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;700&family=Sorts+Mill+Goudy&display=swap"
+        rel="stylesheet">
 
     <?php wp_head(); ?>
 </head>
@@ -24,7 +26,7 @@
             <?php get_template_part('templates-parts/header/header', 'card'); ?>
         </div>
         <?php
-        if (is_shop() || is_product() || is_product_category()) {
+        if (!is_home() && !is_front_page()) {
             get_template_part('templates-parts/header/header', 'nav-wc');
         }
         ?>

@@ -28,29 +28,29 @@
                     </div>
                     <div class="links">
                         <?php if (get_the_author_meta('user_url')) { ?>
-                        <a href="<?php the_author_meta('user_url'); ?>" class="author-website" target="_blank">
-                            <i class="fas fa-link"></i>
-                        </a>
+                            <a href="<?php the_author_meta('user_url'); ?>" class="author-website" target="_blank">
+                                <i class="fas fa-link"></i>
+                            </a>
                         <?php } ?>
                         <?php if (get_the_author_meta('linkedin')) { ?>
-                        <a href="<?php the_author_meta('linkedin'); ?>" class="author-linkedin" target="_blank">
-                            <i class="fab fa-linkedin-in"></i>
-                        </a>
+                            <a href="<?php the_author_meta('linkedin'); ?>" class="author-linkedin" target="_blank">
+                                <i class="fab fa-linkedin-in"></i>
+                            </a>
                         <?php } ?>
                         <?php if (get_the_author_meta('facebook')) { ?>
-                        <a href="<?php the_author_meta('facebook'); ?>" class="author-facebook" target="_blank">
-                            <i class="fab fa-facebook-f"></i>
-                        </a>
+                            <a href="<?php the_author_meta('facebook'); ?>" class="author-facebook" target="_blank">
+                                <i class="fab fa-facebook-f"></i>
+                            </a>
                         <?php } ?>
                         <?php if (get_the_author_meta('twitter')) { ?>
-                        <a href="<?php the_author_meta('twitter'); ?>" class="author-twitter" target="_blank">
-                            <i class="fab fa-twitter"></i>
-                        </a>
+                            <a href="<?php the_author_meta('twitter'); ?>" class="author-twitter" target="_blank">
+                                <i class="fab fa-twitter"></i>
+                            </a>
                         <?php } ?>
                         <?php if (get_the_author_meta('instagram')) { ?>
-                        <a href="<?php the_author_meta('instagram'); ?>" class="author-instagram" target="_blank">
-                            <i class="fab fa-instagram"></i>
-                        </a>
+                            <a href="<?php the_author_meta('instagram'); ?>" class="author-instagram" target="_blank">
+                                <i class="fab fa-instagram"></i>
+                            </a>
                         <?php } ?>
                     </div>
                 </div>

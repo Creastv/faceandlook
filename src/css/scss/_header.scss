@@ -48,8 +48,10 @@
       flex: auto;
     }
     @media #{$xs} {
-      justify-content: space-between;
+      // justify-content: space-between;
       flex: auto;
+      gap: 10px;
+      padding-left: 10px;
     }
     @media #{$xx} {
       justify-content: flex-start;
@@ -75,6 +77,7 @@
         text-transform: uppercase;
         @media #{$xs} {
           font-size: 10px;
+          display: none;
         }
       }
       svg {
@@ -163,19 +166,18 @@
             }
           }
         }
-        .current_page_item {
-          a {
-            font-family: "Poppins", sans-serif;
-            font-weight: 500;
-            font-style: normal;
-            color: $main;
-          }
-        }
       }
     }
   }
 }
-
+.current-menu-item {
+  a {
+    font-family: "Poppins", sans-serif;
+    font-weight: 500;
+    font-style: normal;
+    color: $main !important;
+  }
+}
 .navbar__navigation {
   @media #{$lg} {
     position: absolute;
@@ -388,6 +390,67 @@
           fill: $main;
         }
       }
+    }
+  }
+}
+
+.post-cat-header {
+  width: 100vw;
+  margin-left: -50vw;
+  left: calc(50% - 0px);
+  position: relative;
+  padding-left: 90px;
+  padding-right: 90px;
+  margin-bottom: 40px;
+  overflow: hidden;
+  @media #{$md} {
+    width: 100%;
+    left: 0;
+    margin-left: 0;
+    margin-right: 0px;
+    padding-left: 0;
+    padding-right: 0;
+  }
+  @media #{$sm} {
+    width: 100vw;
+    margin-left: -50vw;
+    left: calc(50% - 0px);
+    position: relative;
+    padding-left: 15px;
+    padding-right: 15px;
+  }
+
+  .post-cat-header__wrap {
+    display: flex;
+    gap: 20px;
+    @media #{$sm} {
+      flex-wrap: wrap;
+    }
+    .col {
+      width: 50%;
+      @media #{$sm} {
+        width: 100%;
+      }
+    }
+    .banner {
+      background-color: #f7f7f5;
+      margin-bottom: 20px;
+      padding: 20px;
+      text-align: center;
+      height: 180px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+    .post {
+      background-color: #f7f7f5;
+      margin-bottom: 20px;
+      padding: 20px;
+      text-align: center;
+      height: 300px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
     }
   }
 }

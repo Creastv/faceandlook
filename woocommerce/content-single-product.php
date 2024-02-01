@@ -33,9 +33,9 @@ if (post_password_required()) {
 }
 ?>
 
-<div id="product-<?php the_ID(); ?>" <?php wc_product_class('', $product); ?>>
-
-    <?php
+<div id="product-<?php the_ID(); ?>" <?php wc_product_class('product-top', $product); ?>>
+	<?php if (function_exists('rank_math_the_breadcrumbs')) rank_math_the_breadcrumbs(); ?>
+	<?php
 	/**
 	 * Hook: woocommerce_before_single_product_summary.
 	 *
@@ -45,16 +45,20 @@ if (post_password_required()) {
 	do_action('woocommerce_before_single_product_summary');
 	?>
 
-    <div class="summary entry-summary">
+	<div class="summary entry-summary">
 
-        <div class="entry-summary__wrap">
-            <?php if ($product->is_on_sale()) {
+		<div class="entry-summary__wrap">
+			<?php if ($product->is_on_sale()) {
 				// Pobieramy etykietę promocji
 				$sale_label = get_post_meta(get_the_ID(), '_sale_price_dates_to', true) ? __('Sale!', 'woocommerce') : __('Sale!', 'woocommerce');
 				// Wyświetlamy etykietę promocji
 				echo '<span class="label-prod label-prod--sale">' . esc_html($sale_label) . '</span>';
 			} ?>
-            <?php
+			<?php if (is_object($product) && $product->is_type('simple') && $product->is_featured()) {
+				// Produkt jest wyróżniony
+				echo '<span class="label-prod label-prod--futured">Wyróżniony produkt</span>';
+			} ?>
+			<?php
 			/**
 			 * Hook: woocommerce_single_product_summary.
 			 *
@@ -70,11 +74,11 @@ if (post_password_required()) {
 			do_action('woocommerce_single_product_summary');
 			?>
 
-        </div>
-        <?php get_template_part('templates-parts/parts/wc-product-info'); ?>
-    </div>
+		</div>
+		<?php get_template_part('templates-parts/parts/wc-product-info'); ?>
+	</div>
 
-    <?php
+	<?php
 	/**
 	 * Hook: woocommerce_after_single_product_summary.
 	 *
@@ -85,11 +89,13 @@ if (post_password_required()) {
 	do_action('woocommerce_after_single_product_summary');
 	?>
 </div>
-<div class="content">
-    <?php the_content(); ?>
-</div>
 <?php get_template_part('templates-parts/parts/wc-product', 'banner'); ?>
-<?php get_template_part('templates-parts/parts/wc-product', 'grid'); ?>
+<div class="content">
+	<?php the_content(); ?>
+</div>
+<?php // get_template_part('templates-parts/parts/wc-product', 'grid'); 
+?>
+<br>
 <?php get_template_part('templates-parts/parts/wc-product', 'faq'); ?>
 <?php get_template_part('templates-parts/parts/wc-product', 'reviews'); ?>
 <?php get_template_part('templates-parts/parts/wc-products', 'carousel'); ?>

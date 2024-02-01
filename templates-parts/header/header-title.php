@@ -1,15 +1,16 @@
 <?php
 $displayHeader = get_field('display_title');
+$termCat = get_queried_object();
+$displayHeaderCat = get_field('wyswietlaj_custome_header', $termCat);
 
 ?>
+
 <?php if (!is_product()) : ?>
 	<?php if (($displayHeader === NULL || $displayHeader == true)) : ?>
 		<header class="entry-header  ">
 			<h1 class="entry-title">
 				<?php if (is_category()) :
 					single_cat_title();
-				elseif (is_search()) :
-					_e('Wyniki wyszukiwania', 'go');
 				elseif (is_tax()) :
 					single_tag_title();
 				elseif (get_post_type(get_the_ID()) == 'mw_class') :
@@ -51,6 +52,10 @@ $displayHeader = get_field('display_title');
 			<?php the_archive_description('<div class="taxonomy-description">', '</div>'); ?>
 		</header>
 	<?php else : ?>
-		<?php if (function_exists('rank_math_the_breadcrumbs')) rank_math_the_breadcrumbs(); ?>
+		<?php //if (function_exists('rank_math_the_breadcrumbs')) rank_math_the_breadcrumbs(); 
+		?>
 	<?php endif; ?>
-<?php endif;
+<?php endif; ?>
+<?php if (is_category() && $displayHeaderCat) : ?>
+	<?php get_template_part('templates-parts/header/header', 'cat'); ?>
+<?php endif; ?>

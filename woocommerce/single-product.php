@@ -31,7 +31,7 @@ get_header('shop'); ?>
  */
 do_action('woocommerce_before_main_content');
 ?>
-<?php if (function_exists('rank_math_the_breadcrumbs')) rank_math_the_breadcrumbs(); ?>
+
 <?php while (have_posts()) : ?>
 <?php the_post(); ?>
 

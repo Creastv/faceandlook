@@ -42,6 +42,36 @@ h6,
   transition: all 0.3s;
 }
 
+h1,
+.h1 {
+  font-size: 36px;
+}
+
+h2,
+.h2 {
+  font-size: 30px;
+}
+
+h3,
+.h3 {
+  font-size: 24px;
+}
+
+h4,
+.h4 {
+  font-size: 22px;
+}
+
+h5,
+.h5 {
+  font-size: 18px;
+}
+
+h6,
+.h6 {
+  font-size: 16px;
+}
+
 .tag-special {
   font-family: "Sorts Mill Goudy", serif;
   font-weight: 400;
@@ -189,6 +219,7 @@ body {
 }
 
 .container {
+  max-width: 1480px;
   width: 100%;
   margin: 0 auto;
   padding-left: 90px;
@@ -232,24 +263,26 @@ body {
   position: fixed;
   text-align: center;
   z-index: 22;
-  right: 30px;
+  right: 26px;
   bottom: 30px;
-  width: 45px;
-  height: 45px;
-  background-repeat: no-repeat;
-  background-position: center;
+  width: 39px;
+  height: 39px;
+  border-radius: 100%;
   transform: translate(0, 100px);
-  padding: 11px;
-  transition: all 0.3s linear;
+  transition: all 0.2s linear;
+  background-color: #161514;
+  border: 2px solid #fff;
+}
+#go-to-top svg {
+  margin-top: 5px;
 }
 #go-to-top svg path {
-  fill: #c2995e;
+  fill: #fff;
 }
 #go-to-top:hover {
-  background-color: #f3ebdf;
-}
-#go-to-top:hover svg path {
-  fill: #c2995e;
+  background-color: #c2995e;
+  transform: translate(0, 100px), scale(1.1);
+  box-shadow: 0 0 20px 0px rgba(0, 0, 0, 0.2);
 }
 
 #go-to-top.active {
@@ -305,10 +338,145 @@ body {
   display: block;
 }
 
+.faq__wraper {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: flex;
+}
+@media only screen and (max-width: 768px) {
+  .faq__wraper {
+    flex-wrap: wrap;
+    gap: 0;
+  }
+}
+.faq__wraper .col {
+  width: 50%;
+}
+@media only screen and (max-width: 768px) {
+  .faq__wraper .col {
+    width: 100%;
+  }
+}
+.faq__wraper .col:nth-child(1) {
+  padding-right: 10px;
+}
+@media only screen and (max-width: 768px) {
+  .faq__wraper .col:nth-child(1) {
+    padding-right: 0px;
+  }
+}
+.faq__wraper .col:nth-child(2) {
+  padding-left: 10px;
+}
+@media only screen and (max-width: 768px) {
+  .faq__wraper .col:nth-child(2) {
+    padding-left: 0px;
+  }
+}
+
+.faq .accordion {
+  margin-bottom: 24px;
+  background-color: #f7f7f5;
+}
+.faq .accordion .question {
+  font-size: 18px;
+  line-height: 26px;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin: 0;
+  margin-bottom: 0px;
+  min-height: 75px;
+  cursor: pointer;
+  transition: all 0.3s;
+}
+@media only screen and (max-width: 768px) {
+  .faq .accordion .question {
+    font-size: 16px;
+    line-height: 26px;
+  }
+}
+.faq .accordion .question span {
+  width: calc(100% - 24px);
+  padding: 10px 50px 10px 20px;
+  position: relative;
+}
+.faq .accordion .question span:after {
+  content: "+";
+  position: absolute;
+  top: 50%;
+  transform: translate(0, -50%);
+  right: 15px;
+  display: block;
+  font-size: 24px !important;
+  color: #161514;
+}
+.faq .accordion .question svg {
+  position: absolute;
+  right: 15px;
+  width: 16px;
+  pointer-events: none;
+}
+.faq .accordion .answer {
+  border-radius: 6px;
+  height: 0;
+  overflow: hidden;
+}
+.faq .accordion .answer .wrap-video {
+  overflow: hidden;
+  padding-top: 56.25%;
+  position: relative;
+}
+.faq .accordion .answer .wrap-video iframe {
+  border: 0;
+  height: 100%;
+  left: 0;
+  position: absolute;
+  top: 0;
+  width: 100%;
+}
+.faq .accordion.active {
+  background-color: rgb(255, 255, 255);
+  border: 2px solid #c2995e;
+}
+.faq .accordion.active .question svg {
+  transform: rotate(180deg);
+}
+.faq .accordion.active .question span:after {
+  content: "-";
+}
+.faq .accordion.active .answer {
+  height: auto;
+  padding: 0 24px 24px;
+}
+.faq ul {
+  columns: 3;
+  -webkit-columns: 3;
+  -moz-columns: 3;
+}
+@media only screen and (max-width: 1300px) {
+  .faq ul {
+    columns: 2;
+    -webkit-columns: 2;
+    -moz-columns: 2;
+  }
+}
+
 .wp-cat-header {
   background-color: #f7f7f5;
   margin-bottom: 40px;
   overflow: hidden;
+}
+@media only screen and (max-width: 768px) {
+  .wp-cat-header {
+    width: 100vw;
+    margin-left: -50vw;
+    left: calc(50% - 0px);
+    position: relative;
+    padding-left: 0px;
+    padding-right: 0px;
+  }
 }
 .wp-cat-header .wc-cat-header__wrap {
   display: flex;
@@ -332,6 +500,7 @@ body {
 .wp-cat-header .wc-cat-header__wrap .img {
   width: 50%;
   background-size: cover;
+  background-position: center;
   align-self: stretch;
   min-height: 400px;
 }
@@ -343,6 +512,10 @@ body {
 
 .wc-wrap-custome__desc {
   padding: 50px 0;
+}
+
+.archive.woocommerce-page .container {
+  max-width: 100%;
 }
 
 .se-placeholder {

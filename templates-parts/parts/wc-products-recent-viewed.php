@@ -6,7 +6,7 @@
 $viewed_products = isset($_SESSION['viewed_products']) ? $_SESSION['viewed_products'] : array();
 
 if (!empty($viewed_products)) {
-    echo '<div class="wc-recent-viewed">';
+    echo '<div class="container wc-recent"> <div class="wc-recent-viewed">';
     $args = array(
         'post_type'      => 'product',
         'posts_per_page' => 5,
@@ -17,7 +17,7 @@ if (!empty($viewed_products)) {
 
     if ($recently_viewed_query->have_posts()) :
 
-        echo '<div class="text-center"><h3>Ostatnio oglądane produkty</h3></div>';
+        echo '<div class="text-center "><p class="h2">Ostatnio oglądane produkty</h3></p>';
         echo '<div class="wc-products-wraper">';
 
         while ($recently_viewed_query->have_posts()) : $recently_viewed_query->the_post();
@@ -28,5 +28,5 @@ if (!empty($viewed_products)) {
         echo '</div>';
         wp_reset_postdata();
     endif;
-    echo '</div>';
+    echo '</div></div>';
 }

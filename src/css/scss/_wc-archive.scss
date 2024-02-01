@@ -3,6 +3,14 @@
   margin-bottom: 40px;
   //   max-height: 400px;
   overflow: hidden;
+  @media #{$sm} {
+    width: 100vw;
+    margin-left: -50vw;
+    left: calc(50% - 0px);
+    position: relative;
+    padding-left: 0px;
+    padding-right: 0px;
+  }
   .wc-cat-header__wrap {
     display: flex;
     align-items: center;
@@ -20,6 +28,7 @@
     .img {
       width: 50%;
       background-size: cover;
+      background-position: center;
       align-self: stretch;
       min-height: 400px;
       //   height: 500px;
@@ -31,4 +40,10 @@
 }
 .wc-wrap-custome__desc {
   padding: 50px 0;
+}
+
+.archive.woocommerce-page {
+  .container {
+    max-width: 100%;
+  }
 }

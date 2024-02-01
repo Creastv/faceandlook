@@ -1,0 +1,47 @@
+@import "../../src/css/scss/variable";
+.custome-header {
+  width: 100vw;
+  margin-left: -50vw;
+  left: calc(50% - 0px);
+  position: relative;
+  padding-left: 90px;
+  padding-right: 90px;
+
+  margin-bottom: 40px;
+  //   max-height: 400px;
+  overflow: hidden;
+  @media #{$sm} {
+    top: 0;
+    padding-left: 0;
+    padding-right: 0;
+  }
+  .custome-header__wrap {
+    display: flex;
+    background-color: #f7f7f5;
+    align-items: stretch;
+    @media #{$md} {
+      flex-wrap: wrap;
+    }
+    .desc {
+      width: 50%;
+      padding: 30px 50px;
+      align-self: center;
+      @media #{$md} {
+        width: 100%;
+        padding: 15px;
+      }
+    }
+    .img {
+      width: 50%;
+      background-size: cover;
+      background-position: center;
+      align-self: stretch;
+      min-height: 400px;
+      //   height: 500px;
+      @media #{$md} {
+        width: 100%;
+        min-height: 200px;
+      }
+    }
+  }
+}

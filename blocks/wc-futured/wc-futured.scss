@@ -1,0 +1,33 @@
+@import "../../src/css/scss/variable";
+.wc-products-wraper {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 20px;
+  @media #{$sm} {
+    gap: 10px;
+  }
+  .card-product {
+    list-style: none;
+    width: calc(20% - 20px);
+    gap: 0px;
+    @media #{$md} {
+      width: calc(25% - 20px);
+    }
+    @media #{$sm} {
+      width: calc(50% - 10px);
+    }
+    h2 {
+      a {
+        text-decoration: none;
+      }
+    }
+  }
+  .h2 {
+    margin-bottom: 30px;
+  }
+}
+
+.wc-recent-viewed {
+  padding: 30px 0;
+}

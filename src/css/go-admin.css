@@ -42,6 +42,36 @@ h6,
   transition: all 0.3s;
 }
 
+h1,
+.h1 {
+  font-size: 36px;
+}
+
+h2,
+.h2 {
+  font-size: 30px;
+}
+
+h3,
+.h3 {
+  font-size: 24px;
+}
+
+h4,
+.h4 {
+  font-size: 22px;
+}
+
+h5,
+.h5 {
+  font-size: 18px;
+}
+
+h6,
+.h6 {
+  font-size: 16px;
+}
+
 .tag-special {
   font-family: "Sorts Mill Goudy", serif;
   font-weight: 400;
@@ -189,6 +219,7 @@ body {
 }
 
 .container {
+  max-width: 1480px;
   width: 100%;
   margin: 0 auto;
   padding-left: 90px;
@@ -232,24 +263,26 @@ body {
   position: fixed;
   text-align: center;
   z-index: 22;
-  right: 30px;
+  right: 26px;
   bottom: 30px;
-  width: 45px;
-  height: 45px;
-  background-repeat: no-repeat;
-  background-position: center;
+  width: 39px;
+  height: 39px;
+  border-radius: 100%;
   transform: translate(0, 100px);
-  padding: 11px;
-  transition: all 0.3s linear;
+  transition: all 0.2s linear;
+  background-color: #161514;
+  border: 2px solid #fff;
+}
+#go-to-top svg {
+  margin-top: 5px;
 }
 #go-to-top svg path {
-  fill: #c2995e;
+  fill: #fff;
 }
 #go-to-top:hover {
-  background-color: #f3ebdf;
-}
-#go-to-top:hover svg path {
-  fill: #c2995e;
+  background-color: #c2995e;
+  transform: translate(0, 100px), scale(1.1);
+  box-shadow: 0 0 20px 0px rgba(0, 0, 0, 0.2);
 }
 
 #go-to-top.active {
@@ -637,8 +670,9 @@ body {
 }
 @media only screen and (max-width: 460px) {
   #header .navbar__icons {
-    justify-content: space-between;
     flex: auto;
+    gap: 10px;
+    padding-left: 10px;
   }
 }
 @media only screen and (max-width: 350px) {
@@ -672,6 +706,7 @@ body {
 @media only screen and (max-width: 460px) {
   #header .navbar__icons a span {
     font-size: 10px;
+    display: none;
   }
 }
 #header .navbar__icons a svg path {
@@ -745,11 +780,12 @@ body {
 #header .navbar__navigation .header-nav ul li a:hover {
   color: #c2995e;
 }
-#header .navbar__navigation .header-nav ul .current_page_item a {
+
+.current-menu-item a {
   font-family: "Poppins", sans-serif;
   font-weight: 500;
   font-style: normal;
-  color: #c2995e;
+  color: #c2995e !important;
 }
 
 @media only screen and (max-width: 1300px) {
@@ -966,6 +1002,74 @@ body {
 }
 .navbar__socialmedia ul li:hover path {
   fill: #c2995e;
+}
+
+.post-cat-header {
+  width: 100vw;
+  margin-left: -50vw;
+  left: calc(50% - 0px);
+  position: relative;
+  padding-left: 90px;
+  padding-right: 90px;
+  margin-bottom: 40px;
+  overflow: hidden;
+}
+@media only screen and (max-width: 998px) {
+  .post-cat-header {
+    width: 100%;
+    left: 0;
+    margin-left: 0;
+    margin-right: 0px;
+    padding-left: 0;
+    padding-right: 0;
+  }
+}
+@media only screen and (max-width: 768px) {
+  .post-cat-header {
+    width: 100vw;
+    margin-left: -50vw;
+    left: calc(50% - 0px);
+    position: relative;
+    padding-left: 15px;
+    padding-right: 15px;
+  }
+}
+.post-cat-header .post-cat-header__wrap {
+  display: flex;
+  gap: 20px;
+}
+@media only screen and (max-width: 768px) {
+  .post-cat-header .post-cat-header__wrap {
+    flex-wrap: wrap;
+  }
+}
+.post-cat-header .post-cat-header__wrap .col {
+  width: 50%;
+}
+@media only screen and (max-width: 768px) {
+  .post-cat-header .post-cat-header__wrap .col {
+    width: 100%;
+  }
+}
+.post-cat-header .post-cat-header__wrap .banner {
+  background-color: #f7f7f5;
+  margin-bottom: 20px;
+  padding: 20px;
+  text-align: center;
+  height: 180px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.post-cat-header .post-cat-header__wrap .post {
+  background-color: #f7f7f5;
+  margin-bottom: 20px;
+  padding: 20px;
+  text-align: center;
+  height: 300px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .btn {

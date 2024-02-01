@@ -1,7 +1,7 @@
 <?php
 add_theme_support('post-thumbnails');
 add_image_size('post-futured', 600, 370, array('center', 'center'), true);
-add_image_size('person-futured', 500, 500, array('center', 'center'), true);
+add_image_size('wc-product', 300, 300, array('center', 'center'), true);
 
 if (!function_exists('go_register_nav_menu')) {
 	function go_register_nav_menu()

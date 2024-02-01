@@ -1,17 +1,46 @@
 .product-template-default {
-  .product {
+  .product-top {
+    width: 100vw;
+    margin-left: -50vw;
+    left: calc(50% - 0px);
+    position: relative;
+    padding-left: 90px;
+    padding-right: 90px;
+    @media #{$md} {
+      width: 100%;
+      left: 0;
+      margin-left: 0;
+      margin-right: 0px;
+      padding-left: 0;
+      padding-right: 0;
+    }
+    @media #{$sm} {
+      width: 100vw;
+      margin-left: -50vw;
+      left: calc(50% - 0px);
+    }
+    .rank-math-breadcrumb {
+      width: 100%;
+      margin-left: 15px;
+    }
+  }
+  .product-top {
     display: flex;
     flex-wrap: wrap;
-    gap: 50px;
-    @media #{$md} {
-      gap: 10px;
+
+    // @media #{$md} {
+    //   gap: 10px;
+    // }
+    .onsale {
+      display: none !important;
     }
+
     .wrap-product-gallery {
-      width: calc(50% - 50px) !important;
+      width: calc(40% - 50px) !important;
       float: none !important;
-      @media #{$md} {
+      @media #{$sm} {
         width: 100% !important;
-        order: 1;
+        order: 2;
       }
       .woocommerce-product-gallery {
         position: -webkit-sticky;
@@ -21,11 +50,18 @@
       }
     }
     .entry-summary {
-      width: calc(50% - 0px) !important;
+      width: calc(60% + 50px) !important;
       float: none !important;
-      @media #{$md} {
+      padding-left: 50px;
+      @media #{$sm} {
         width: 100% !important;
-        order: 2;
+        order: 1;
+        padding-left: 0;
+      }
+      .label-prod {
+        position: initial;
+        margin-bottom: 20px;
+        font-size: 16px;
       }
     }
     form.cart {
@@ -135,17 +171,22 @@
       font-size: 12px;
       padding: 0 20px;
       border-right: 1px solid #e4e4e0;
+      border-left: 1px solid #e4e4e0;
+      margin-left: -1px;
+      flex: auto;
       @media #{$lg} {
         width: 50%;
         padding: 0 10px;
       }
-      &:last-child {
-        border: none;
-      }
     }
   }
   .secure {
+    text-align: center;
+    display: block;
+    margin: 0 auto;
     width: 100%;
+    // max-width: 300px;
+    // width: 100%;
     height: auto;
   }
 }
