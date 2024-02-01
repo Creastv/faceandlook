@@ -2035,7 +2035,7 @@ body.woocommerce-page .entry-content {
 @media only screen and (max-width: 768px) {
   .product-template-default .product-top .wrap-product-gallery {
     width: 100% !important;
-    order: 2;
+    order: 1;
   }
 }
 .product-template-default .product-top .wrap-product-gallery .woocommerce-product-gallery {
@@ -2051,7 +2051,7 @@ body.woocommerce-page .entry-content {
 @media only screen and (max-width: 768px) {
   .product-template-default .product-top .entry-summary {
     width: 100% !important;
-    order: 1;
+    order: 2;
     padding-left: 0;
   }
 }
