@@ -1905,9 +1905,9 @@ body.woocommerce-page .entry-content {
   margin-bottom: 0px !important;
   font-size: 19px !important;
 }
-@media only screen and (max-width: 768px) {
+@media only screen and (max-width: 1400px) {
   .card-product .entry-price .price {
-    font-size: 16px !important;
+    font-size: 14px !important;
   }
 }
 @media only screen and (max-width: 460px) {
