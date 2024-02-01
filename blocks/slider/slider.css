@@ -9,6 +9,11 @@
   min-height: 600px;
   overflow: hidden;
 }
+@media only screen and (max-width: 768px) {
+  .home-slider .swiper-slide {
+    min-height: initial;
+  }
+}
 .home-slider .swiper-slide .slide {
   position: relative;
 }

@@ -13,6 +13,9 @@
     min-height: 600px;
     // height: 70vh;
     overflow: hidden;
+    @media #{$sm} {
+      min-height: initial;
+    }
     .slide {
       position: relative;
       img {
