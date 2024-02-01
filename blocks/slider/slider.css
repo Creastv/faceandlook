@@ -6,6 +6,7 @@
 }
 .home-slider .swiper-slide {
   max-height: 70vh;
+  min-height: 600px;
   overflow: hidden;
 }
 .home-slider .swiper-slide .slide {
@@ -14,6 +15,12 @@
 .home-slider .swiper-slide .slide img {
   width: 100%;
   height: auto;
+}
+@media only screen and (max-width: 768px) {
+  .home-slider .swiper-slide .slide img {
+    min-height: 500px;
+    width: auto;
+  }
 }
 @media only screen and (max-width: 768px) {
   .home-slider .swiper-slide .slide .slide-img-md {
@@ -69,6 +76,12 @@
 .home-slider .swiper-slide .slide .slide__content a {
   font-size: 21px;
   padding: 10px 25px;
+  background-color: #161514;
+  color: #fff;
+  border: #161514;
+}
+.home-slider .swiper-slide .slide .slide__content a:hover {
+  background-color: #c2995e;
 }
 .home-slider .swiper-pagination {
   right: 30px !important;
