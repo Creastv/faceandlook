@@ -22,6 +22,11 @@ if ($query->have_posts()) {
             $baner_title = $baner['link']['title'];
             $baner_target = $baner['link']['target'] ? $baner['link']['target'] : '_self';
         endif;
+        if ($baner2['link']) :
+            $baner2_url = $baner2['link']['url'];
+            $baner2_title = $baner2['link']['title'];
+            $baner2_target = $baner2['link']['target'] ? $baner2['link']['target'] : '_self';
+        endif;
         if ($counter % 2 == 0) {
             echo '<div class="col">';
             echo '<div class="post">';
@@ -48,7 +53,7 @@ if ($query->have_posts()) {
             echo '<p>';
             echo $baner['opis'];
             echo '</p>';
-            echo '<a class="btn" href="' . esc_url($baner_url) . '" target=" ' . esc_attr($baner_target) . ' "> ' . esc_html($baner_title) . '</a>';
+            echo '<a class="btn" href="' . esc_url($baner_url) . '" target=" ' . esc_attr($baner_target) . ' " > ' . esc_html($baner_title) . '</a>';
             echo '</div>';
             echo '<div class="banner__img">';
             echo wp_get_attachment_image($baner['zdjecie'], 'post-futured');
@@ -57,7 +62,21 @@ if ($query->have_posts()) {
             echo '</div>';
         } else {
             echo '<div class="col">';
-            echo '<div class="banner">banner</div>';
+            echo '<div class="banner">';
+
+            echo '<div class="banner__content">';
+            echo '<p class="h4">';
+            echo $baner2['tytul'];
+            echo '</p>';
+            echo '<p>';
+            echo $baner2['opis'];
+            echo '</p>';
+            echo '<a class="btn" href="' . esc_url($baner2_url) . '" target=" ' . esc_attr($baner2_target) . ' " > ' . esc_html($baner2_title) . '</a>';
+            echo '</div>';
+            echo '<div class="banner__img">';
+            echo wp_get_attachment_image($baner2['zdjecie'], 'post-futured');
+            echo '</div>';
+            echo '</div>';
             echo '<div class="post">';
             echo '<div class="post__content">';
             echo '<h2>';
