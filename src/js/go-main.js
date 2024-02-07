@@ -55,7 +55,7 @@ setTimeout(
         //add alt text if missing (but title is present)
         if (!images[i].alt) {
             images[i].alt = 'test';
-		 images[i].setAttribute('alt', 'Bemowskie Centrum kultury');
+		 images[i].setAttribute('alt', 'Face&Look');
         }
     }
 }, 1000);
