@@ -53,7 +53,9 @@ if ($query->have_posts()) {
             echo '<p>';
             echo $baner['opis'];
             echo '</p>';
-            echo '<a class="btn" href="' . esc_url($baner_url) . '" target=" ' . esc_attr($baner_target) . ' " > ' . esc_html($baner_title) . '</a>';
+            if ($baner['link']) :
+                echo '<a class="btn" href="' . esc_url($baner_url) . '" target=" ' . esc_attr($baner_target) . ' " > ' . esc_html($baner_title) . '</a>';
+            endif;
             echo '</div>';
             echo '<div class="banner__img">';
             echo wp_get_attachment_image($baner['zdjecie'], 'post-futured');
@@ -71,7 +73,9 @@ if ($query->have_posts()) {
             echo '<p>';
             echo $baner2['opis'];
             echo '</p>';
-            echo '<a class="btn" href="' . esc_url($baner2_url) . '" target=" ' . esc_attr($baner2_target) . ' " > ' . esc_html($baner2_title) . '</a>';
+            if ($baner['link']) :
+                echo '<a class="btn" href="' . esc_url($baner2_url) . '" target=" ' . esc_attr($baner2_target) . ' " > ' . esc_html($baner2_title) . '</a>';
+            endif;
             echo '</div>';
             echo '<div class="banner__img">';
             echo wp_get_attachment_image($baner2['zdjecie'], 'post-futured');

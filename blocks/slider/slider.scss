@@ -7,10 +7,16 @@
   margin-left: 50%;
   // padding: 30px 0;
   // background-color: var(--main3);
+  @media #{$md} {
+    position: relative;
+    width: 100vw;
+    left: 0;
+    margin-left: -15px;
+  }
 
   .swiper-slide {
     max-height: 70vh;
-    min-height: 600px;
+    // min-height: 600px;
     // height: 70vh;
     overflow: hidden;
     @media #{$sm} {
@@ -99,6 +105,27 @@
       opacity: 1;
     }
   }
+  .swiper-pagination {
+    right: 30px !important;
+    padding: 25px 50px;
+    left: initial !important;
+    width: initial !important;
+    @media #{$sm} {
+      bottom: 10px !important;
+      width: initial !important;
+      padding: 0px;
+      right: initial !important;
+      left: 10px !important;
+    }
+    .swiper-pagination-bullet {
+      background-color: $black !important;
+      width: 14px !important;
+      height: 14px !important;
+    }
+    .swiper-pagination-bullet-active {
+      background-color: $black !important;
+    }
+  }
 }
 #header {
   margin-bottom: 0 !important;
@@ -117,7 +144,7 @@
   font-weight: bold;
   color: $black;
   @media #{$sm} {
-    bottom: -10px;
+    bottom: 10px;
     right: 10px;
   }
 }
@@ -136,25 +163,4 @@
   stroke-dashoffset: calc(125.6 * (1 - var(--progress)));
   stroke-dasharray: 125.6;
   transform: rotate(-90deg);
-}
-
-.swiper-pagination {
-  right: 30px !important;
-  padding: 18px 50px;
-  left: initial !important;
-  width: initial !important;
-  @media #{$sm} {
-    bottom: -50px !important;
-    width: 100% !important;
-    padding: 0px;
-    right: initial !important;
-  }
-  .swiper-pagination-bullet {
-    background-color: $black !important;
-    width: 14px !important;
-    height: 14px !important;
-  }
-  .swiper-pagination-bullet-active {
-    background-color: $black !important;
-  }
 }

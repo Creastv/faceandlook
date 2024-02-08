@@ -2,10 +2,10 @@ const progressCircle = document.querySelector(".autoplay-progress svg");
 const progressContent = document.querySelector(".autoplay-progress span");
 var swiper = new Swiper(".js-home-slider", {
     slidesPerView: 1,
-    spaceBetween: 30,
+    // spaceBetween: 30,
     loop: true,
     autoplay: {
-      delay: 5500,
+      delay: 15500,
       disableOnInteraction: false
     },
     pagination: {
