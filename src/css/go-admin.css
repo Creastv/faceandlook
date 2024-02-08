@@ -929,9 +929,6 @@ body {
 }
 @media only screen and (max-width: 768px) {
   .navbar__wc-nav {
-    position: fixed;
-    bottom: 0;
-    z-index: 99;
     background-color: #161514;
   }
 }
@@ -975,6 +972,10 @@ body {
 }
 .navbar__wc-nav .navbar__wc-nav__wrap ul li a:hover {
   color: #c2995e;
+}
+
+.navbar__wc-nav {
+  transition: all 0.3s linear;
 }
 
 .navbar__socialmedia {

@@ -86,3 +86,38 @@ window.onclick = function(event) {
     modal.style.display = "none";
   }
 }
+
+
+//funkcja ktora przykleja navbar__wc-nav do gory strony przy skrolowaniu w górę
+const navbarSec = document.querySelector(".navbar__wc-nav");
+
+
+// Hide navbar__wc-nav when scrolling down
+let prevScrollPos = window.pageYOffset;
+window.addEventListener("scroll", () => {
+  const navbarElement = document.querySelector(".js-navbar");
+const navbarHeight = navbarElement.offsetHeight;
+  const currentScrollPos = window.pageYOffset;
+  // Check if the page is at the top
+
+  if (prevScrollPos > currentScrollPos) {
+    navbarSec.style.position = 'fixed';
+    navbarSec.style.zIndex = '98';
+    navbarSec.style.top = `${navbarHeight}px`;
+    console.log(navbarHeight);
+  } else {
+    console.log("scrolling down");
+    navbarSec.style.position = 'relative';
+    navbarSec.style.top = `0px`;
+
+  }
+  prevScrollPos = currentScrollPos;
+
+  if (window.pageYOffset === 0) {
+    navbarSec.style.position = 'relative';
+    navbarSec.style.transition = 'none';
+    navbarSec.style.top = `0px`;
+  } else {
+    navbarSec.style.transition = 'top 0.6s';  
+  }
+});

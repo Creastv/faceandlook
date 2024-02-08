@@ -303,9 +303,9 @@
     width: 100%;
   }
   @media #{$sm} {
-    position: fixed;
-    bottom: 0;
-    z-index: 99;
+    // position: fixed;
+    // bottom: 0;
+    // z-index: 99;
     background-color: $black;
   }
   .navbar__wc-nav__wrap {
@@ -347,6 +347,14 @@
     }
   }
 }
+
+.navbar__wc-nav {
+  // position: fixed;
+  transition: all 0.3s linear;
+}
+// .navbar__wc-nav.active {
+//   top: 0;
+// }
 
 .navbar__socialmedia {
   position: fixed;
