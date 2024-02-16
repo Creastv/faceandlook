@@ -13,7 +13,7 @@
             </svg>
 
             <span>Dostępność:<br>
-                <b><?php bbloomer_show_stock_shop(); ?></b>
+                <b><?php // bbloomer_show_stock_shop(); ?></b>
             </span>
         </li>
         <li>
