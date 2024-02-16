@@ -103,6 +103,7 @@
       max-width: calc(16.6% - 10px);
     }
   }
+
   .entry-summary {
     .entry-summary__wrap {
       background-color: $light;
@@ -111,9 +112,13 @@
       @media #{$md} {
         padding: 15px;
       }
+      .stock {
+        display: none !important;
+      }
       .entry-title {
         font-size: 28px;
       }
+
       .price {
         font-weight: 500 !important;
         // .woocommerce-Price-amount {

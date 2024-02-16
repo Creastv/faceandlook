@@ -2271,6 +2271,9 @@ body.woocommerce-page .entry-content {
     padding: 15px;
   }
 }
+.product-template-default .entry-summary .entry-summary__wrap .stock {
+  display: none !important;
+}
 .product-template-default .entry-summary .entry-summary__wrap .entry-title {
   font-size: 28px;
 }
