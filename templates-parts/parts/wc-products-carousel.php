@@ -34,58 +34,58 @@ $bestsalle_query = new WP_Query($bestsalle);
     </div>
     <div id="promocje" class="tabcontent">
         <?php if ($promo_query->have_posts()) : ?>
-            <div class="swiper new-slider">
-                <div class="swiper-wrapper">
-                    <?php while ($promo_query->have_posts()) : $promo_query->the_post(); ?>
-                        <div class="swiper-slide">
-                            <?php get_template_part('woocommerce/content-product'); ?>
-                        </div>
-                    <?php endwhile;
-                    wp_reset_postdata(); ?>
+        <div class="swiper new-slider tab-swiper">
+            <div class="swiper-wrapper">
+                <?php while ($promo_query->have_posts()) : $promo_query->the_post(); ?>
+                <div class="swiper-slide">
+                    <?php get_template_part('woocommerce/content-product'); ?>
                 </div>
-                <div class="swiper-pagination"></div>
-                <div class="swiper-button-prev"></div>
-                <div class="swiper-button-next"></div>
-
+                <?php endwhile;
+                    wp_reset_postdata(); ?>
             </div>
+            <div class="swiper-pagination"></div>
+            <div class="swiper-button-prev"></div>
+            <div class="swiper-button-next"></div>
+
+        </div>
         <?php endif; ?>
     </div>
 
     <div id="nowosci" class="tabcontent active">
         <?php if ($new_query->have_posts()) : ?>
-            <div class="swiper new-slider">
-                <div class="swiper-wrapper">
-                    <?php while ($new_query->have_posts()) : $new_query->the_post(); ?>
-                        <div class="swiper-slide">
-                            <?php get_template_part('woocommerce/content-product'); ?>
-                        </div>
-                    <?php endwhile;
-                    wp_reset_postdata(); ?>
+        <div class="swiper new-slider tab-swiper">
+            <div class="swiper-wrapper">
+                <?php while ($new_query->have_posts()) : $new_query->the_post(); ?>
+                <div class="swiper-slide">
+                    <?php get_template_part('woocommerce/content-product'); ?>
                 </div>
-                <div class="swiper-pagination"></div>
-                <div class="swiper-button-prev"></div>
-                <div class="swiper-button-next"></div>
-
+                <?php endwhile;
+                    wp_reset_postdata(); ?>
             </div>
+            <div class="swiper-pagination"></div>
+            <div class="swiper-button-prev"></div>
+            <div class="swiper-button-next"></div>
+
+        </div>
         <?php endif; ?>
     </div>
 
     <div id="bestseller" class="tabcontent">
         <?php if ($bestsalle_query->have_posts()) : ?>
-            <div class="swiper new-slider">
-                <div class="swiper-wrapper">
-                    <?php while ($bestsalle_query->have_posts()) : $bestsalle_query->the_post(); ?>
-                        <div class="swiper-slide">
-                            <?php get_template_part('woocommerce/content-product'); ?>
-                        </div>
-                    <?php endwhile;
-                    wp_reset_postdata(); ?>
+        <div class="swiper new-slider tab-swiper">
+            <div class="swiper-wrapper">
+                <?php while ($bestsalle_query->have_posts()) : $bestsalle_query->the_post(); ?>
+                <div class="swiper-slide">
+                    <?php get_template_part('woocommerce/content-product'); ?>
                 </div>
-                <div class="swiper-pagination"></div>
-                <div class="swiper-button-prev"></div>
-                <div class="swiper-button-next"></div>
-
+                <?php endwhile;
+                    wp_reset_postdata(); ?>
             </div>
+            <div class="swiper-pagination"></div>
+            <div class="swiper-button-prev"></div>
+            <div class="swiper-button-next"></div>
+
+        </div>
         <?php endif; ?>
     </div>
 </div>

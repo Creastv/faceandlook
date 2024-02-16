@@ -6,27 +6,36 @@
 $viewed_products = isset($_SESSION['viewed_products']) ? $_SESSION['viewed_products'] : array();
 
 if (!empty($viewed_products)) {
-    echo '<div class="container wc-recent"> <div class="wc-recent-viewed">';
     $args = array(
         'post_type'      => 'product',
         'posts_per_page' => 5,
         'post__in'       => $viewed_products,
     );
-
     $recently_viewed_query = new WP_Query($args);
 
-    if ($recently_viewed_query->have_posts()) :
 
-        echo '<div class="text-center "><p class="h2">Ostatnio oglądane produkty</h3></p>';
-        echo '<div class="wc-products-wraper">';
+?>
+<?php if ($recently_viewed_query->have_posts()) : ?>
+<div class="container wc-recent">
+    <div class="wc-recent-viewed">
+        <div class="text-center ">
+            <p class="h2">Ostatnio oglądane produkty</h3>
+            </p>
+            <div class="swiper new-slider recent-viewed-slider">
+                <div class="swiper-wrapper">
+                    <?php while ($recently_viewed_query->have_posts()) : $recently_viewed_query->the_post(); ?>
+                    <div class="swiper-slide">
+                        <?php get_template_part('woocommerce/content-product'); ?>
+                    </div>
+                    <?php endwhile;
+                            wp_reset_postdata(); ?>
+                </div>
+                <div class="swiper-pagination"></div>
+                <div class="swiper-button-prev"></div>
+                <div class="swiper-button-next"></div>
 
-        while ($recently_viewed_query->have_posts()) : $recently_viewed_query->the_post();
-            global $product;
-            get_template_part('woocommerce/content-product');
-        // Dodatkowe informacje o produkcie można dodać w podobny sposób
-        endwhile;
-        echo '</div>';
-        wp_reset_postdata();
-    endif;
-    echo '</div></div>';
-}
+            </div>
+        </div>
+    </div>
+    <?php endif; ?>
+    <?php }
