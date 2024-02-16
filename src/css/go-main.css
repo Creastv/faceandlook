@@ -2342,6 +2342,29 @@ body.woocommerce-page .entry-content {
   height: auto;
 }
 
+.product-attributes {
+  margin-bottom: 30px;
+}
+.product-attributes .attribute {
+  display: flex;
+  align-items: center;
+  margin-bottom: 10px;
+}
+.product-attributes .attribute .name {
+  border: 1px solid #e4e4e0;
+  padding: 10px;
+  font-weight: 500;
+  font-size: 14px;
+  color: #161514;
+}
+.product-attributes .attribute .value {
+  border: 1px solid #e4e4e0;
+  padding: 10px;
+  margin-left: -1px;
+  font-size: 14px;
+  color: #161514;
+}
+
 /* The Modal (background) */
 .modal {
   display: none; /* Hidden by default */

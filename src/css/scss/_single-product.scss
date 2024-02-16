@@ -190,3 +190,27 @@
     height: auto;
   }
 }
+
+.product-attributes {
+  margin-bottom: 30px;
+  .attribute {
+    display: flex;
+    align-items: center;
+    // justify-content: space-between;
+    margin-bottom: 10px;
+    .name {
+      border: 1px solid #e4e4e0;
+      padding: 10px;
+      font-weight: 500;
+      font-size: 14px;
+      color: $black;
+    }
+    .value {
+      border: 1px solid #e4e4e0;
+      padding: 10px;
+      margin-left: -1px;
+      font-size: 14px;
+      color: $black;
+    }
+  }
+}
