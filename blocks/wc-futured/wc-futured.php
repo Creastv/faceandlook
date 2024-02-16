@@ -19,7 +19,6 @@ if ($futured->have_posts()) :
     while ($futured->have_posts()) : $futured->the_post();
         global $product;
         get_template_part('woocommerce/content-product');
-        get_template_part('woocommerce/content-product');
     // Dodatkowe informacje o produkcie można dodać w podobny sposób
     endwhile;
     echo '</div>';

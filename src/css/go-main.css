@@ -1880,6 +1880,7 @@ body.woocommerce-page .entry-content {
   transition: all 0.4s ease-out;
   width: auto;
   height: 100%;
+  min-height: 300px;
   margin: 0 auto;
   display: block;
 }
