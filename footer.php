@@ -4,9 +4,11 @@
 <?php if (is_singular('post') || (is_category() || is_home())) : ?>
     <?php get_template_part('templates-parts/parts/wc-products', 'carousel'); ?>
 <?php endif; ?>
-</div>
-</div>
 
+</div>
+</div>
+<?php // get_template_part('templates-parts/header/header', 'megamenu'); 
+?>
 </main>
 <footer id="footer" itemscope itemtype="http://schema.org/WPFooter">
     <div class="container">

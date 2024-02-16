@@ -1,0 +1,19 @@
+.megamenu {
+  position: fixed;
+  z-index: 99999;
+  top: 0;
+  left: 0;
+  width: 100%;
+  min-height: 0;
+  background-color: #fff;
+  border-bottom: 1px solid #e5e5e5;
+  //   padding-top: 150px;
+  overflow: hidden;
+  transition: all 0.5s ease-in-out;
+  .megamenu__wraper {
+  }
+}
+.megamenu.active {
+  min-height: 70vh;
+  padding-top: 150px;
+}

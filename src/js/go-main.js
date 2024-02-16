@@ -121,3 +121,30 @@ const navbarHeight = navbarElement.offsetHeight;
     navbarSec.style.transition = 'top 0.6s';  
   }
 });
+
+
+
+// //funkcja która otwiera megamenu po najechniu na element #menu-item-26
+// const megaMenu = document.querySelector(".megamenu");
+// const megaMenuBtn = document.querySelector("#menu-item-26");
+// const header = document.querySelector(".megamenu__wraper");
+// const megaElements = document.querySelectorAll(".js-header-nav-list li ");
+// const megaMenuElements2 = [megaMenu, megaMenuBtn];
+// const megaMenuElements = [ megaMenu, megaMenuBtn ];
+// // const megaMenuElements = [megaMenu];
+// megaMenuElements2.forEach( element => {
+//   element.addEventListener("mouseover", () => {
+//     megaMenu.classList.add("active");
+//     //dodaje do body overflow hidden  
+//     document.querySelector("body").style.overflow = "hidden";
+//   } );
+// } );
+// //funkcja która po zjechaniu z elementów z tablicy megaMenuElements zamyka megamenu 
+// megaMenuElements.forEach( element => {
+//   element.addEventListener("mouseout", () => { 
+//      megaMenu.classList.remove("active");
+//     //usuwam z body overflow hidden 
+//     document.querySelector("body").style.overflow = "inherit";
+//   });
+// });
+
