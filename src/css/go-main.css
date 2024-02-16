@@ -2363,6 +2363,12 @@ body.woocommerce-page .entry-content {
   color: #161514;
 }
 
+@media only screen and (max-width: 768px) {
+  .woocommerce div.product .product_title {
+    padding: 20px 15px 0 15px;
+  }
+}
+
 /* The Modal (background) */
 .modal {
   display: none; /* Hidden by default */
