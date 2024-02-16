@@ -553,7 +553,7 @@ body {
   margin: 0 auto;
 }
 
-.woocommerce-page .flex-viewport img {
+.woocommerce-page .wp-post-image img {
   display: block;
   width: auto !important;
   height: 100%;
