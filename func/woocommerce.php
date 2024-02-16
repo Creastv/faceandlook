@@ -71,52 +71,52 @@ add_action('wp_footer', 'custom_quantity_fields_script');
 function custom_quantity_fields_script()
 {
 ?>
-<script type='text/javascript'>
-jQuery(function($) {
-    if (!String.prototype.getDecimals) {
-        String.prototype.getDecimals = function() {
-            var num = this,
-                match = ('' + num).match(/(?:\.(\d+))?(?:[eE]([+-]?\d+))?$/);
-            if (!match) {
-                return 0;
+    <script type='text/javascript'>
+        jQuery(function($) {
+            if (!String.prototype.getDecimals) {
+                String.prototype.getDecimals = function() {
+                    var num = this,
+                        match = ('' + num).match(/(?:\.(\d+))?(?:[eE]([+-]?\d+))?$/);
+                    if (!match) {
+                        return 0;
+                    }
+                    return Math.max(0, (match[1] ? match[1].length : 0) - (match[2] ? +match[2] : 0));
+                }
             }
-            return Math.max(0, (match[1] ? match[1].length : 0) - (match[2] ? +match[2] : 0));
-        }
-    }
-    // Quantity "plus" and "minus" buttons
-    $(document.body).on('click', '.plus, .minus', function() {
-        var $qty = $(this).closest('.quantity').find('.qty'),
-            currentVal = parseFloat($qty.val()),
-            max = parseFloat($qty.attr('max')),
-            min = parseFloat($qty.attr('min')),
-            step = $qty.attr('step');
+            // Quantity "plus" and "minus" buttons
+            $(document.body).on('click', '.plus, .minus', function() {
+                var $qty = $(this).closest('.quantity').find('.qty'),
+                    currentVal = parseFloat($qty.val()),
+                    max = parseFloat($qty.attr('max')),
+                    min = parseFloat($qty.attr('min')),
+                    step = $qty.attr('step');
 
-        // Format values
-        if (!currentVal || currentVal === '' || currentVal === 'NaN') currentVal = 0;
-        if (max === '' || max === 'NaN') max = '';
-        if (min === '' || min === 'NaN') min = 0;
-        if (step === 'any' || step === '' || step === undefined || parseFloat(step) === 'NaN') step = 1;
+                // Format values
+                if (!currentVal || currentVal === '' || currentVal === 'NaN') currentVal = 0;
+                if (max === '' || max === 'NaN') max = '';
+                if (min === '' || min === 'NaN') min = 0;
+                if (step === 'any' || step === '' || step === undefined || parseFloat(step) === 'NaN') step = 1;
 
-        // Change the value
-        if ($(this).is('.plus')) {
-            if (max && (currentVal >= max)) {
-                $qty.val(max);
-            } else {
-                $qty.val((currentVal + parseFloat(step)).toFixed(step.getDecimals()));
-            }
-        } else {
-            if (min && (currentVal <= min)) {
-                $qty.val(min);
-            } else if (currentVal > 0) {
-                $qty.val((currentVal - parseFloat(step)).toFixed(step.getDecimals()));
-            }
-        }
+                // Change the value
+                if ($(this).is('.plus')) {
+                    if (max && (currentVal >= max)) {
+                        $qty.val(max);
+                    } else {
+                        $qty.val((currentVal + parseFloat(step)).toFixed(step.getDecimals()));
+                    }
+                } else {
+                    if (min && (currentVal <= min)) {
+                        $qty.val(min);
+                    } else if (currentVal > 0) {
+                        $qty.val((currentVal - parseFloat(step)).toFixed(step.getDecimals()));
+                    }
+                }
 
-        // Trigger change event
-        $qty.trigger('change');
-    });
-});
-</script>
+                // Trigger change event
+                $qty.trigger('change');
+            });
+        });
+    </script>
 <?php
 }
 
@@ -181,3 +181,19 @@ function dodaj_nowa_sekcje_przed_krokiem_opisem()
 }
 
 add_action('woocommerce_single_product_summary', 'dodaj_nowa_sekcje_przed_krokiem_opisem', 5);
+
+
+
+add_action('woocommerce_single_product_summary', 'display_product_attributes', 25);
+function display_product_attributes()
+{
+    global $product;
+    echo '<div class="product-attributes">';
+    foreach ($product->get_attributes() as $attr_name => $attr) {
+        echo '<div class="attribute">';
+        echo '<span class="name">' . wc_attribute_label($attr_name) . ': </span>';
+        echo '<span class="value">' . $product->get_attribute($attr_name) . '</span>';
+        echo '</div>';
+    }
+    echo '</div>';
+}
