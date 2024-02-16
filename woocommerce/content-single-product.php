@@ -79,6 +79,7 @@ if (post_password_required()) {
 
         </div>
         <?php get_template_part('templates-parts/parts/wc-product-info'); ?>
+
     </div>
 
     <?php

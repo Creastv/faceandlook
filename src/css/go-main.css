@@ -716,7 +716,7 @@ body {
 }
 #header .navbar__icons a span {
   display: block;
-  font-size: 12px;
+  font-size: 10px;
   text-transform: uppercase;
 }
 @media only screen and (max-width: 460px) {
@@ -2299,22 +2299,20 @@ body.woocommerce-page .entry-content {
   display: none !important;
 }
 
-.global-prod-info {
-  padding: 30px;
-}
 .global-prod-info ul {
+  padding: 10px 40px;
   list-style: none;
   padding: 0;
   margin: 0;
   display: flex;
-  align-items: center;
-  justify-content: space-between;
+  justify-content: center;
   width: 100%;
-  margin-bottom: 20px;
 }
-@media only screen and (max-width: 1300px) {
+@media only screen and (max-width: 460px) {
   .global-prod-info ul {
     flex-wrap: wrap;
+    gap: 10px;
+    padding: 10px 0;
   }
 }
 .global-prod-info ul li {
@@ -2322,24 +2320,57 @@ body.woocommerce-page .entry-content {
   align-items: center;
   gap: 15px;
   font-size: 12px;
-  padding: 0 20px;
+  padding: 10px 20px;
   border-right: 1px solid #e4e4e0;
   border-left: 1px solid #e4e4e0;
   margin-left: -1px;
-  flex: auto;
 }
-@media only screen and (max-width: 1300px) {
+.global-prod-info ul li:first-child, .global-prod-info ul li:last-child {
+  border: none;
+}
+@media only screen and (max-width: 1400px) {
   .global-prod-info ul li {
-    width: 50%;
-    padding: 0 10px;
+    align-items: flex-start;
+    flex-wrap: wrap;
+    gap: 5px;
+    padding: 10px;
   }
 }
-.global-prod-info .secure {
-  text-align: center;
-  display: block;
-  margin: 0 auto;
-  width: 100%;
+@media only screen and (max-width: 460px) {
+  .global-prod-info ul li {
+    flex-wrap: nowrap;
+    align-items: center;
+    width: calc(50% - 10px);
+    gap: 10px;
+    border: none;
+    padding: 0 10px;
+    font-size: 10px;
+  }
+}
+.global-prod-info ul li svg {
+  max-width: 31px;
   height: auto;
+}
+@media only screen and (max-width: 1400px) {
+  .global-prod-info ul li span {
+    width: 100%;
+  }
+}
+.global-prod-info ul li .stock {
+  margin: 0;
+}
+.global-prod-info .payment {
+  padding: 10px;
+  background-color: #f7f7f5;
+  text-align: center;
+}
+.global-prod-info .payment svg {
+  max-width: 250px;
+}
+@media only screen and (max-width: 460px) {
+  .global-prod-info .payment svg {
+    max-width: 150px;
+  }
 }
 
 .product-attributes {

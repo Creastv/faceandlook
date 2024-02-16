@@ -150,18 +150,20 @@
 }
 
 .global-prod-info {
-  padding: 30px;
+  // padding: 30px;
   ul {
+    padding: 10px 40px;
     list-style: none;
     padding: 0;
     margin: 0;
     display: flex;
-    align-items: center;
-    justify-content: space-between;
+    justify-content: center;
     width: 100%;
-    margin-bottom: 20px;
-    @media #{$lg} {
+    // margin-bottom: 20px;
+    @media #{$xs} {
       flex-wrap: wrap;
+      gap: 10px;
+      padding: 10px 0;
     }
 
     li {
@@ -169,25 +171,59 @@
       align-items: center;
       gap: 15px;
       font-size: 12px;
-      padding: 0 20px;
+      padding: 10px 20px;
       border-right: 1px solid #e4e4e0;
       border-left: 1px solid #e4e4e0;
       margin-left: -1px;
-      flex: auto;
-      @media #{$lg} {
-        width: 50%;
+      // flex: auto;
+      // width: 25%;
+      &:first-child,
+      &:last-child {
+        border: none;
+      }
+      @media #{$xlg} {
+        align-items: flex-start;
+        flex-wrap: wrap;
+        gap: 5px;
+        padding: 10px;
+      }
+      @media #{$xs} {
+        flex-wrap: nowrap;
+        align-items: center;
+        width: calc(50% - 10px);
+        gap: 10px;
+        border: none;
         padding: 0 10px;
+        font-size: 10px;
+      }
+      svg {
+        max-width: 31px;
+        height: auto;
+      }
+      //
+      span {
+        @media #{$xlg} {
+          width: 100%;
+        }
+        b {
+          // white-space: nowrap;
+        }
+      }
+      .stock {
+        margin: 0;
       }
     }
   }
-  .secure {
+  .payment {
+    padding: 10px;
+    background-color: #f7f7f5;
     text-align: center;
-    display: block;
-    margin: 0 auto;
-    width: 100%;
-    // max-width: 300px;
-    // width: 100%;
-    height: auto;
+    svg {
+      max-width: 250px;
+      @media #{$xs} {
+        max-width: 150px;
+      }
+    }
   }
 }
 
