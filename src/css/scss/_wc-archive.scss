@@ -70,13 +70,11 @@
 
 .woocommerce-page {
   .wp-post-image {
-    img {
-      display: block;
-      width: auto !important;
-      height: 100%;
-      box-shadow: none;
-      max-height: 500px;
-      margin: 0 auto;
-    }
+    display: block;
+    width: auto !important;
+    height: 100%;
+    box-shadow: none;
+    max-height: 500px;
+    margin: 0 auto;
   }
 }
