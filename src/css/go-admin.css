@@ -1033,6 +1033,9 @@ body {
 .header-cat-wrap {
   position: relative;
 }
+.header-cat-wrap .swiper-scrollbar {
+  opacity: 1 !important;
+}
 .header-cat-wrap .header-cat-slider {
   position: relative;
   width: calc(100vw - 90px);
@@ -1040,8 +1043,28 @@ body {
   margin-left: 50%;
   margin-bottom: 50px;
 }
+@media only screen and (max-width: 998px) {
+  .header-cat-wrap .header-cat-slider {
+    left: calc(-50vw + 15px);
+    margin-left: calc(50% + 15px);
+    margin-bottom: 50px;
+  }
+}
+@media only screen and (max-width: 768px) {
+  .header-cat-wrap .header-cat-slider {
+    width: 100vw;
+    left: -50vw;
+    margin-left: 50%;
+    margin-bottom: 50px;
+  }
+}
 .header-cat-wrap .header-cat-slider .swiper-slide {
   width: 80%;
+}
+@media only screen and (max-width: 768px) {
+  .header-cat-wrap .header-cat-slider .swiper-slide {
+    width: 80%;
+  }
 }
 .header-cat-wrap .header-cat-slider .post {
   position: relative;
@@ -1068,8 +1091,20 @@ body {
   z-index: 2;
   left: 0;
   bottom: 0;
-  width: 100%;
+  width: 60%;
   padding: 90px;
+}
+@media only screen and (max-width: 998px) {
+  .header-cat-wrap .header-cat-slider .post .post__content {
+    width: 80%;
+    padding: 20px;
+  }
+}
+@media only screen and (max-width: 768px) {
+  .header-cat-wrap .header-cat-slider .post .post__content {
+    padding: 15px;
+    width: 100%;
+  }
 }
 .header-cat-wrap .header-cat-slider .post .post__content h2 {
   margin-bottom: 10px;
@@ -1080,6 +1115,7 @@ body {
   color: #fff;
 }
 .header-cat-wrap .header-cat-slider .post .post__content p {
+  font-size: 14px;
   margin-bottom: 20px;
   color: #fff;
 }
