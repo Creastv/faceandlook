@@ -1061,7 +1061,7 @@ body {
 .header-cat-wrap .header-cat-slider .swiper-slide {
   width: 45%;
 }
-@media only screen and (max-width: 768px) {
+@media only screen and (max-width: 998px) {
   .header-cat-wrap .header-cat-slider .swiper-slide {
     width: 80%;
   }
@@ -1094,9 +1094,8 @@ body {
   width: 100%;
   padding: 30px;
 }
-@media only screen and (max-width: 998px) {
+@media only screen and (max-width: 1300px) {
   .header-cat-wrap .header-cat-slider .post .post__content {
-    width: 80%;
     padding: 20px;
   }
 }
@@ -1107,6 +1106,7 @@ body {
   }
 }
 .header-cat-wrap .header-cat-slider .post .post__content h2 {
+  max-width: 80%;
   font-size: 24px;
 }
 .header-cat-wrap .header-cat-slider .post .post__content h2 a {
