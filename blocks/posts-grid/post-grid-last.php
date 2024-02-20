@@ -12,7 +12,7 @@ $po = array(
 $query_posts_one = new WP_Query($po);
 $po2 = array(
     'post_type' => 'post',
-    'posts_per_page' => 4,
+    'posts_per_page' => 5,
     'offset' => 1,
     'ignore_sticky_posts' => 1,
 );
