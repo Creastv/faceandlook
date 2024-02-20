@@ -4,7 +4,9 @@ $termCat = get_queried_object();
 $displayHeaderCat = get_field('wyswietlaj_custome_header', $termCat);
 
 ?>
-
+<?php if (is_category() && $displayHeaderCat) : ?>
+	<?php get_template_part('templates-parts/header/header', 'category'); ?>
+<?php endif; ?>
 <?php if (!is_product()) : ?>
 	<?php if (($displayHeader === NULL || $displayHeader == true)) : ?>
 		<header class="entry-header  ">
@@ -55,7 +57,4 @@ $displayHeaderCat = get_field('wyswietlaj_custome_header', $termCat);
 		<?php //if (function_exists('rank_math_the_breadcrumbs')) rank_math_the_breadcrumbs(); 
 		?>
 	<?php endif; ?>
-<?php endif; ?>
-<?php if (is_category() && $displayHeaderCat) : ?>
-	<?php get_template_part('templates-parts/header/header', 'cat'); ?>
 <?php endif; ?>
