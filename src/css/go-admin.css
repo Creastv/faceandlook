@@ -1107,8 +1107,7 @@ body {
   }
 }
 .header-cat-wrap .header-cat-slider .post .post__content h2 {
-  margin-bottom: 10px;
-  max-width: 70%;
+  font-size: 24px;
 }
 .header-cat-wrap .header-cat-slider .post .post__content h2 a {
   text-decoration: none;
