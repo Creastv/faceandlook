@@ -1250,6 +1250,11 @@ body.single .entry-header {
 body.single .entry-header h1 {
   font-size: 2.4em;
 }
+@media only screen and (max-width: 768px) {
+  body.single .entry-header h1 {
+    font-size: 28px;
+  }
+}
 body.single .entry-header .rank-math-breadcrumb p {
   justify-content: center;
 }
