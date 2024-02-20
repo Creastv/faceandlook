@@ -26,7 +26,7 @@ $query_posts_one = new WP_Query($po);
                         <div class="entry-term">
                             <span> <?php echo $term_list[0]; ?></span>
                         </div>
-                        <h2>
+                        <h2 class="h3">
                             <a href="<?php the_permalink(); ?>">
                                 <?php the_title(); ?>
                             </a>
