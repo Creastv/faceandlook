@@ -1754,6 +1754,9 @@ body.woocommerce-page .entry-content {
     gap: 10px;
   }
 }
+.recommended-posts__posts-wraper h3 {
+  margin-bottom: 30px;
+}
 
 .card-post {
   background-color: #fff;
