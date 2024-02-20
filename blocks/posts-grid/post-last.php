@@ -18,7 +18,7 @@ $query_posts_one = new WP_Query($po);
             <div class="post">
                 <div class="post__img">
                     <a href="<?php the_permalink(); ?>">
-                        <?php the_post_thumbnail('medium'); ?>
+                        <?php the_post_thumbnail('post-futured'); ?>
                     </a>
                 </div>
                 <div class="post__content">
