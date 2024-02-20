@@ -47,9 +47,9 @@
       width: calc(33.33% - 20px) !important;
     }
     @media #{$md} {
-      width: calc(50% - 20px) !important;
+      width: calc(33.33% - 20px) !important;
     }
-    @media #{$xs} {
+    @media #{$sm} {
       width: calc(50% - 10px) !important;
     }
   }

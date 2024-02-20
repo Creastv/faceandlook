@@ -1873,10 +1873,10 @@ body.woocommerce-page .entry-content {
 }
 @media only screen and (max-width: 998px) {
   .products.columns-5 .card-product {
-    width: calc(50% - 20px) !important;
+    width: calc(33.33% - 20px) !important;
   }
 }
-@media only screen and (max-width: 460px) {
+@media only screen and (max-width: 768px) {
   .products.columns-5 .card-product {
     width: calc(50% - 10px) !important;
   }
