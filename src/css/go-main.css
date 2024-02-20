@@ -1092,7 +1092,7 @@ body {
   z-index: 2;
   left: 0;
   bottom: 0;
-  width: 45%;
+  width: 100%;
   padding: 30px;
 }
 @media only screen and (max-width: 998px) {
