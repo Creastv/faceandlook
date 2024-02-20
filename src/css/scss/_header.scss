@@ -435,7 +435,7 @@
       margin-bottom: 50px;
     }
     .swiper-slide {
-      width: 80%;
+      width: 45%;
       @media #{$sm} {
         width: 80%;
       }
@@ -444,7 +444,7 @@
       position: relative;
       background-color: #f7f7f5;
       margin-bottom: 20px;
-      height: 500px;
+      height: 600px;
       overflow: hidden;
       transition: all 0.3s;
       &::after {
@@ -468,8 +468,8 @@
         z-index: 2;
         left: 0;
         bottom: 0;
-        width: 60%;
-        padding: 90px;
+        width: 45%;
+        padding: 30px;
         @media #{$md} {
           width: 80%;
           padding: 20px;
