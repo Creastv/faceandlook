@@ -1,6 +1,7 @@
 <?php
 add_theme_support('post-thumbnails');
 add_image_size('post-futured', 600, 370, array('center', 'center'), true);
+add_image_size('post-futured-grid', 100, 100, array('center', 'center'), true);
 add_image_size('wc-product', 300, 300, array('center', 'center'), true);
 
 

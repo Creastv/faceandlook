@@ -42,6 +42,24 @@ function register_acf_block_types()
     },
   ));
   acf_register_block_type(array(
+    'name'              => 'posts-grid',
+    'title'             => __('Posty - grid'),
+    'render_template'   => 'blocks/posts-grid/posts-grid.php',
+    'category'          => 'formatting',
+    'icon' => array(
+      'background' => '#122b4f',
+      'foreground' => '#fff',
+      'src' => 'ellipsis',
+    ),
+    'mode'            => 'preview',
+    'keywords'          => array('Aktualności'),
+    'supports' => array('align' => false),
+    'enqueue_assets'    => function () {
+      wp_enqueue_style('go-posts-grid',  get_template_directory_uri() . '/blocks/posts-grid/posts-grid.min.css');
+      wp_enqueue_script('go-posts-grid-init', get_template_directory_uri() . '/blocks/posts-grid/posts-grid.js', array('jquery'), '4', true);
+    },
+  ));
+  acf_register_block_type(array(
     'name'              => 'faq',
     'title'             => __('Najczęściej zadawane pytania'),
     'render_template'   => 'blocks/faq/faq.php',
