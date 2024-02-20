@@ -87,7 +87,12 @@ body.woocommerce-page {
     width: 100%;
   }
 }
-
+.woocommerce-products-header__title.page-title {
+  padding: 50px 0;
+  @media #{$sm} {
+    padding: 30px 0;
+  }
+}
 .wc-custome {
   display: flex;
   align-items: flex-start;

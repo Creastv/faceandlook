@@ -476,7 +476,8 @@ body {
 
 .wp-cat-header {
   background-color: #f7f7f5;
-  margin-bottom: 40px;
+  margin-bottom: 50px;
+  margin-top: 50px;
   overflow: hidden;
 }
 @media only screen and (max-width: 768px) {
@@ -488,6 +489,7 @@ body {
     padding-left: 0px;
     padding-right: 0px;
     margin-bottom: 0;
+    margin-top: 0px;
   }
 }
 .wp-cat-header .wc-cat-header__wrap {
