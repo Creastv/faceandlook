@@ -439,6 +439,9 @@
       @media #{$md} {
         width: 80%;
       }
+      @media #{$sm} {
+        width: 90%;
+      }
     }
     .post {
       position: relative;
@@ -447,6 +450,9 @@
       height: 600px;
       overflow: hidden;
       transition: all 0.3s;
+      @media #{$md} {
+        height: 350px;
+      }
       &::after {
         content: "";
         width: 100%;
@@ -479,8 +485,13 @@
         }
         h2 {
           // margin-bottom: 10px;
+
           max-width: 80%;
-          font-size: 24px;
+          font-size: 36px;
+          @media #{$md} {
+            font-size: 24px;
+            max-width: 100%;
+          }
           a {
             text-decoration: none;
             color: #fff;
