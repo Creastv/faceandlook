@@ -7,8 +7,11 @@ if ($type == 1) {
     $args = array(
         'post_type' => 'product',
         'posts_per_page' => $post_per_page,
-        'ignore_sticky_posts' => 1,
-        'cat' => $cat
+        'tax_query' => array(array(
+            'taxonomy'         => 'product_cat',
+            'field'            => 'term_id', // Or 'term_id' or 'name'
+            'terms'            => $cat, // A slug term
+        )),
     );
 }
 if ($type == 2) {
@@ -33,18 +36,65 @@ if ($type == 4) {
         'orderby'        => 'meta_value_num',
     );
 }
+if ($type == 5) {
+    $args = array(
+        'post_type' => 'product',
+        'posts_per_page' => $post_per_page,
+        'tax_query' => array(
+            array(
+                'taxonomy' => 'product_visibility',
+                'field'    => 'name',
+                'terms'    => 'featured',
+            ),
+        ),
+    );
+}
 
-$futured = new WP_Query($args);
+if ($type == 6) {
+    $args = array(
+        'post_type' => 'product',
+        'posts_per_page' => $post_per_page,
+        'tax_query' => array(
+            array(
+                'taxonomy' => 'product_visibility',
+                'field'    => 'name',
+                'terms'    => 'featured',
+            ),
+        ),
+    );
+}
+if ($type != 6) :
 
-if ($futured->have_posts()) :
-    echo '<div class="wc-recent-viewed">';
-    echo '<div class="wc-products-wraper">';
-    while ($futured->have_posts()) : $futured->the_post();
-        global $product;
-        get_template_part('woocommerce/content-product');
-    // Dodatkowe informacje o produkcie można dodać w podobny sposób
-    endwhile;
-    echo '</div>';
-    wp_reset_postdata();
-    echo '</div>';
+    $products = new WP_Query($args);
+
+    if ($products->have_posts()) :
+        echo '<div class="wc-recent-viewed">';
+        echo '<div class="wc-products-wraper">';
+        while ($products->have_posts()) : $products->the_post();
+            global $product;
+            get_template_part('woocommerce/content-product');
+        // Dodatkowe informacje o produkcie można dodać w podobny sposób
+        endwhile;
+        echo '</div>';
+        wp_reset_postdata();
+        echo '</div>';
+    endif;
+
+
+else :
+
+    $selectedProducts = get_field('wybrane_produkty');
+    if ($selectedProducts) :
+        echo '<div class="wc-recent-viewed">';
+        echo '<div class="wc-products-wraper">';
+        foreach ($selectedProducts as $post) :
+            setup_postdata($post);
+            get_template_part('woocommerce/content-product');
+        // Dodatkowe informacje o produkcie można dodać w podobny sposób
+        endforeach;
+        echo '</div>';
+        echo '</div>';
+        wp_reset_postdata();
+    endif;
+
 endif;
