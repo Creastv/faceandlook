@@ -1,4 +1,7 @@
-<div class="se-placeholder">
-    <p><b>OPINIE</b></p>
-    <p>sekcja w budowie</p>
+<?php
+$widget = get_field('widget', 'option');
+?>
+
+<div class="widget">
+    <?php echo $widget; ?>
 </div>
