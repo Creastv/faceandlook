@@ -4,8 +4,10 @@
             <?php the_title(); ?>
         </h1>
         <?php if (function_exists('rank_math_the_breadcrumbs')) rank_math_the_breadcrumbs(); ?>
+        <span class="entry-date">Opublikowano:<b> <?php the_date(); ?></b></span>
         <?php the_post_thumbnail('large', array('alt' => get_the_title(), 'title' => get_the_title()));
         ?>
+
     </header>
 
     <div class="entry-content">

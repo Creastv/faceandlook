@@ -1,7 +1,13 @@
 .meta {
   margin-bottom: 20px;
 }
-
+.entry-date {
+  display: block;
+  font-size: 0.8em;
+  margin-bottom: 20px;
+  margin-bottom: 30px;
+  color: $black;
+}
 body.single {
   .entry-header {
     // max-width: 640px;
@@ -37,6 +43,8 @@ body.single {
       width: 100%;
       max-width: 1000px;
       height: auto;
+      display: block;
+      margin: 0 auto;
     }
   }
 

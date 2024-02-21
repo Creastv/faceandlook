@@ -1243,6 +1243,14 @@ body.archive .entry-content {
   margin-bottom: 20px;
 }
 
+.entry-date {
+  display: block;
+  font-size: 0.8em;
+  margin-bottom: 20px;
+  margin-bottom: 30px;
+  color: #161514;
+}
+
 body.single .entry-header {
   width: 100%;
   margin: 0 auto;
@@ -1278,6 +1286,8 @@ body.single .entry-header img {
   width: 100%;
   max-width: 1000px;
   height: auto;
+  display: block;
+  margin: 0 auto;
 }
 body.single .entry-content {
   max-width: 760px;
@@ -1366,7 +1376,7 @@ body.single .entry-content a {
 .btn-revers:hover {
   background-color: #f3ebdf;
   border: 1px solid #f3ebdf;
-  color: #fff;
+  color: #161514;
 }
 
 .btn-small {
