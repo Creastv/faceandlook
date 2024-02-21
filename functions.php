@@ -138,7 +138,7 @@ add_filter('excerpt_more', 'new_excerpt_more');
 
 function wp_example_excerpt_length($length)
 {
-	return 30;
+	return 20;
 }
 add_filter('excerpt_length', 'wp_example_excerpt_length');
 

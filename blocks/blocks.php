@@ -96,6 +96,23 @@ function register_acf_block_types()
     },
   ));
   acf_register_block_type(array(
+    'name'              => 'title',
+    'title'             => __('Title'),
+    'render_template'   => 'blocks/title/title.php',
+    'category'          => 'formatting',
+    'icon' => array(
+      'background' => '#122b4f',
+      'foreground' => '#fff',
+      'src' => 'ellipsis',
+    ),
+    'mode'            => 'preview',
+    'keywords'          => array('Title'),
+    'supports' => array('align' => false),
+    'enqueue_assets'    => function () {
+      wp_enqueue_style('go-title',  get_template_directory_uri() . '/blocks/title/title.min.css');
+    },
+  ));
+  acf_register_block_type(array(
     'name'              => 'wc-products',
     'title'             => __('Produkty'),
     'render_template'   => 'blocks/wc-products/wc-products.php',
@@ -108,10 +125,6 @@ function register_acf_block_types()
     'mode'            => 'preview',
     'keywords'          => array('Produkty'),
     'supports' => array('align' => false),
-    'enqueue_assets'    => function () {
-      wp_enqueue_style('go-wc-products',  get_template_directory_uri() . '/blocks/wc-products/wc-products.min.css');
-      wp_enqueue_script('go-wc-products-init', get_template_directory_uri() . '/blocks/wc-products/wc-products.js', array('jquery'), '4', true);
-    },
   ));
   acf_register_block_type(array(
     'name'              => 'header',
@@ -145,7 +158,6 @@ function register_acf_block_types()
     'keywords'          => array('Aktualności'),
     'supports' => array('align' => false),
     'enqueue_assets'    => function () {
-      wp_enqueue_style('go-products-tab',  get_template_directory_uri() . '/blocks/wc-products-tab/products-tab.min.css');
       wp_enqueue_style('ra_svipeer_css', 'https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css');
       wp_enqueue_script('ra-swiper_js', '//cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js',  array(), '20130456', true);
       wp_enqueue_script('go-products-tab-init', get_template_directory_uri() . '/blocks/wc-products-tab/products-tab.js', array('jquery'), '4', true);
