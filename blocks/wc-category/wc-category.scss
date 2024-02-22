@@ -1,3 +1,4 @@
+@import "../../src/css/scss/variable";
 .b-wc-cats {
   .b-wc-cats-item {
     text-align: center;
@@ -7,6 +8,7 @@
       width: 150px;
       height: 150px;
       margin: 0 auto;
+      background-color: $main2;
       img {
         // width: 100%;
       }
