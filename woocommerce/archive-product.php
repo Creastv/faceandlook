@@ -38,7 +38,6 @@ do_action('woocommerce_before_main_content');
 
 
 ?>
-<?php if (!is_shop() ||  is_product_category() || is_tax()) : ?>
 <?php if ($display) { ?>
 <div class="wp-cat-header">
     <div class="wc-cat-header__wrap">
@@ -129,17 +128,5 @@ do_action('woocommerce_before_main_content');
 
 </div>
 <?php get_template_part('templates-parts/parts/wc-products-banner'); ?>
-<?php else : ?>
-<?php
-	$page_id = 7;
-	$page = get_post($page_id);
-	if ($page) {
-		$content = apply_filters('the_content', $page->post_content);
-	?>
-<div class="container"> <?php echo $content; ?>
-    <?php } ?>
-</div>
-
-<?php endif; ?>
 
 <?php get_footer('shop');
