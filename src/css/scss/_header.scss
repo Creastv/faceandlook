@@ -162,7 +162,7 @@
             font-family: "Poppins", sans-serif;
             font-weight: 300;
             font-style: normal;
-            padding: 50px 10px;
+            padding: 10px 10px;
             text-decoration: none;
             text-transform: uppercase;
             &:hover {
@@ -299,6 +299,23 @@
   }
 }
 
+.container-sub-nav {
+  float: none !important;
+  max-width: 1480px !important;
+  width: inherit !important;
+  margin: 0 auto !important;
+  padding-left: 90px;
+  padding-right: 90px;
+  background-color: red;
+  @media #{$md} {
+    padding-left: 15px;
+    padding-right: 90px;
+  }
+  @media #{$sm} {
+    padding-left: 15px;
+    padding-right: 15px;
+  }
+}
 .navbar__wc-nav {
   width: calc(100% - 90px);
   background-color: $light;
@@ -312,7 +329,42 @@
     // z-index: 99;
     background-color: $black;
   }
+
   .navbar__wc-nav__wrap {
+    button {
+      background: none !important;
+      border: 0 !important;
+    }
+    .mega-menu-toggle {
+      .mega-toggle-blocks-center {
+        .mega-toggle-animated-box {
+          width: auto !important;
+          height: auto !important;
+          &:before {
+            content: "Kategorie produktów";
+            display: block;
+            font-size: 16px;
+            font-weight: 500;
+            color: $black;
+          }
+          .mega-toggle-animated-inner {
+            // display: none !important;
+            position: absolute;
+            left: -40px;
+            top: 14px !important;
+            width: 25px !important;
+            height: 2px !important;
+            background-color: $black !important;
+            &:before,
+            &:after {
+              height: 2px !important;
+              width: 25px !important;
+              background-color: $black !important;
+            }
+          }
+        }
+      }
+    }
     ul {
       list-style: none;
       display: flex;

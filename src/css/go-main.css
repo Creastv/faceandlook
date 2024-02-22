@@ -789,7 +789,7 @@ body {
   font-family: "Poppins", sans-serif;
   font-weight: 300;
   font-style: normal;
-  padding: 50px 10px;
+  padding: 10px 10px;
   text-decoration: none;
   text-transform: uppercase;
 }
@@ -918,6 +918,28 @@ body {
   transform: rotate(-45deg) translate(1px, -4px);
 }
 
+.container-sub-nav {
+  float: none !important;
+  max-width: 1480px !important;
+  width: inherit !important;
+  margin: 0 auto !important;
+  padding-left: 90px;
+  padding-right: 90px;
+  background-color: red;
+}
+@media only screen and (max-width: 998px) {
+  .container-sub-nav {
+    padding-left: 15px;
+    padding-right: 90px;
+  }
+}
+@media only screen and (max-width: 768px) {
+  .container-sub-nav {
+    padding-left: 15px;
+    padding-right: 15px;
+  }
+}
+
 .navbar__wc-nav {
   width: calc(100% - 90px);
   background-color: #f7f7f5;
@@ -931,6 +953,34 @@ body {
   .navbar__wc-nav {
     background-color: #161514;
   }
+}
+.navbar__wc-nav .navbar__wc-nav__wrap button {
+  background: none !important;
+  border: 0 !important;
+}
+.navbar__wc-nav .navbar__wc-nav__wrap .mega-menu-toggle .mega-toggle-blocks-center .mega-toggle-animated-box {
+  width: auto !important;
+  height: auto !important;
+}
+.navbar__wc-nav .navbar__wc-nav__wrap .mega-menu-toggle .mega-toggle-blocks-center .mega-toggle-animated-box:before {
+  content: "Kategorie produktów";
+  display: block;
+  font-size: 16px;
+  font-weight: 500;
+  color: #161514;
+}
+.navbar__wc-nav .navbar__wc-nav__wrap .mega-menu-toggle .mega-toggle-blocks-center .mega-toggle-animated-box .mega-toggle-animated-inner {
+  position: absolute;
+  left: -40px;
+  top: 14px !important;
+  width: 25px !important;
+  height: 2px !important;
+  background-color: #161514 !important;
+}
+.navbar__wc-nav .navbar__wc-nav__wrap .mega-menu-toggle .mega-toggle-blocks-center .mega-toggle-animated-box .mega-toggle-animated-inner:before, .navbar__wc-nav .navbar__wc-nav__wrap .mega-menu-toggle .mega-toggle-blocks-center .mega-toggle-animated-box .mega-toggle-animated-inner:after {
+  height: 2px !important;
+  width: 25px !important;
+  background-color: #161514 !important;
 }
 .navbar__wc-nav .navbar__wc-nav__wrap ul {
   list-style: none;
