@@ -21,26 +21,7 @@ function register_acf_block_types()
       wp_enqueue_script('go-slider-init', get_template_directory_uri() . '/blocks/slider/slider.js', array('jquery'), '4', true);
     },
   ));
-  acf_register_block_type(array(
-    'name'              => 'wc-category',
-    'title'             => __('Kategorie produktów'),
-    'render_template'   => 'blocks/wc-category/wc-category.php',
-    'category'          => 'formatting',
-    'icon' => array(
-      'background' => '#122b4f',
-      'foreground' => '#fff',
-      'src' => 'ellipsis',
-    ),
-    'mode'            => 'preview',
-    'keywords'          => array('wc-category'),
-    'supports' => array('align' => false),
-    'enqueue_assets'    => function () {
-      wp_enqueue_style('go-wc-category',  get_template_directory_uri() . '/blocks/wc-category/wc-category.min.css');
-      wp_enqueue_style('ra_svipeer_css', 'https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css');
-      wp_enqueue_script('ra-swiper_js', 'https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js',  array(), '20130456', true);
-      wp_enqueue_script('go-wc-category-init', get_template_directory_uri() . '/blocks/wc-category/wc-category.js', array('jquery'), '4', true);
-    },
-  ));
+
   acf_register_block_type(array(
     'name'              => 'posts',
     'title'             => __('Ostatnio dodane aktualności - slider'),
@@ -181,6 +162,26 @@ function register_acf_block_types()
       wp_enqueue_style('ra_svipeer_css', 'https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css');
       wp_enqueue_script('ra-swiper_js', '//cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js',  array(), '20130456', true);
       wp_enqueue_script('go-products-tab-init', get_template_directory_uri() . '/blocks/wc-products-tab/products-tab.js', array('jquery'), '4', true);
+    },
+  ));
+  acf_register_block_type(array(
+    'name'              => 'wc-category',
+    'title'             => __('Kategorie produktów'),
+    'render_template'   => 'blocks/wc-category/wc-category.php',
+    'category'          => 'formatting',
+    'icon' => array(
+      'background' => '#122b4f',
+      'foreground' => '#fff',
+      'src' => 'ellipsis',
+    ),
+    'mode'            => 'preview',
+    'keywords'          => array('wc-category'),
+    'supports' => array('align' => false),
+    'enqueue_assets'    => function () {
+      wp_enqueue_style('go-wc-category',  get_template_directory_uri() . '/blocks/wc-category/wc-category.min.css');
+      wp_enqueue_style('ra_svipeer_css', 'https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css');
+      wp_enqueue_script('ra-swiper_js', 'https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js',  array(), '20130456', true);
+      wp_enqueue_script('go-wc-category-init', get_template_directory_uri() . '/blocks/wc-category/wc-category.js', array('jquery'), '4', true);
     },
   ));
 }

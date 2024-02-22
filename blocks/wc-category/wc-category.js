@@ -1,5 +1,5 @@
 var swiper = new Swiper(".wc-cats", {
-    slidesPerView: 1,
+    slidesPerView: 2,
     spaceBetween: 30,
     loop: true,
     autoplay: {
@@ -21,7 +21,7 @@ var swiper = new Swiper(".wc-cats", {
         spaceBetween: 30
       },
       1024: {
-        slidesPerView: 4,
+        slidesPerView: 5,
         spaceBetween: 30
       }
     }
