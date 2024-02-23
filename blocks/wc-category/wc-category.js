@@ -1,6 +1,6 @@
 var swiper = new Swiper(".wc-cats", {
-    slidesPerView: 2,
-    spaceBetween: 30,
+    slidesPerView: 3,
+    spaceBetween: 10,
     loop: true,
     autoplay: {
       delay: 3500,
@@ -12,18 +12,17 @@ var swiper = new Swiper(".wc-cats", {
       clickable: true,
     },
     breakpoints: {
-      640: {
-        slidesPerView: 2,
-        spaceBetween: 20
-      },
-      768: {
-        slidesPerView: 2,
+      500: {
+        slidesPerView: 4,
         spaceBetween: 30
       },
-      1024: {
+      900: {
         slidesPerView: 5,
+        spaceBetween: 30
+      },
+      1300: {
+        slidesPerView: 6,
         spaceBetween: 30
       }
     }
   });
-§
