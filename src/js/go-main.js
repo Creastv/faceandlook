@@ -91,60 +91,35 @@ window.onclick = function(event) {
 //funkcja ktora przykleja navbar__wc-nav do gory strony przy skrolowaniu w górę
 const navbarSec = document.querySelector(".navbar__wc-nav");
 
+if(navbarSec !== null){
+  // Hide navbar__wc-nav when scrolling down
+  let prevScrollPos = window.pageYOffset;
+  window.addEventListener("scroll", () => {
+    const navbarElement = document.querySelector(".js-navbar");
+  const navbarHeight = navbarElement.offsetHeight;
+    const currentScrollPos = window.pageYOffset;
+    // Check if the page is at the top
 
-// Hide navbar__wc-nav when scrolling down
-let prevScrollPos = window.pageYOffset;
-window.addEventListener("scroll", () => {
-  const navbarElement = document.querySelector(".js-navbar");
-const navbarHeight = navbarElement.offsetHeight;
-  const currentScrollPos = window.pageYOffset;
-  // Check if the page is at the top
+    if (prevScrollPos > currentScrollPos) {
+      navbarSec.style.position = 'fixed';
+      navbarSec.style.zIndex = '98';
+      navbarSec.style.top = `${navbarHeight}px`;
+    } else {
+      navbarSec.style.position = 'relative';
+      navbarSec.style.top = `0px`;
 
-  if (prevScrollPos > currentScrollPos) {
-    navbarSec.style.position = 'fixed';
-    navbarSec.style.zIndex = '98';
-    navbarSec.style.top = `${navbarHeight}px`;
-  } else {
-    navbarSec.style.position = 'relative';
-    navbarSec.style.top = `0px`;
+    }
+    prevScrollPos = currentScrollPos;
 
-  }
-  prevScrollPos = currentScrollPos;
-
-  if (window.pageYOffset === 0) {
-    navbarSec.style.position = 'relative';
-    navbarSec.style.transition = 'none';
-    navbarSec.style.top = `0px`;
-  } else {
-    navbarSec.style.transition = 'top 0.6s';  
-  }
-});
-
-
-
-// //funkcja która otwiera megamenu po najechniu na element #menu-item-26
-// const megaMenu = document.querySelector(".megamenu");
-// const megaMenuBtn = document.querySelector("#menu-item-26");
-// const header = document.querySelector(".megamenu__wraper");
-// const megaElements = document.querySelectorAll(".js-header-nav-list li ");
-// const megaMenuElements2 = [megaMenu, megaMenuBtn];
-// const megaMenuElements = [ megaMenu, megaMenuBtn ];
-// // const megaMenuElements = [megaMenu];
-// megaMenuElements2.forEach( element => {
-//   element.addEventListener("mouseover", () => {
-//     megaMenu.classList.add("active");
-//     //dodaje do body overflow hidden  
-//     document.querySelector("body").style.overflow = "hidden";
-//   } );
-// } );
-// //funkcja która po zjechaniu z elementów z tablicy megaMenuElements zamyka megamenu 
-// megaMenuElements.forEach( element => {
-//   element.addEventListener("mouseout", () => { 
-//      megaMenu.classList.remove("active");
-//     //usuwam z body overflow hidden 
-//     document.querySelector("body").style.overflow = "inherit";
-//   });
-// });
+    if (window.pageYOffset === 0) {
+      navbarSec.style.position = 'relative';
+      navbarSec.style.transition = 'none';
+      navbarSec.style.top = `0px`;
+    } else {
+      navbarSec.style.transition = 'top 0.6s';  
+    }
+  });
+}
 
 if (window.innerWidth < 768) {
 const cartButton = document.querySelector(".entry-summary__wrap form.cart");

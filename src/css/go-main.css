@@ -1846,14 +1846,14 @@ body.woocommerce-page .entry-content {
 .card-post .entry-title {
   padding: 0 15px;
 }
+@media only screen and (max-width: 768px) {
+  .card-post .entry-title h2 {
+    font-size: 18px;
+  }
+}
 .card-post .entry-title a {
   text-decoration: none !important;
   transition: all 0.4s ease-out;
-}
-@media only screen and (max-width: 768px) {
-  .card-post .entry-title a {
-    font-size: 18px;
-  }
 }
 .card-post .entry-title a:hover {
   color: #c2995e;

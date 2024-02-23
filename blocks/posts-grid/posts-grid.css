@@ -116,14 +116,14 @@
 .posts-grid .posts-grid__wrap .post .post__content {
   padding: 0 15px;
 }
+@media only screen and (max-width: 768px) {
+  .posts-grid .posts-grid__wrap .post .post__content h2 {
+    font-size: 18px;
+  }
+}
 .posts-grid .posts-grid__wrap .post .post__content h2 a {
   text-decoration: none !important;
   transition: all 0.4s ease-out;
-}
-@media only screen and (max-width: 768px) {
-  .posts-grid .posts-grid__wrap .post .post__content h2 a {
-    font-size: 18px;
-  }
 }
 .posts-grid .posts-grid__wrap .post .post__content p {
   font-size: 14px;
@@ -167,16 +167,16 @@
 }
 .posts-grid .posts-grid__wrap .post-vertical .post__content h2 {
   font-size: 16px;
-  margin-bottom: 10px;
+  margin: 10px 0;
+}
+@media only screen and (max-width: 768px) {
+  .posts-grid .posts-grid__wrap .post-vertical .post__content h2 {
+    font-size: 14px;
+  }
 }
 .posts-grid .posts-grid__wrap .post-vertical .post__content h2 a {
   text-decoration: none !important;
   transition: all 0.4s ease-out;
-}
-@media only screen and (max-width: 768px) {
-  .posts-grid .posts-grid__wrap .post-vertical .post__content h2 a {
-    font-size: 16px;
-  }
 }
 .posts-grid .posts-grid__wrap .post-vertical:hover {
   transform: translate(0, -5px);

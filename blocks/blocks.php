@@ -57,7 +57,6 @@ function register_acf_block_types()
     'supports' => array('align' => false),
     'enqueue_assets'    => function () {
       wp_enqueue_style('go-posts-grid',  get_template_directory_uri() . '/blocks/posts-grid/posts-grid.min.css');
-      wp_enqueue_script('go-posts-grid-init', get_template_directory_uri() . '/blocks/posts-grid/posts-grid.js', array('jquery'), '4', true);
     },
   ));
   acf_register_block_type(array(
