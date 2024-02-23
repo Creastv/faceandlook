@@ -2455,6 +2455,18 @@ body.woocommerce-page .entry-content {
   }
 }
 
+.cart.active {
+  position: fixed;
+  z-index: 999;
+  bottom: 0px;
+  background: #f2f2f2;
+  width: 100%;
+  left: 0;
+  margin-bottom: 0 !important;
+  padding: 10px;
+  justify-content: center;
+}
+
 /* The Modal (background) */
 .modal {
   display: none; /* Hidden by default */

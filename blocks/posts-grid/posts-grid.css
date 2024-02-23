@@ -120,6 +120,11 @@
   text-decoration: none !important;
   transition: all 0.4s ease-out;
 }
+@media only screen and (max-width: 768px) {
+  .posts-grid .posts-grid__wrap .post .post__content h2 a {
+    font-size: 18px;
+  }
+}
 .posts-grid .posts-grid__wrap .post .post__content p {
   font-size: 14px;
 }
@@ -167,6 +172,11 @@
 .posts-grid .posts-grid__wrap .post-vertical .post__content h2 a {
   text-decoration: none !important;
   transition: all 0.4s ease-out;
+}
+@media only screen and (max-width: 768px) {
+  .posts-grid .posts-grid__wrap .post-vertical .post__content h2 a {
+    font-size: 16px;
+  }
 }
 .posts-grid .posts-grid__wrap .post-vertical:hover {
   transform: translate(0, -5px);

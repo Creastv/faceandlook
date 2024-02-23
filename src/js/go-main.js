@@ -104,9 +104,7 @@ const navbarHeight = navbarElement.offsetHeight;
     navbarSec.style.position = 'fixed';
     navbarSec.style.zIndex = '98';
     navbarSec.style.top = `${navbarHeight}px`;
-    console.log(navbarHeight);
   } else {
-    console.log("scrolling down");
     navbarSec.style.position = 'relative';
     navbarSec.style.top = `0px`;
 
@@ -148,3 +146,20 @@ const navbarHeight = navbarElement.offsetHeight;
 //   });
 // });
 
+if (window.innerWidth < 768) {
+const cartButton = document.querySelector(".entry-summary__wrap form.cart");
+if(cartButton !== null){
+
+    const elSpace = document.querySelector(".product-attributes");
+    const offsetButton = cartButton.offsetTop;
+    document.addEventListener("scroll", () => {
+      if (window.pageYOffset >= offsetButton + 100) {
+        cartButton.classList.add("active");
+        elSpace.style.marginBottom = cartButton.clientHeight + 30 + "px";
+      } else {
+        cartButton.classList.remove("active");
+        elSpace.style.marginBottom = "30px";
+      }
+    });
+  }
+}

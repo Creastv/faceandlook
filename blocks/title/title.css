@@ -7,4 +7,12 @@
   justify-content: space-between;
   gap: 20px;
   flex-wrap: wrap;
+}
+@media only screen and (max-width: 768px) {
+  .bc-title .bc-title__wrap {
+    gap: 0px;
+  }
+}
+.bc-title .bc-title__wrap .btn-revers {
+  margin-bottom: 20px;
 }/*# sourceMappingURL=title.css.map */

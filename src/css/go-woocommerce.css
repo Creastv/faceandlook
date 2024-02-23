@@ -610,6 +610,10 @@ body {
   border-top-color: #c2995e !important;
 }
 
+.woof_container {
+  padding-bottom: 20px;
+}
+
 .se-placeholder {
   background-color: #f7f7f5;
   padding: 20px;
