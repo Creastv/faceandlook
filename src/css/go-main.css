@@ -1930,6 +1930,7 @@ body.woocommerce-page .entry-content {
   flex-wrap: wrap;
   align-items: stretch;
   gap: 20px;
+  clear: both;
 }
 @media only screen and (max-width: 460px) {
   .products.columns-5 {
