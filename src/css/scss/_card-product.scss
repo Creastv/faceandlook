@@ -3,6 +3,7 @@
   flex-wrap: wrap;
   align-items: stretch;
   gap: 20px;
+  clear: both;
   @media #{$xs} {
     gap: 10px;
   }
