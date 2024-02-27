@@ -21,8 +21,8 @@ add_action('wp', 'remove_woocommerce_sidebar');
 // Remove breadcrumbs ...
 remove_action('woocommerce_before_main_content', 'woocommerce_breadcrumb', 20, 0);
 
-remove_action('woocommerce_before_shop_loop', 'woocommerce_catalog_ordering', 30);
-remove_action('woocommerce_before_shop_loop', 'woocommerce_result_count', 20);
+// remove_action('woocommerce_before_shop_loop', 'woocommerce_catalog_ordering', 30);
+// remove_action('woocommerce_before_shop_loop', 'woocommerce_result_count', 20);
 
 
 // Enable Gutenberg editor for WooCommerce

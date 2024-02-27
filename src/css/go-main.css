@@ -1694,6 +1694,20 @@ body.woocommerce-page .entry-content {
     order: 1;
   }
 }
+.wc-custome .wc-custome__container__result {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20px;
+}
+.wc-custome .wc-custome__container__result .woocommerce-result-count,
+.wc-custome .wc-custome__container__result .woocommerce-ordering {
+  float: none !important;
+}
+.wc-custome .wc-custome__container__result .woocommerce-notices-wrapper {
+  width: 100%;
+}
 
 .yith-wcan-filters {
   padding: 20px;
