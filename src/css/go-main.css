@@ -939,12 +939,12 @@ body {
     padding-right: 15px;
   }
 }
-.container-sub-nav ul {
+.container-sub-nav > ul {
   display: flex !important;
   flex-wrap: wrap;
   justify-content: center;
 }
-.container-sub-nav ul > li {
+.container-sub-nav > ul > li {
   width: initial !important;
 }
 
