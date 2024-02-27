@@ -1694,14 +1694,7 @@ body.woocommerce-page .entry-content {
     order: 1;
   }
 }
-.wc-custome .wc-custome__container__result {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: space-between;
-  align-items: center;
-  margin-bottom: 20px;
-}
-.wc-custome .wc-custome__container__result .woocommerce-notices-wrapper {
+.wc-custome .woocommerce-notices-wrapper {
   width: 100%;
 }
 

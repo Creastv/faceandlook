@@ -128,19 +128,13 @@ body.woocommerce-page {
       order: 1;
     }
   }
-  .wc-custome__container__result {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-between;
-    align-items: center;
-    margin-bottom: 20px;
-    .woocommerce-result-count,
-    .woocommerce-ordering {
-      // float: none !important;
-    }
-    .woocommerce-notices-wrapper {
-      width: 100%;
-    }
+
+  .woocommerce-result-count,
+  .woocommerce-ordering {
+    // float: none !important;
+  }
+  .woocommerce-notices-wrapper {
+    width: 100%;
   }
 }
 

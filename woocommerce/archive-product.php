@@ -39,38 +39,38 @@ do_action('woocommerce_before_main_content');
 
 ?>
 <?php if ($display) { ?>
-	<div class="wp-cat-header">
-		<div class="wc-cat-header__wrap">
-			<div class="desc">
-				<h1><?php woocommerce_page_title(); ?></h1>
-				<?php if (function_exists('rank_math_the_breadcrumbs')) rank_math_the_breadcrumbs(); ?>
-				<?php echo $desc ? '<p>' . $desc . '</p>' : false; ?>
-			</div>
-			<div class="img" style="background-image: url('<?php echo $image; ?>')"></div>
-		</div>
-	</div>
+<div class="wp-cat-header">
+    <div class="wc-cat-header__wrap">
+        <div class="desc">
+            <h1><?php woocommerce_page_title(); ?></h1>
+            <?php if (function_exists('rank_math_the_breadcrumbs')) rank_math_the_breadcrumbs(); ?>
+            <?php echo $desc ? '<p>' . $desc . '</p>' : false; ?>
+        </div>
+        <div class="img" style="background-image: url('<?php echo $image; ?>')"></div>
+    </div>
+</div>
 <?php } else { ?>
-	<header class="woocommerce-products-header">
-		<?php if (apply_filters('woocommerce_show_page_title', true)) : ?>
-			<h1 class="woocommerce-products-header__title page-title"><?php woocommerce_page_title(); ?></h1>
-			<?php if (function_exists('rank_math_the_breadcrumbs')) rank_math_the_breadcrumbs(); ?>
-		<?php endif; ?>
+<header class="woocommerce-products-header">
+    <?php if (apply_filters('woocommerce_show_page_title', true)) : ?>
+    <h1 class="woocommerce-products-header__title page-title"><?php woocommerce_page_title(); ?></h1>
+    <?php if (function_exists('rank_math_the_breadcrumbs')) rank_math_the_breadcrumbs(); ?>
+    <?php endif; ?>
 
-		<?php do_action('woocommerce_archive_description'); ?>
-	</header>
+    <?php do_action('woocommerce_archive_description'); ?>
+</header>
 <?php } ?>
 
 <div class="wc-custome">
-	<?php /**
+    <?php /**
 	 * Hook: woocommerce_sidebar.
 	 *
 	 * @hooked woocommerce_get_sidebar - 10
 	 */
 	do_action('woocommerce_sidebar');
 	?>
-	<div class="wc-custome__container">
+    <div class="wc-custome__container">
 
-		<?php
+        <?php
 		if (woocommerce_product_loop()) {
 
 			/**
@@ -80,13 +80,9 @@ do_action('woocommerce_before_main_content');
 			 * @hooked woocommerce_result_count - 20
 			 * @hooked woocommerce_catalog_ordering - 30
 			 */
-		?>
-			<div class="wc-custome__container__result">
-				<?php
-				do_action('woocommerce_before_shop_loop'); ?>
-			</div>
+			do_action('woocommerce_before_shop_loop');
 
-		<?php woocommerce_product_loop_start();
+			woocommerce_product_loop_start();
 
 			if (wc_get_loop_prop('total')) {
 				while (have_posts()) {
@@ -128,7 +124,7 @@ do_action('woocommerce_before_main_content');
 		}
 		do_action('woocommerce_after_main_content');
 		?>
-	</div>
+    </div>
 
 </div>
 <?php get_template_part('templates-parts/parts/wc-products-banner'); ?>
