@@ -2,7 +2,7 @@
 
 
 setTimeout(  function() {
-    document.querySelector('.tabs').style.display = 'block';
+    document.querySelector('.tabs-wc-block').style.display = 'block';
     var swiper = new Swiper(".new-slider", {
     slidesPerView: 2,
     spaceBetween: 20,
