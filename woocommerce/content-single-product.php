@@ -31,6 +31,8 @@ if (post_password_required()) {
 	echo get_the_password_form(); // WPCS: XSS ok.
 	return;
 }
+
+$faq = get_field('wylacz_faq', $product->id);
 ?>
 
 <div id="product-<?php the_ID(); ?>" <?php wc_product_class('product-top', $product); ?>>
@@ -97,15 +99,12 @@ if (post_password_required()) {
 <div class="content">
     <?php the_content(); ?>
 </div>
-<?php // get_template_part('templates-parts/parts/wc-product', 'grid'); 
-?>
-<!-- Begin eTrusted widget tag -->
-<etrusted-widget data-etrusted-widget-id="wdg-778c8b8c-c52e-4dc0-8301-52842c24284d" data-sku="529ee2ee738d">
-</etrusted-widget>
-<!-- End eTrusted widget tag -->
+
 <br>
 <?php get_template_part('templates-parts/parts/wc-product', 'reviews'); ?>
+<?php if (!$faq || $faq == null) : ?>
 <?php get_template_part('templates-parts/parts/wc-product', 'faq'); ?>
+<?php endif; ?>
 <?php get_template_part('templates-parts/parts/wc-products', 'carousel'); ?>
 
 

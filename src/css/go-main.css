@@ -1566,7 +1566,15 @@ body.single .entry-content a {
 .woocommerce input.button.alt,
 .woocommerce a.button.alt,
 .woocommerce button.button.alt,
-.wc-block-checkout__actions_row .wc-block-components-checkout-place-order-button {
+.wc-block-checkout__actions_row .wc-block-components-checkout-place-order-button,
+.woocommerce:where(body:not(.woocommerce-block-theme-has-button-styles)) #respond input#submit,
+.woocommerce:where(body:not(.woocommerce-block-theme-has-button-styles)) a.button,
+.woocommerce:where(body:not(.woocommerce-block-theme-has-button-styles)) button.button,
+.woocommerce:where(body:not(.woocommerce-block-theme-has-button-styles)) input.button,
+:where(body:not(.woocommerce-block-theme-has-button-styles)) .woocommerce #respond input#submit,
+:where(body:not(.woocommerce-block-theme-has-button-styles)) .woocommerce a.button,
+:where(body:not(.woocommerce-block-theme-has-button-styles)) .woocommerce button.button,
+:where(body:not(.woocommerce-block-theme-has-button-styles)) .woocommerce input.button {
   transition: all 0.3s linear;
   background-color: #c2995e !important;
   color: #ffffff;
@@ -1579,7 +1587,15 @@ body.single .entry-content a {
 .woocommerce input.button.alt:hover,
 .woocommerce a.button.alt:hover,
 .woocommerce button.button.alt:hover,
-.wc-block-checkout__actions_row .wc-block-components-checkout-place-order-button:hover {
+.wc-block-checkout__actions_row .wc-block-components-checkout-place-order-button:hover,
+.woocommerce:where(body:not(.woocommerce-block-theme-has-button-styles)) #respond input#submit:hover,
+.woocommerce:where(body:not(.woocommerce-block-theme-has-button-styles)) a.button:hover,
+.woocommerce:where(body:not(.woocommerce-block-theme-has-button-styles)) button.button:hover,
+.woocommerce:where(body:not(.woocommerce-block-theme-has-button-styles)) input.button:hover,
+:where(body:not(.woocommerce-block-theme-has-button-styles)) .woocommerce #respond input#submit:hover,
+:where(body:not(.woocommerce-block-theme-has-button-styles)) .woocommerce a.button:hover,
+:where(body:not(.woocommerce-block-theme-has-button-styles)) .woocommerce button.button:hover,
+:where(body:not(.woocommerce-block-theme-has-button-styles)) .woocommerce input.button:hover {
   background-color: #161514 !important;
   border-color: #161514 !important;
   color: #fff !important;
@@ -2551,6 +2567,51 @@ body.woocommerce-page .entry-content {
   margin-bottom: 0 !important;
   padding: 10px;
   justify-content: center;
+}
+
+.woocommerce-tabs {
+  max-width: 900px;
+  width: 100%;
+  display: block;
+  margin: 0 auto;
+  order: 3;
+}
+.woocommerce-tabs .comment-form-author {
+  margin-right: 15px;
+}
+.woocommerce-tabs .comment-form-author,
+.woocommerce-tabs .comment-form-email {
+  width: calc(50% - 15px);
+  display: inline-block;
+}
+.woocommerce-tabs .comment-form-author input,
+.woocommerce-tabs .comment-form-email input {
+  width: 100%;
+}
+.woocommerce-tabs .wc-tabs {
+  text-align: center;
+}
+.woocommerce-tabs .wc-tabs:before {
+  display: none !important;
+}
+.woocommerce-tabs .wc-tabs li {
+  background: none !important;
+  border: none !important;
+}
+.woocommerce-tabs .wc-tabs li:before, .woocommerce-tabs .wc-tabs li:after {
+  display: none !important;
+}
+.woocommerce-tabs .wc-tabs li a {
+  font-size: 30px;
+  text-decoration: underline !important;
+  color: #161514 !important;
+}
+.woocommerce-tabs .wc-tabs .active a {
+  text-decoration: none !important;
+  color: #c2995e !important;
+}
+.woocommerce-tabs .woocommerce-Tabs-panel {
+  padding: 0px 30px !important;
 }
 
 /* The Modal (background) */

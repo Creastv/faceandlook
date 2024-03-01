@@ -272,3 +272,50 @@
   padding: 10px;
   justify-content: center;
 }
+
+.woocommerce-tabs {
+  max-width: 900px;
+  width: 100%;
+  display: block;
+  margin: 0 auto;
+  order: 3;
+  .comment-form-author {
+    margin-right: 15px;
+  }
+  .comment-form-author,
+  .comment-form-email {
+    width: calc(50% - 15px);
+    display: inline-block;
+    input {
+      width: 100%;
+    }
+  }
+  .wc-tabs {
+    text-align: center;
+    &:before {
+      display: none !important;
+    }
+    li {
+      background: none !important;
+      border: none !important;
+      &:before,
+      &:after {
+        display: none !important;
+      }
+      a {
+        font-size: 30px;
+        text-decoration: underline !important;
+        color: $black !important;
+      }
+    }
+    .active {
+      a {
+        text-decoration: none !important;
+        color: $main !important;
+      }
+    }
+  }
+  .woocommerce-Tabs-panel {
+    padding: 0px 30px !important;
+  }
+}
