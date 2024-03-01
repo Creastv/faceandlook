@@ -2308,6 +2308,9 @@ body.woocommerce-page .entry-content {
   background-color: #161514;
 }
 
+.product-template-default .wc-product {
+  padding: 0;
+}
 .product-template-default .product-top {
   width: 100vw;
   margin-left: -50vw;
@@ -2726,7 +2729,7 @@ body.woocommerce-page .entry-content {
   background-color: #161514 !important;
 }
 
-.tabs {
+.tabs-wc-block {
   padding: 30px 0;
   display: none;
 }

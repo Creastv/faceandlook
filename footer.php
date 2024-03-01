@@ -7,8 +7,6 @@
 
 </div>
 </div>
-<?php // get_template_part('templates-parts/header/header', 'megamenu'); 
-?>
 </main>
 <footer id="footer" itemscope itemtype="http://schema.org/WPFooter">
     <div class="container">

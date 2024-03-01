@@ -102,14 +102,13 @@ $faq = get_field('wylacz_faq', $product->id);
 
 <br>
 <?php get_template_part('templates-parts/parts/wc-product', 'reviews'); ?>
+
 <?php if (!$faq || $faq == null) : ?>
 <?php get_template_part('templates-parts/parts/wc-product', 'faq'); ?>
 <?php endif; ?>
 <?php get_template_part('templates-parts/parts/wc-products', 'carousel'); ?>
 
-
 <?php do_action('woocommerce_after_single_product'); ?>
-
 <script>
 jQuery(function($) {
 

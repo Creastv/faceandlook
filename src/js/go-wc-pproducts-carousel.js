@@ -1,5 +1,5 @@
 setTimeout(  function() {
-    const tab = document.querySelector('.tabs');
+    const tab = document.querySelector('.tabs-wc-block');
 
     if(tab !== null){
 
