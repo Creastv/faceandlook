@@ -58,15 +58,15 @@ function woo_remove_product_tabs($tabs)
     unset($tabs['description']);          // Remove the description tab
     // unset($tabs['reviews']);             // Remove the reviews tab
     unset($tabs['additional_information']);      // Remove the additional information tab
-    // global $product;
-    // $desc = get_field('opis_produktu_z_csv_baselinkier', $product->id);
-    // if ($desc) {
-    //     $tabs[''] = array(
-    //         'title' => __('Opis', 'woocommerce'), // TAB TITLE
-    //         'priority' => 15, // TAB SORTING (DESC 10, ADD INFO 20, REVIEWS 30)
-    //         'callback' => 'fandl_docs_product_tab_content', // TAB CONTENT CALLBACK
-    //     );
-    // }
+    global $product;
+    $desc = get_field('opis_produktu_z_csv_baselinkier', $product->id);
+    if ($desc) {
+        $tabs[''] = array(
+            'title' => __('Opis', 'woocommerce'), // TAB TITLE
+            'priority' => 15, // TAB SORTING (DESC 10, ADD INFO 20, REVIEWS 30)
+            'callback' => 'fandl_docs_product_tab_content', // TAB CONTENT CALLBACK
+        );
+    }
     return $tabs;
 }
 
