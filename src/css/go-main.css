@@ -2076,6 +2076,7 @@ body.woocommerce-page .entry-content {
 }
 .card-product .card-product-top img {
   padding: 10px;
+  height: 100%;
   -o-object-fit: contain;
      object-fit: contain;
   position: absolute;
