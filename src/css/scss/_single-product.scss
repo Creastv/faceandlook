@@ -295,6 +295,7 @@
   }
   .wc-tabs {
     text-align: center;
+    margin: 0;
     &:before {
       display: none !important;
     }
@@ -314,7 +315,7 @@
     .active {
       a {
         text-decoration: none !important;
-        color: $main !important;
+        // color: $main !important;
       }
     }
   }
