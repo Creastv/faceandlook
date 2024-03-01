@@ -100,12 +100,12 @@ if (post_password_required()) {
 <?php // get_template_part('templates-parts/parts/wc-product', 'grid'); 
 ?>
 <!-- Begin eTrusted widget tag -->
-<etrusted-widget data-etrusted-widget-id="wdg-778c8b8c-c52e-4dc0-8301-52842c24284d" data-sku="YOUR-DATA-SKU">
+<etrusted-widget data-etrusted-widget-id="wdg-778c8b8c-c52e-4dc0-8301-52842c24284d" data-sku="529ee2ee738d">
 </etrusted-widget>
 <!-- End eTrusted widget tag -->
 <br>
-<?php get_template_part('templates-parts/parts/wc-product', 'faq'); ?>
 <?php get_template_part('templates-parts/parts/wc-product', 'reviews'); ?>
+<?php get_template_part('templates-parts/parts/wc-product', 'faq'); ?>
 <?php get_template_part('templates-parts/parts/wc-products', 'carousel'); ?>
 
 
