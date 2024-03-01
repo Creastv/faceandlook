@@ -51,15 +51,15 @@ remove_action('woocommerce_after_shop_loop', 'woocommerce_pagination', 10);
 /**
  * Remove tabs from woocommerce
  */
-add_filter('woocommerce_product_tabs', 'woo_remove_product_tabs', 98);
+// add_filter('woocommerce_product_tabs', 'woo_remove_product_tabs', 98);
 
-function woo_remove_product_tabs($tabs)
-{
-    unset($tabs['description']);          // Remove the description tab
-    // unset($tabs['reviews']);             // Remove the reviews tab
-    unset($tabs['additional_information']);      // Remove the additional information tab
-    return $tabs;
-}
+// function woo_remove_product_tabs($tabs)
+// {
+//     unset($tabs['description']);          // Remove the description tab
+//     // unset($tabs['reviews']);             // Remove the reviews tab
+//     unset($tabs['additional_information']);      // Remove the additional information tab
+//     return $tabs;
+// }
 
 add_filter('woocommerce_product_tabs', 'bbloomer_add_product_tab', 9999);
 
