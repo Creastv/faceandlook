@@ -1567,6 +1567,7 @@ body.single .entry-content a {
 .woocommerce a.button.alt,
 .woocommerce button.button.alt,
 .wc-block-checkout__actions_row .wc-block-components-checkout-place-order-button {
+  transition: all 0.3s linear;
   background-color: #c2995e !important;
   color: #ffffff;
   border: 1px solid #c2995e !important;
@@ -1579,9 +1580,9 @@ body.single .entry-content a {
 .woocommerce a.button.alt:hover,
 .woocommerce button.button.alt:hover,
 .wc-block-checkout__actions_row .wc-block-components-checkout-place-order-button:hover {
-  background-color: transparent !important;
-  border-color: #c2995e !important;
-  color: #c2995e !important;
+  background-color: #161514 !important;
+  border-color: #161514 !important;
+  color: #fff !important;
 }
 
 /* Zmiana koloru tła i koloru czcionki dla wszystkich inputów w WooCommerce */
@@ -1793,6 +1794,78 @@ body.woocommerce-page .entry-content {
 .woocommerce-MyAccount-navigation ul li a:hover {
   border: 1px solid #c2995e;
   color: #c2995e;
+}
+
+.checkout.woocommerce-checkout {
+  display: flex;
+  flex-wrap: wrap;
+}
+.checkout.woocommerce-checkout .col2-set {
+  margin-right: 50px;
+  width: calc(60% - 50px);
+  display: flex;
+  flex-wrap: wrap;
+}
+@media only screen and (max-width: 768px) {
+  .checkout.woocommerce-checkout .col2-set {
+    width: 100%;
+    margin-right: 0;
+  }
+}
+.checkout.woocommerce-checkout .col2-set .col-1,
+.checkout.woocommerce-checkout .col2-set .col-2 {
+  width: 100%;
+}
+.checkout.woocommerce-checkout .col2-set .col-1 {
+  margin-bottom: 50px;
+}
+@media only screen and (max-width: 768px) {
+  .checkout.woocommerce-checkout .col2-set .col-1 {
+    margin-bottom: 30px;
+  }
+}
+@media only screen and (max-width: 768px) {
+  .checkout.woocommerce-checkout .col2-set .col-2 {
+    margin-bottom: 30px;
+  }
+}
+.checkout.woocommerce-checkout #order_review {
+  width: 40%;
+}
+@media only screen and (max-width: 768px) {
+  .checkout.woocommerce-checkout #order_review {
+    width: 100%;
+  }
+}
+.checkout.woocommerce-checkout #order_review .shop_table {
+  border: none;
+}
+.checkout.woocommerce-checkout #order_review #payment {
+  background: #f3ebdf;
+}
+.checkout.woocommerce-checkout #order_review #payment .payment_box {
+  background-color: #f7f7f5;
+}
+.checkout.woocommerce-checkout #order_review #payment .payment_box:before {
+  content: "";
+  border: 1em solid #f7f7f5;
+  border-right-color: transparent;
+  border-left-color: transparent;
+  border-top-color: transparent;
+}
+.checkout.woocommerce-checkout .woocommerce-NoticeGroup {
+  width: 100%;
+}
+.checkout.woocommerce-checkout #order_review_heading {
+  display: none;
+}
+@media only screen and (max-width: 768px) {
+  .checkout.woocommerce-checkout #order_review_heading {
+    display: block;
+  }
+}
+.checkout.woocommerce-checkout #billing_country_field {
+  display: none;
 }
 
 .posts-wraper {

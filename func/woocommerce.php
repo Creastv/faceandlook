@@ -71,52 +71,52 @@ add_action('wp_footer', 'custom_quantity_fields_script');
 function custom_quantity_fields_script()
 {
 ?>
-    <script type='text/javascript'>
-        jQuery(function($) {
-            if (!String.prototype.getDecimals) {
-                String.prototype.getDecimals = function() {
-                    var num = this,
-                        match = ('' + num).match(/(?:\.(\d+))?(?:[eE]([+-]?\d+))?$/);
-                    if (!match) {
-                        return 0;
-                    }
-                    return Math.max(0, (match[1] ? match[1].length : 0) - (match[2] ? +match[2] : 0));
-                }
+<script type='text/javascript'>
+jQuery(function($) {
+    if (!String.prototype.getDecimals) {
+        String.prototype.getDecimals = function() {
+            var num = this,
+                match = ('' + num).match(/(?:\.(\d+))?(?:[eE]([+-]?\d+))?$/);
+            if (!match) {
+                return 0;
             }
-            // Quantity "plus" and "minus" buttons
-            $(document.body).on('click', '.plus, .minus', function() {
-                var $qty = $(this).closest('.quantity').find('.qty'),
-                    currentVal = parseFloat($qty.val()),
-                    max = parseFloat($qty.attr('max')),
-                    min = parseFloat($qty.attr('min')),
-                    step = $qty.attr('step');
+            return Math.max(0, (match[1] ? match[1].length : 0) - (match[2] ? +match[2] : 0));
+        }
+    }
+    // Quantity "plus" and "minus" buttons
+    $(document.body).on('click', '.plus, .minus', function() {
+        var $qty = $(this).closest('.quantity').find('.qty'),
+            currentVal = parseFloat($qty.val()),
+            max = parseFloat($qty.attr('max')),
+            min = parseFloat($qty.attr('min')),
+            step = $qty.attr('step');
 
-                // Format values
-                if (!currentVal || currentVal === '' || currentVal === 'NaN') currentVal = 0;
-                if (max === '' || max === 'NaN') max = '';
-                if (min === '' || min === 'NaN') min = 0;
-                if (step === 'any' || step === '' || step === undefined || parseFloat(step) === 'NaN') step = 1;
+        // Format values
+        if (!currentVal || currentVal === '' || currentVal === 'NaN') currentVal = 0;
+        if (max === '' || max === 'NaN') max = '';
+        if (min === '' || min === 'NaN') min = 0;
+        if (step === 'any' || step === '' || step === undefined || parseFloat(step) === 'NaN') step = 1;
 
-                // Change the value
-                if ($(this).is('.plus')) {
-                    if (max && (currentVal >= max)) {
-                        $qty.val(max);
-                    } else {
-                        $qty.val((currentVal + parseFloat(step)).toFixed(step.getDecimals()));
-                    }
-                } else {
-                    if (min && (currentVal <= min)) {
-                        $qty.val(min);
-                    } else if (currentVal > 0) {
-                        $qty.val((currentVal - parseFloat(step)).toFixed(step.getDecimals()));
-                    }
-                }
+        // Change the value
+        if ($(this).is('.plus')) {
+            if (max && (currentVal >= max)) {
+                $qty.val(max);
+            } else {
+                $qty.val((currentVal + parseFloat(step)).toFixed(step.getDecimals()));
+            }
+        } else {
+            if (min && (currentVal <= min)) {
+                $qty.val(min);
+            } else if (currentVal > 0) {
+                $qty.val((currentVal - parseFloat(step)).toFixed(step.getDecimals()));
+            }
+        }
 
-                // Trigger change event
-                $qty.trigger('change');
-            });
-        });
-    </script>
+        // Trigger change event
+        $qty.trigger('change');
+    });
+});
+</script>
 <?php
 }
 
@@ -208,3 +208,57 @@ function bbloomer_show_stock_shop()
 
 // funkcja usuwania informacji o stanie magazynowym na podstronie produktu
 remove_action('woocommerce_single_product_summary', 'woocommerce_template_single_meta', 40);
+
+
+
+// Nowa zakładka Klub F&L
+function bbloomer_add_premium_support_endpoint()
+{
+    add_rewrite_endpoint('klub-faceandlook', EP_ROOT | EP_PAGES);
+}
+
+add_action('init', 'bbloomer_add_premium_support_endpoint');
+
+function bbloomer_premium_support_query_vars($vars)
+{
+    $vars[] = 'klub-faceandlook';
+    return $vars;
+}
+
+add_filter('query_vars', 'bbloomer_premium_support_query_vars', 0);
+
+function bbloomer_add_premium_support_link_my_account($items)
+{
+    $items['klub-faceandlook'] = 'Klub Face&Look';
+    return $items;
+}
+
+add_filter('woocommerce_account_menu_items', 'bbloomer_add_premium_support_link_my_account');
+
+function bbloomer_premium_support_content()
+{
+    get_template_part('woocommerce/myaccount/klub');
+}
+
+add_action('woocommerce_account_klub-faceandlook_endpoint', 'bbloomer_premium_support_content');
+
+// Zmiana kolejności
+add_filter('woocommerce_account_menu_items', 'custom_account_menu_items');
+
+function custom_account_menu_items($items)
+{
+    // Zdefiniuj nową kolejność zakładek
+    $new_order = array(
+        'dashboard'         => $items['dashboard'],
+        'klub-faceandlook'        => $items['klub-faceandlook'],
+        'loyalty_reward'         => $items['loyalty_reward'],
+        'orders'            => $items['orders'],
+
+        'edit-account'      => $items['edit-account'],
+        'customer-logout'   => $items['customer-logout'],
+
+    );
+
+    // Zwróć zakładki w nowej kolejności
+    return $new_order;
+}
