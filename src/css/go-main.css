@@ -734,15 +734,13 @@ body {
 #header .navbar__icons a:hover path {
   fill: #c2995e;
 }
-#header .navbar__card {
-  width: 90px;
-}
 @media only screen and (max-width: 768px) {
   #header .navbar__card {
     order: 4;
   }
 }
 #header .navbar__card .fkcart-mini-toggler {
+  width: 90px;
   flex-wrap: wrap;
   gap: 0px;
   justify-content: center;
@@ -1880,7 +1878,8 @@ body.woocommerce-page .entry-content {
     display: block;
   }
 }
-.checkout.woocommerce-checkout #billing_country_field {
+.checkout.woocommerce-checkout #billing_country_field,
+.checkout.woocommerce-checkout #shipping_country_field {
   display: none;
 }
 

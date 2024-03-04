@@ -112,11 +112,12 @@
   }
   .navbar__card {
     // background-color: $black;
-    width: 90px;
+
     @media #{$sm} {
       order: 4;
     }
     .fkcart-mini-toggler {
+      width: 90px;
       flex-wrap: wrap;
       gap: 0px;
       justify-content: center;
