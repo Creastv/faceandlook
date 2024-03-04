@@ -317,14 +317,14 @@
     padding-left: 15px;
     padding-right: 15px;
   }
-  > ul {
-    display: flex !important;
-    flex-wrap: wrap;
-    justify-content: center;
-    > li {
-      width: initial !important;
-    }
-  }
+  // > ul {
+  //   display: flex !important;
+  //   flex-wrap: wrap;
+  //   justify-content: center;
+  //   > li {
+  //     width: initial !important;
+  //   }
+  // }
 }
 .navbar__wc-nav {
   width: calc(100% - 90px);

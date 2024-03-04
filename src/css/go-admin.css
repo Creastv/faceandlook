@@ -934,14 +934,6 @@ body {
     padding-right: 15px;
   }
 }
-.container-sub-nav > ul {
-  display: flex !important;
-  flex-wrap: wrap;
-  justify-content: center;
-}
-.container-sub-nav > ul > li {
-  width: initial !important;
-}
 
 .navbar__wc-nav {
   width: calc(100% - 90px);
