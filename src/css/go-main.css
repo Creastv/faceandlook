@@ -486,9 +486,6 @@ body {
     width: 100%;
   }
 }
-.f-main .f-main__wrap .col:nth-child(2) {
-  align-self: center;
-}
 @media only screen and (max-width: 768px) {
   .f-main .f-main__wrap .col:nth-child(2) {
     width: 100%;
