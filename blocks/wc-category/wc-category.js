@@ -6,11 +6,7 @@ var swiper = new Swiper(".wc-cats", {
       delay: 3500,
       disableOnInteraction: false
     },
-    pagination: {
-      el: ".swiper-pagination",
-      dynamicBullets: true,
-      clickable: true,
-    },
+  
     breakpoints: {
       500: {
         slidesPerView: 4,

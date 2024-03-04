@@ -2318,6 +2318,11 @@ body.woocommerce-page .entry-content {
 .product-template-default .wc-product {
   padding: 0;
 }
+@media only screen and (max-width: 768px) {
+  .product-template-default .wc-banner {
+    order: 3;
+  }
+}
 .product-template-default .product-top {
   width: 100vw;
   margin-left: -50vw;

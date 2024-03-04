@@ -2,6 +2,11 @@
   .wc-product {
     padding: 0;
   }
+  .wc-banner {
+    @media #{$sm} {
+      order: 3;
+    }
+  }
   .product-top {
     width: 100vw;
     margin-left: -50vw;
