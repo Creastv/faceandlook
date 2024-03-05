@@ -946,14 +946,7 @@ body {
 #mega-menu-wrap-triari_menu #mega-menu-triari_menu li.mega-menu-megamenu > ul.mega-sub-menu > li.mega-menu-row .mega-menu-column {
   float: none;
   min-height: 1px;
-  width: 250px !important;
-}
-
-.container-sub-nav__li-full {
-  width: 500px !important;
-}
-.container-sub-nav__li-full img {
-  display: block;
+  width: 300px !important;
 }
 
 .navbar__wc-nav {

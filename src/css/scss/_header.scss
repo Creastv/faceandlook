@@ -335,13 +335,15 @@
   .mega-menu-column {
   float: none;
   min-height: 1px;
-  width: 250px !important;
+  width: 300px !important;
 }
-.container-sub-nav__li-full {
-  width: 500px !important;
-  img {
-    display: block;
-  }
+// .container-sub-nav__li-full {
+//   width: 500px !important;
+//   img {
+//     display: block;
+//   }
+// }
+.mega-menu-link {
 }
 .navbar__wc-nav {
   width: calc(100% - 90px);
