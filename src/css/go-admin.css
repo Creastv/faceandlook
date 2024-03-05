@@ -943,7 +943,7 @@ body {
   width: initial !important;
 }
 .container-sub-nav .container-sub-nav__li-full {
-  width: initial !important;
+  width: 500px !important;
 }
 .container-sub-nav .container-sub-nav__li-full img {
   display: block;
