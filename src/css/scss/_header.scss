@@ -321,9 +321,16 @@
     display: flex !important;
     // flex-wrap: wrap;
     justify-content: center !important;
+    @media #{$sm} {
+      flex-wrap: wrap;
+      justify-self: flex-start;
+    }
 
     > li {
       width: initial !important;
+      @media #{$sm} {
+        width: 100% !important;
+      }
     }
   }
 }

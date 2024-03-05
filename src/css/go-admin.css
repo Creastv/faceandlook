@@ -938,8 +938,19 @@ body {
   display: flex !important;
   justify-content: center !important;
 }
+@media only screen and (max-width: 768px) {
+  .container-sub-nav > ul {
+    flex-wrap: wrap;
+    justify-self: flex-start;
+  }
+}
 .container-sub-nav > ul > li {
   width: initial !important;
+}
+@media only screen and (max-width: 768px) {
+  .container-sub-nav > ul > li {
+    width: 100% !important;
+  }
 }
 
 #mega-menu-wrap-triari_menu #mega-menu-triari_menu li.mega-menu-megamenu > ul.mega-sub-menu > li.mega-menu-row .mega-menu-column {
