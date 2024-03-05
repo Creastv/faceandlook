@@ -936,7 +936,6 @@ body {
 }
 .container-sub-nav > ul {
   display: flex !important;
-  flex-wrap: wrap;
   justify-content: center;
 }
 .container-sub-nav > ul > li {
