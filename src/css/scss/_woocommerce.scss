@@ -99,7 +99,7 @@ ins {
 .form-row-last,
 .form-row-first {
   @media #{$sm} {
-    width: 100%;
+    width: 100% !important;
   }
 }
 
