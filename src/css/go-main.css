@@ -1731,6 +1731,20 @@ body.woocommerce-page .entry-content {
     order: 1;
   }
 }
+@media only screen and (max-width: 460px) {
+  .wc-custome .woocommerce-result-count,
+  .wc-custome .woocommerce-ordering {
+    float: none !important;
+    text-align: center;
+    width: 100%;
+  }
+}
+@media only screen and (max-width: 460px) {
+  .wc-custome .woocommerce-ordering {
+    float: none !important;
+    width: 100%;
+  }
+}
 .wc-custome .woocommerce-notices-wrapper {
   width: 100%;
 }
@@ -2646,6 +2660,11 @@ body.woocommerce-page .entry-content {
   font-size: 30px;
   text-decoration: underline !important;
   color: #161514 !important;
+}
+@media only screen and (max-width: 768px) {
+  .woocommerce-tabs .wc-tabs li a {
+    font-size: 21px;
+  }
 }
 .woocommerce-tabs .wc-tabs .active a {
   text-decoration: none !important;

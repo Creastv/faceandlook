@@ -162,6 +162,17 @@ body.woocommerce-page {
   .woocommerce-result-count,
   .woocommerce-ordering {
     // float: none !important;
+    @media #{$xs} {
+      float: none !important;
+      text-align: center;
+      width: 100%;
+    }
+  }
+  .woocommerce-ordering {
+    @media #{$xs} {
+      float: none !important;
+      width: 100%;
+    }
   }
   .woocommerce-notices-wrapper {
     width: 100%;

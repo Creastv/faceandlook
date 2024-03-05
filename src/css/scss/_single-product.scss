@@ -315,6 +315,9 @@
         font-size: 30px;
         text-decoration: underline !important;
         color: $black !important;
+        @media #{$sm} {
+          font-size: 21px;
+        }
       }
     }
     .active {
