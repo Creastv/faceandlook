@@ -59,6 +59,10 @@
 .card-product {
   float: none !important;
   margin: 0 !important;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  flex-direction: column;
 }
 
 .card-product {
