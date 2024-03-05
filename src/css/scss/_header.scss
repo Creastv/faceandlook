@@ -321,9 +321,9 @@
     display: flex !important;
     flex-wrap: wrap;
     justify-content: center;
-    // li {
-    //   width: initial !important;
-    // }
+    > li {
+      width: initial !important;
+    }
   }
 }
 .navbar__wc-nav {

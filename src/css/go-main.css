@@ -939,6 +939,9 @@ body {
   flex-wrap: wrap;
   justify-content: center;
 }
+.container-sub-nav > ul > li {
+  width: initial !important;
+}
 
 .navbar__wc-nav {
   width: calc(100% - 90px);
