@@ -936,7 +936,7 @@ body {
 }
 .container-sub-nav > ul {
   display: flex !important;
-  justify-content: center;
+  justify-content: center !important;
 }
 .container-sub-nav > ul > li {
   width: initial !important;

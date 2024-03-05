@@ -320,7 +320,8 @@
   > ul {
     display: flex !important;
     // flex-wrap: wrap;
-    justify-content: center;
+    justify-content: center !important;
+
     > li {
       width: initial !important;
     }
