@@ -96,6 +96,12 @@
 ins {
   text-decoration: none !important;
 }
+.form-row-last,
+.form-row-first {
+  @media #{$sm} {
+    width: 100%;
+  }
+}
 
 body.woocommerce-page {
   .entry-header {

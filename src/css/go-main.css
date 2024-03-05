@@ -1657,6 +1657,13 @@ ins {
   text-decoration: none !important;
 }
 
+@media only screen and (max-width: 768px) {
+  .form-row-last,
+  .form-row-first {
+    width: 100%;
+  }
+}
+
 body.woocommerce-page .entry-header {
   text-align: left;
 }
