@@ -326,6 +326,12 @@
     }
   }
 }
+.container-sub-nav__li-full {
+  width: 500px !important;
+  img {
+    display: block;
+  }
+}
 #mega-menu-wrap-triari_menu
   #mega-menu-triari_menu
   li.mega-menu-megamenu
@@ -336,12 +342,7 @@
   min-height: 1px;
   width: 250px !important;
 }
-.container-sub-nav__li-full {
-  width: 500px !important;
-  img {
-    display: block;
-  }
-}
+
 .navbar__wc-nav {
   width: calc(100% - 90px);
   background-color: $light;
