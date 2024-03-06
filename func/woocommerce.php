@@ -212,8 +212,8 @@ function dodaj_nowa_sekcje_przed_krokiem_opisem()
 {
     global $post;
     $term_list = wp_get_post_terms($post->ID, 'producent', array("fields" => "names"));
-    if($term_list[0]):
-    echo '<p> Producent: <b>' . $term_list[0] . '</b></p>';
+    if ($term_list[0]) :
+        echo '<p> Producent: <a href="' . get_term_link($term_list[0], 'producent') . '">' . $term_list[0] . '</a></p>';
     endif;
 }
 
