@@ -215,7 +215,7 @@ function dodaj_nowa_sekcje_przed_krokiem_opisem()
     echo '<p> Producent: <b>' . $term_list[0] . '</b></p>';
 }
 
-// add_action('woocommerce_single_product_summary', 'dodaj_nowa_sekcje_przed_krokiem_opisem', 5);
+add_action('woocommerce_single_product_summary', 'dodaj_nowa_sekcje_przed_krokiem_opisem', 5);
 
 
 
