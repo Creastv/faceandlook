@@ -141,6 +141,17 @@ body.woocommerce-page {
   }
 }
 
+.widget {
+  // padding: 0 0 50px 0;
+  // @media #{$sm} {
+  //   padding: 0px 0 30px 0;
+  // }
+  .woof {
+    padding: 20px;
+    background: #f7f7f5;
+  }
+}
+
 .wc-custome {
   display: flex;
   align-items: flex-start;

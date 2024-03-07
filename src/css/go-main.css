@@ -1698,6 +1698,11 @@ body.woocommerce-page .entry-content {
   margin: 0 auto;
 }
 
+.widget .woof {
+  padding: 20px;
+  background: #f7f7f5;
+}
+
 .wc-custome {
   display: flex;
   align-items: flex-start;
