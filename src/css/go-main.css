@@ -1401,6 +1401,7 @@ body.single .entry-content a {
   align-items: center;
   justify-content: center;
   border-top: 1px solid #f3ebdf;
+  border-bottom: 1px solid #f3ebdf;
   text-align: center;
 }
 .kk-ata .kk-ata__wraper span {

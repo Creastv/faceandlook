@@ -18,7 +18,7 @@
                 <?php echo do_shortcode("[addtoany]"); ?>
             </div>
         </div>
-        <div id="author-bio">
+        <!-- <div id="author-bio">
             <div id="author-avatar"><?php echo get_avatar(get_the_author_meta('ID'), 60); ?></div>
 
             <div id="author-details">
@@ -59,7 +59,7 @@
                 <div class="author-footer">
                     <p> <?php the_author_description(); ?></p>
                 </div>
-            </div><!-- #author-details -->
-        </div><!-- #author-bio -->
+            </div>
+        </div> -->
     </div>
 </article>
