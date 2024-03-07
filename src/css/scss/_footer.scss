@@ -129,9 +129,9 @@
     gap: 30px;
     .col {
       &:nth-child(1) {
-        width: calc(30% - 20px);
+        width: calc(30% - 30px);
         @media #{$lg} {
-          width: calc(60% - 20px);
+          width: 100%;
         }
         @media #{$sm} {
           width: 100%;
@@ -139,32 +139,35 @@
       }
       &:nth-child(2) {
         // align-self: center;
+        @media #{$lg} {
+          width: calc(25% - 30px);
+        }
         @media #{$sm} {
           width: 100%;
         }
       }
       &:nth-child(3) {
         @media #{$lg} {
-          width: calc(33.33% - 20px);
+          width: calc(25% - 30px);
         }
         @media #{$sm} {
-          width: calc(50% - 20px);
+          width: calc(50% - 30px);
         }
       }
       &:nth-child(4) {
         @media #{$lg} {
-          width: calc(33.33% - 20px);
+          width: calc(25% - 30px);
         }
         @media #{$sm} {
-          width: calc(50% - 20px);
+          width: calc(50% - 30px);
         }
       }
       &:nth-child(5) {
         @media #{$lg} {
-          width: calc(33.33% - 20px);
+          width: calc(25% - 30px);
         }
         @media #{$sm} {
-          width: calc(50% - 20px);
+          width: calc(50% - 30px);
         }
       }
     }
