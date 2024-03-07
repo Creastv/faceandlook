@@ -134,6 +134,17 @@ body {
   text-align: left;
 }
 
+.dev-element {
+  width: 100%;
+  padding: 20px;
+  text-align: center;
+  background: #f7f7f5;
+}
+.dev-element h4 {
+  margin: 0;
+  text-transform: uppercase;
+}
+
 .faq__wraper {
   max-width: 1200px;
   margin: 0 auto;
