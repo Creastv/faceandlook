@@ -1684,6 +1684,20 @@ body.woocommerce-page .entry-content {
   }
 }
 
+.archive.woocommerce-page .container,
+.tax-producent.woocommerce-page .container {
+  max-width: 100%;
+}
+.archive.woocommerce-page .flex-viewport img,
+.tax-producent.woocommerce-page .flex-viewport img {
+  display: block;
+  width: auto;
+  height: auto;
+  box-shadow: none;
+  max-height: 500px;
+  margin: 0 auto;
+}
+
 .wc-custome {
   display: flex;
   align-items: flex-start;

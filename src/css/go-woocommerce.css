@@ -543,18 +543,6 @@ body {
   }
 }
 
-.archive.woocommerce-page .container {
-  max-width: 100%;
-}
-.archive.woocommerce-page .flex-viewport img {
-  display: block;
-  width: auto;
-  height: auto;
-  box-shadow: none;
-  max-height: 500px;
-  margin: 0 auto;
-}
-
 .woocommerce-page .wp-post-image {
   display: block;
   width: auto !important;

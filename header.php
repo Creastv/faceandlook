@@ -26,9 +26,10 @@
             <?php get_template_part('templates-parts/header/header', 'card'); ?>
         </div>
         <?php
-        if (!is_home() && !is_front_page()) {
+        if (is_shop() || is_product_category() || is_tax('producent') || is_product() || is_cart() || is_checkout() || is_account_page()) {
             get_template_part('templates-parts/header/header', 'nav-wc');
         }
+
         ?>
         <?php get_template_part('templates-parts/header/header', 'socialmedia'); ?>
     </header>

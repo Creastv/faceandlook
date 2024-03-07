@@ -123,6 +123,24 @@ body.woocommerce-page {
     padding: 30px 0;
   }
 }
+
+.archive.woocommerce-page,
+.tax-producent.woocommerce-page {
+  .container {
+    max-width: 100%;
+  }
+  .flex-viewport {
+    img {
+      display: block;
+      width: auto;
+      height: auto;
+      box-shadow: none;
+      max-height: 500px;
+      margin: 0 auto;
+    }
+  }
+}
+
 .wc-custome {
   display: flex;
   align-items: flex-start;
