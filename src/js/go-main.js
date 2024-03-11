@@ -102,7 +102,7 @@ if(navbarSec !== null){
 
     if (prevScrollPos > currentScrollPos) {
       navbarSec.style.position = 'fixed';
-      navbarSec.style.zIndex = '9999999';
+      navbarSec.style.zIndex = '98';
       navbarSec.style.top = `${navbarHeight}px`;
     } else {
       navbarSec.style.position = 'relative';
