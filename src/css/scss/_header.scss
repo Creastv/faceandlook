@@ -448,7 +448,11 @@
 // .navbar__wc-nav.active {
 //   top: 0;
 // }
-
+#mega-menu-triari_menu {
+  @media #{$sm} {
+    padding-top: 100px !important;
+  }
+}
 .navbar__socialmedia {
   position: fixed;
   z-index: 99;
