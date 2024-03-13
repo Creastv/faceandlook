@@ -2064,6 +2064,9 @@ body.woocommerce-page .entry-content {
     margin-bottom: 5px;
   }
 }
+.card-product .entry-price .added_to_cart {
+  display: none !important;
+}
 .card-product .entry-price .price {
   margin-bottom: 0px !important;
   font-size: 19px !important;

@@ -68,25 +68,29 @@ $term_list = wp_get_post_terms($post->ID, 'producent', array("fields" => "names"
 
     <div class="entry-price">
         <div class="price"><?php echo $product->get_price_html(); ?></div>
-        <?php
-        echo apply_filters(
-            'woocommerce_loop_add_to_cart_link', // WPCS: XSS ok.
-            sprintf(
-                '<a href="%s" data-quantity="%s" class="%s btn-revers" %s>%s</a>',
+        <div class="add-to-cart ">
+            <?php
+            echo sprintf(
+                '<a href="%s" data-quantity="1" class="%s btn-revers" %s>%s</a>',
                 esc_url($product->add_to_cart_url()),
-                esc_attr(isset($args['quantity']) ? $args['quantity'] : 1),
-                esc_attr(isset($args['class']) ? $args['class'] : ''),
-                isset($args['attributes']) ? wc_implode_html_attributes($args['attributes']) : '',
+                esc_attr(implode(' ', array_filter(array(
+                    '', 'product_type_' . $product->get_type(),
+                    $product->is_purchasable() && $product->is_in_stock() ? 'add_to_cart_button' : '',
+                    $product->supports('ajax_add_to_cart') ? 'ajax_add_to_cart' : '',
+                )))),
+                wc_implode_html_attributes(array(
+                    'data-product_id'  => $product->get_id(),
+                    'data-product_sku' => $product->get_sku(),
+                    'aria-label'       => $product->add_to_cart_description(),
+                    'rel'              => 'nofollow',
+                )),
                 // esc_html( $product->add_to_cart_text() )
                 '<svg xmlns="http://www.w3.org/2000/svg" width="9.628" height="10.089" viewBox="0 0 9.628 10.089">
-                <path id="Trazado_39" data-name="Trazado 39" d="M2561.179-490.223h-1.513a.632.632,0,0,0-.621.524l-.242,1.412a.253.253,0,0,1-.249.21h-5.3a1.023,1.023,0,0,0-1.023,1.022,1.017,1.017,0,0,0,.03.246l.661,2.636a1.494,1.494,0,0,0,1.45,1.135h3.558a1.5,1.5,0,0,0,1.477-1.268l.759-4.446a.253.253,0,0,1,.248-.21h.768a.633.633,0,0,0,.675-.586.632.632,0,0,0-.586-.675.59.59,0,0,0-.089,0Zm-7.943,9.078a1.009,1.009,0,0,0,1.009,1.009,1.009,1.009,0,0,0,1.009-1.009,1.009,1.009,0,0,0-1.009-1.009h0A1.009,1.009,0,0,0,2553.235-481.145Zm4.035,0a1.009,1.009,0,0,0,1.009,1.009,1.008,1.008,0,0,0,1.009-1.009,1.008,1.008,0,0,0-1.009-1.009h0A1.009,1.009,0,0,0,2557.271-481.145Z" transform="translate(-2552.227 490.225)" fill="#c2995e" />
-            </svg>
-            Kup',
-            ),
-            $product,
-            $args
-        );
+                     <path id="Trazado_39" data-name="Trazado 39" d="M2561.179-490.223h-1.513a.632.632,0,0,0-.621.524l-.242,1.412a.253.253,0,0,1-.249.21h-5.3a1.023,1.023,0,0,0-1.023,1.022,1.017,1.017,0,0,0,.03.246l.661,2.636a1.494,1.494,0,0,0,1.45,1.135h3.558a1.5,1.5,0,0,0,1.477-1.268l.759-4.446a.253.253,0,0,1,.248-.21h.768a.633.633,0,0,0,.675-.586.632.632,0,0,0-.586-.675.59.59,0,0,0-.089,0Zm-7.943,9.078a1.009,1.009,0,0,0,1.009,1.009,1.009,1.009,0,0,0,1.009-1.009,1.009,1.009,0,0,0-1.009-1.009h0A1.009,1.009,0,0,0,2553.235-481.145Zm4.035,0a1.009,1.009,0,0,0,1.009,1.009,1.008,1.008,0,0,0,1.009-1.009,1.008,1.008,0,0,0-1.009-1.009h0A1.009,1.009,0,0,0,2557.271-481.145Z" transform="translate(-2552.227 490.225)" fill="#c2995e" />
+                </svg>
+                Kup',
+            );
+            ?></div>
 
-        ?>
     </div>
 </div>
