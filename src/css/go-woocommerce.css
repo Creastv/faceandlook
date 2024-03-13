@@ -353,6 +353,10 @@ body {
   text-transform: uppercase;
 }
 
+.woof_show_mobile_filter {
+  text-align: center;
+}
+
 .wc-banner {
   margin-bottom: 20px;
 }

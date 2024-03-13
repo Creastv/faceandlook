@@ -145,6 +145,10 @@ body {
   text-transform: uppercase;
 }
 
+.woof_show_mobile_filter {
+  text-align: center;
+}
+
 .faq__wraper {
   max-width: 1200px;
   margin: 0 auto;
