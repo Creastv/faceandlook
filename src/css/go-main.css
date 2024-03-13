@@ -2351,7 +2351,7 @@ body.woocommerce-page .entry-content {
     flex-wrap: wrap;
     gap: 10px;
     padding: 0 5px;
-    margin-bottom: 5px;
+    margin-bottom: 15px;
   }
 }
 .card-product .entry-price .added_to_cart {
@@ -2369,6 +2369,7 @@ body.woocommerce-page .entry-content {
 @media only screen and (max-width: 460px) {
   .card-product .entry-price .price {
     font-size: 14px !important;
+    width: 100%;
   }
 }
 .card-product .entry-price .price span {
@@ -2378,14 +2379,21 @@ body.woocommerce-page .entry-content {
 .card-product .entry-price .price del {
   font-size: 12px;
 }
+@media only screen and (max-width: 460px) {
+  .card-product .entry-price .add-to-cart {
+    width: 100% !important;
+    display: block;
+  }
+}
 .card-product .entry-price .btn-revers {
   border-radius: 100px;
   font-size: 14px;
 }
 @media only screen and (max-width: 460px) {
   .card-product .entry-price .btn-revers {
-    margin-bottom: 10px;
+    margin-bottom: 0px;
     width: 100%;
+    display: block;
   }
 }
 .card-product .entry-price .btn-revers svg path {

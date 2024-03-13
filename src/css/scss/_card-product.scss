@@ -233,11 +233,12 @@
       flex-wrap: wrap;
       gap: 10px;
       padding: 0 5px;
-      margin-bottom: 5px;
+      margin-bottom: 15px;
     }
     .added_to_cart {
       display: none !important;
     }
+
     .price {
       margin-bottom: 0px !important;
       font-size: 19px !important;
@@ -246,6 +247,7 @@
       }
       @media #{$xs} {
         font-size: 14px !important;
+        width: 100%;
       }
 
       span {
@@ -256,13 +258,20 @@
         font-size: 12px;
       }
     }
+    .add-to-cart {
+      @media #{$xs} {
+        width: 100% !important;
+        display: block;
+      }
+    }
     .btn-revers {
       border-radius: 100px;
       font-size: 14px;
       @media #{$xs} {
         // font-size: 16px;
-        margin-bottom: 10px;
+        margin-bottom: 0px;
         width: 100%;
+        display: block;
       }
       svg path {
         transition: all 0.3s;
