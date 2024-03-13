@@ -36,8 +36,8 @@ $faq = get_field('wylacz_faq', $product->id);
 ?>
 
 <div id="product-<?php the_ID(); ?>" <?php wc_product_class('product-top', $product); ?>>
-	<?php if (function_exists('rank_math_the_breadcrumbs')) rank_math_the_breadcrumbs(); ?>
-	<?php
+    <?php if (function_exists('rank_math_the_breadcrumbs')) rank_math_the_breadcrumbs(); ?>
+    <?php
 	/**
 	 * Hook: woocommerce_before_single_product_summary.
 	 *
@@ -47,20 +47,20 @@ $faq = get_field('wylacz_faq', $product->id);
 	do_action('woocommerce_before_single_product_summary');
 	?>
 
-	<div class="summary entry-summary">
+    <div class="summary entry-summary">
 
-		<div class="entry-summary__wrap">
-			<?php if ($product->is_on_sale()) {
+        <div class="entry-summary__wrap">
+            <?php if ($product->is_on_sale()) {
 				// Pobieramy etykietę promocji
 				$sale_label = get_post_meta(get_the_ID(), '_sale_price_dates_to', true) ? __('Sale!', 'woocommerce') : __('Sale!', 'woocommerce');
 				// Wyświetlamy etykietę promocji
 				echo '<span class="label-prod label-prod--sale">' . esc_html($sale_label) . '</span>';
 			} ?>
-			<?php if (is_object($product) && $product->is_type('simple') && $product->is_featured()) {
+            <?php if (is_object($product) && $product->is_type('simple') && $product->is_featured()) {
 				// Produkt jest wyróżniony
 				echo '<span class="label-prod label-prod--futured">Wyróżniony produkt</span>';
 			} ?>
-			<?php
+            <?php
 
 			/**
 			 * Hook: woocommerce_single_product_summary.
@@ -79,12 +79,15 @@ $faq = get_field('wylacz_faq', $product->id);
 			?>
 
 
-		</div>
-		<?php get_template_part('templates-parts/parts/wc-product-info'); ?>
+        </div>
+        <?php get_template_part('templates-parts/parts/wc-product-info'); ?>
 
-	</div>
-	<?php get_template_part('templates-parts/parts/wc-product', 'banner'); ?>
-	<?php
+    </div>
+    <?php get_template_part('templates-parts/parts/wc-product', 'banner'); ?>
+    <div class="content">
+        <?php the_content(); ?>
+    </div>
+    <?php
 	/**
 	 * Hook: woocommerce_after_single_product_summary.
 	 *
@@ -97,25 +100,25 @@ $faq = get_field('wylacz_faq', $product->id);
 </div>
 
 <div class="content">
-	<?php the_content(); ?>
+    <?php the_content(); ?>
 </div>
 
 <br>
 <?php get_template_part('templates-parts/parts/wc-product', 'reviews'); ?>
 
 <?php if (!$faq || $faq == null) : ?>
-	<?php get_template_part('templates-parts/parts/wc-product', 'faq'); ?>
+<?php get_template_part('templates-parts/parts/wc-product', 'faq'); ?>
 <?php endif; ?>
 <?php get_template_part('templates-parts/parts/wc-products', 'carousel'); ?>
 
 <?php do_action('woocommerce_after_single_product'); ?>
 <script>
-	jQuery(function($) {
+jQuery(function($) {
 
-		mobile = $(window).width();
-		if (mobile <= 768) {
-			jQuery(".product_title.entry-title").insertBefore(".rank-math-breadcrumb");
-		}
+    mobile = $(window).width();
+    if (mobile <= 768) {
+        jQuery(".product_title.entry-title").insertBefore(".rank-math-breadcrumb");
+    }
 
-	});
+});
 </script>
