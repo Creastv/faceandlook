@@ -1,5 +1,5 @@
 <?php
-$post_per_page = get_field('post_per_page');
+$post_per_page = get_field('ilosc_wyswietlanych_produktow');
 
 $args = array(
     'post_type' => 'product',
