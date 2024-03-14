@@ -299,3 +299,18 @@ function custom_account_menu_items($items)
     // Zwróć zakładki w nowej kolejności
     return $new_order;
 }
+
+/**
+ * Snippet Name:	WooCommerce Show Customer Addresses On Thank You Page For Guest Checkouts
+ * Snippet Author:	ecommercehints.com
+ */
+
+add_action('woocommerce_thankyou', 'ecommercehints_show_customer_addresses_on_thank_you_if_guest', 10, 1);
+function ecommercehints_show_customer_addresses_on_thank_you_if_guest($order_id)
+{
+    if (!$order_id || is_user_logged_in()) { // Do nothing if there is no order or the customer is logged in
+        return;
+    }
+    $order = wc_get_order($order_id);
+    wc_get_template('order/order-details-customer.php', array('order' => $order)); // Show the addresses
+}

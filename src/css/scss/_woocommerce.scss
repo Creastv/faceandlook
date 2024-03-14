@@ -391,6 +391,7 @@ body.woocommerce-page {
 [data-block-name="woocommerce/classic-shortcode"].woocommerce {
   display: flex;
   flex-wrap: wrap;
+  justify-content: center;
   .woocommerce-cart-form {
     margin-right: 50px;
     width: calc(60% - 50px);

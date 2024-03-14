@@ -1680,6 +1680,7 @@ body.woocommerce-page .entry-content {
 [data-block-name="woocommerce/classic-shortcode"].woocommerce {
   display: flex;
   flex-wrap: wrap;
+  justify-content: center;
 }
 [data-block-name="woocommerce/classic-shortcode"].woocommerce .woocommerce-cart-form {
   margin-right: 50px;
