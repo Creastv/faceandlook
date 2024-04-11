@@ -864,6 +864,9 @@ body {
 }
 #header .navbar__navigation .header-nav ul li .sub-menu li a {
   font-size: 14px;
+  display: block;
+  padding: 5px 0;
+  white-space: nowrap;
 }
 @media only screen and (max-width: 1300px) {
   #header .navbar__navigation .header-nav ul li .sub-menu {
