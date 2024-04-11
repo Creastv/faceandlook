@@ -651,6 +651,8 @@ body {
 }
 #header .navbar {
   display: flex;
+  position: relative;
+  z-index: 99;
 }
 @media only screen and (max-width: 768px) {
   #header .navbar {
@@ -800,6 +802,35 @@ body {
   margin: 0;
   display: flex;
 }
+#header .navbar__navigation .header-nav ul li.menu-item-has-children {
+  position: relative;
+  padding-right: 10px;
+  cursor: pointer;
+}
+#header .navbar__navigation .header-nav ul li.menu-item-has-children:after {
+  content: "";
+  display: block;
+  width: 0;
+  height: 0;
+  border-left: 5px solid transparent;
+  border-right: 5px solid transparent;
+  border-top: 5px solid #000;
+  position: absolute;
+  right: 5px;
+  top: 50%;
+  transform: translateY(-50%);
+}
+@media only screen and (max-width: 1300px) {
+  #header .navbar__navigation .header-nav ul li.menu-item-has-children:after {
+    display: none;
+  }
+}
+#header .navbar__navigation .header-nav ul li.menu-item-has-children:hover:after {
+  transition: border 0.3s;
+  border-left: 5px solid transparent;
+  border-right: 5px solid transparent;
+  border-top: 5px solid #c2995e;
+}
 #header .navbar__navigation .header-nav ul li a {
   font-family: "Poppins", sans-serif;
   font-weight: 300;
@@ -808,8 +839,46 @@ body {
   text-decoration: none;
   text-transform: uppercase;
 }
-#header .navbar__navigation .header-nav ul li a:hover {
+#header .navbar__navigation .header-nav ul li:hover > a {
   color: #c2995e;
+}
+#header .navbar__navigation .header-nav ul li:hover > .sub-menu {
+  display: block;
+  transform: translate(0, 0px);
+  opacity: 1;
+  visibility: visible;
+}
+#header .navbar__navigation .header-nav ul li .sub-menu {
+  position: absolute;
+  display: block;
+  background-color: #fff;
+  padding: 10px;
+  box-shadow: 0 0 20px 0px rgba(0, 0, 0, 0.1029);
+  transition: all 0.3s;
+  transform: translate(0, 20px);
+  opacity: 0;
+  visibility: hidden;
+}
+#header .navbar__navigation .header-nav ul li .sub-menu li {
+  display: block;
+}
+#header .navbar__navigation .header-nav ul li .sub-menu li a {
+  font-size: 14px;
+}
+@media only screen and (max-width: 1300px) {
+  #header .navbar__navigation .header-nav ul li .sub-menu {
+    position: relative;
+    opacity: 1;
+    visibility: visible;
+    transform: translate(0, 0px);
+    background: none;
+    padding: 0 0 0 20px;
+  }
+  #header .navbar__navigation .header-nav ul li .sub-menu li a {
+    font-size: 16px;
+    padding: 0 !important;
+    margin-left: 10px;
+  }
 }
 
 .current-menu-item a {
@@ -858,8 +927,8 @@ body {
 
 .js-navbar.active {
   left: 0 !important;
-  position: fixed;
-  z-index: 99;
+  position: fixed !important;
+  z-index: 99 !important;
   width: 100%;
   top: 0px;
   background-color: #fff;
