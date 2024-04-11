@@ -10,13 +10,11 @@
     <title><?php wp_title('|', true, 'right'); ?></title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link
-        href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;700&family=Sorts+Mill+Goudy&display=swap"
-        rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;700&family=Sorts+Mill+Goudy&display=swap" rel="stylesheet">
     <script src="https://integrations.etrusted.com/applications/widget.js/v2" defer async></script>
     <?php wp_head(); ?>
     <!-- Google Tag Manager -->
-    <script>
+    <!-- <script>
     (function(w, d, s, l, i) {
         w[l] = w[l] || [];
         w[l].push({
@@ -31,14 +29,14 @@
             'https://www.googletagmanager.com/gtm.js?id=' + i + dl;
         f.parentNode.insertBefore(j, f);
     })(window, document, 'script', 'dataLayer', 'GTM-K89Q2RJ');
-    </script>
+    </script> -->
     <!-- End Google Tag Managerr -->
 </head>
 
 <body <?php body_class(); ?>>
     <!-- Google Tag Manager (noscript) -->
-    <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-K89Q2RJ" height="0" width="0"
-            style="display:none;visibility:hidden"></iframe></noscript>
+    <!-- <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-K89Q2RJ" height="0" width="0"
+            style="display:none;visibility:hidden"></iframe></noscript> -->
     <!-- End Google Tag Manager (noscript) -->
     <header id="header" class="js-header" itemscope itemtype="http://schema.org/WPHeader">
         <div class="navbar js-navbar">
