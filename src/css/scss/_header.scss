@@ -451,6 +451,11 @@
 // }
 .mega-menu-link {
 }
+
+// .js-navbar.active + .navbar__wc-nav {
+//   z-index: 1000 !important;
+// }
+
 .navbar__wc-nav {
   width: calc(100% - 90px);
   background-color: $light;
@@ -546,11 +551,11 @@
 // .navbar__wc-nav.active {
 //   top: 0;
 // }
-#mega-menu-triari_menu {
-  @media #{$sm} {
-    padding-top: 100px !important;
-  }
-}
+// #mega-menu-triari_menu {
+//   @media #{$sm} {
+//     padding-top: 100px !important;
+//   }
+// }
 .navbar__socialmedia {
   position: fixed;
   z-index: 99;

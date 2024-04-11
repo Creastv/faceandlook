@@ -24,19 +24,20 @@ togglers.forEach((item) => {
     }
   });
 });
-// togglerNav.addEventListener("click", () => {
-//   if (navFlag == false) {
-//     nav.classList.add("active");
-//     togglerNav.classList.add("active");
-//     // document.querySelector("body").style.overflow = "hidden";
-//     navFlag = true;
-//   } else {
-//     nav.classList.remove("active");
-//     togglerNav.classList.remove("active");
-//     // document.querySelector("body").style.overflow = "inherit";
-//     navFlag = false;
-//   }
-// });
+
+// megamenu changing z-index
+const toggleMegamenudocument = document.querySelector('.mega-toggle-animated');
+
+
+if(toggleMegamenudocument !== null){
+  toggleMegamenudocument.addEventListener('click', () => {
+    const megamenu = document.querySelector('.js-navbar');
+    const wraper = document.querySelector('.navbar__wc-nav');
+    // if(megamenu.classList.contains('active')){
+      wraper.style.zIndex = '1000';
+    // }
+  });
+}
 
 // sticy nabvbar
 const navbar = document.querySelector(".js-navbar");
@@ -121,7 +122,7 @@ if(navbarSec !== null){
 
     if (prevScrollPos > currentScrollPos) {
       navbarSec.style.position = 'fixed';
-      navbarSec.style.zIndex = '98';
+      navbarSec.style.zIndex = '68';
       navbarSec.style.top = `${navbarHeight}px`;
     } else {
       navbarSec.style.position = 'relative';

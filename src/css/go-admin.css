@@ -1164,12 +1164,6 @@ body {
   transition: all 0.3s linear;
 }
 
-@media only screen and (max-width: 768px) {
-  #mega-menu-triari_menu {
-    padding-top: 100px !important;
-  }
-}
-
 .navbar__socialmedia {
   position: fixed;
   z-index: 99;
