@@ -266,19 +266,19 @@ function remove_admin_bar()
 function cmplz_reload_after_consent()
 {
 ?>
-	<script>
-		document.addEventListener('cmplz_status_change', function(e) {
-			if (e.detail.category === 'marketing' && e.detail.value === 'allow') {
-				location.reload();
-			}
-		});
+<script>
+document.addEventListener('cmplz_status_change', function(e) {
+    // if (e.detail.category === 'marketing' && e.detail.value === 'allow') {
+    location.reload();
+    // }
+});
 
-		document.addEventListener('cmplz_status_change_service', function(e) {
-			if (e.detail.value) {
-				location.reload();
-			}
-		});
-	</script>
+document.addEventListener('cmplz_status_change_service', function(e) {
+    if (e.detail.value) {
+        location.reload();
+    }
+});
+</script>
 <?php
 }
 add_action('wp_footer', 'cmplz_reload_after_consent');
