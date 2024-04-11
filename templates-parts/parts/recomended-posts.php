@@ -1,15 +1,17 @@
 <?php
 $category_object = get_the_category(get_the_ID());
-$category_name = $category_object[0]->name;
+$category_name = $category_object[0]->term_id;
 $obecny = get_the_ID();
+var_dump($category_name);
 
 $articles = new WP_Query(array(
+    'category__in' => $category_name,
     'post_type' => 'post',
     'posts_per_page' => 4,
     'order' => 'DESC',
-    // 'category_name' => $category_name,
+
     'orderby'        => 'rand',
-    // 'post__not_in' => array($obecny),
+    'post__not_in' => array($obecny),
 
 ));
 ?>
