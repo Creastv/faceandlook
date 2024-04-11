@@ -861,6 +861,7 @@ body {
 }
 #header .navbar__navigation .header-nav ul li .sub-menu li {
   display: block;
+  margin: 0;
 }
 #header .navbar__navigation .header-nav ul li .sub-menu li a {
   font-size: 14px;
