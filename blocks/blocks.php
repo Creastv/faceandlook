@@ -92,7 +92,7 @@ function register_acf_block_types()
     'supports' => array('align' => false),
     'enqueue_assets'    => function () {
       wp_enqueue_style('go-wc-futured',  get_template_directory_uri() . '/blocks/wc-futured/wc-futured.min.css');
-      wp_enqueue_script('go-wc-futured-init', get_template_directory_uri() . '/blocks/wc-futured/wc-futured.js', array('jquery'), '4', true);
+      // wp_enqueue_script('go-wc-futured-init', get_template_directory_uri() . '/blocks/wc-futured/wc-futured.js', array('jquery'), '4', true);
     },
   ));
   acf_register_block_type(array(
