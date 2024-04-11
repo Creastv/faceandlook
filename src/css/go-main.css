@@ -2926,6 +2926,10 @@ body.woocommerce-page .entry-content {
   cursor: pointer;
 }
 
+.dgwt-wcas-sf-wrapp {
+  display: flex;
+}
+
 .wc-products-wraper {
   display: flex;
   justify-content: center;
