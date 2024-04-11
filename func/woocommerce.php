@@ -59,38 +59,21 @@ function woo_remove_product_tabs($tabs)
     // unset($tabs['reviews']);             // Remove the reviews tab
     unset($tabs['additional_information']);      // Remove the additional information tab
     global $product;
-    $desc = get_field('opis_produktu_z_csv_baselinkier', $product->id);
-    if ($desc) {
-        $tabs[''] = array(
-            'title' => __('Opis', 'woocommerce'), // TAB TITLE
-            'priority' => 15, // TAB SORTING (DESC 10, ADD INFO 20, REVIEWS 30)
-            'callback' => 'fandl_docs_product_tab_content', // TAB CONTENT CALLBACK
-        );
-    }
+    // $desc = get_field('opis_produktu_z_csv_baselinkier', $product->id);
+    // if ($desc) {
+    $tabs[''] = array(
+        'title' => __('Opis', 'woocommerce'), // TAB TITLE
+        'priority' => 15, // TAB SORTING (DESC 10, ADD INFO 20, REVIEWS 30)
+        'callback' => 'fandl_docs_product_tab_content', // TAB CONTENT CALLBACK
+    );
+    // }
     return $tabs;
 }
-
-// add_filter('woocommerce_product_tabs', 'bbloomer_add_product_tab', 9999);
-
-// // Dodatkowy opis produktu
-// function bbloomer_add_product_tab($tabs)
-// {
-//     global $product;
-//     $desc = get_field('opis_produktu_z_csv_baselinkier', $product->id);
-//     if ($desc) {
-//         $tabs[''] = array(
-//             'title' => __('Opis', 'woocommerce'), // TAB TITLE
-//             'priority' => 15, // TAB SORTING (DESC 10, ADD INFO 20, REVIEWS 30)
-//             'callback' => 'fandl_docs_product_tab_content', // TAB CONTENT CALLBACK
-//         );
-//     }
-//     return $tabs;
-// }
 function fandl_docs_product_tab_content()
 {
     global $product;
     $desc = get_field('opis_produktu_z_csv_baselinkier', $product->id);
-
+    the_content();
     if ($desc) {
         echo $desc;
     }

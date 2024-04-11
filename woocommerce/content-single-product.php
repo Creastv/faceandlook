@@ -19,6 +19,7 @@
 defined('ABSPATH') || exit;
 
 global $product;
+$desc = get_field('opis_produktu_z_csv_baselinkier', $product->id);
 
 /**
  * Hook: woocommerce_before_single_product.
@@ -97,10 +98,11 @@ $faq = get_field('wylacz_faq', $product->id);
 	do_action('woocommerce_after_single_product_summary');
 	?>
 </div>
-
+<!-- <?php if (!$desc) : ?>
 <div class="content">
     <?php the_content(); ?>
 </div>
+<?php endif; ?> -->
 
 <br>
 <?php get_template_part('templates-parts/parts/wc-product', 'reviews'); ?>
