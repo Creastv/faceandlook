@@ -2713,6 +2713,10 @@ body.woocommerce-page .entry-content {
 .product-template-default .entry-summary .entry-summary__wrap .woocommerce-product-details__short-description {
   margin-bottom: 30px;
 }
+.product-template-default .entry-summary .entry-summary__wrap .yith-wcwl-add-to-wishlist a {
+  font-size: 12px;
+  text-decoration: none;
+}
 .product-template-default .variations {
   margin-bottom: 30px !important;
 }
