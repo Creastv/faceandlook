@@ -2,7 +2,7 @@
 $category_object = get_the_category(get_the_ID());
 $category_name = $category_object[0]->term_id;
 $obecny = get_the_ID();
-var_dump($category_name);
+// var_dump($category_name);
 
 $articles = new WP_Query(array(
     'category__in' => $category_name,
