@@ -2818,6 +2818,7 @@ body.woocommerce-page .entry-content {
 @media only screen and (max-width: 768px) {
   .woocommerce div.product .product_title {
     padding: 20px 15px 0 15px;
+    font-size: 21px;
   }
 }
 
