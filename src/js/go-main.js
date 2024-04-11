@@ -1,23 +1,42 @@
 
 // HEader fixed
 
-const togglerNav = document.querySelector(".js-navbar__toggler");
+// const togglerNav = document.querySelector(".js-navbar__toggler");
 const nav = document.querySelector(".js-navbar__navigation");
 let navFlag = false;
 
-togglerNav.addEventListener("click", () => {
-  if (navFlag == false) {
-    nav.classList.add("active");
-    togglerNav.classList.add("active");
-    // document.querySelector("body").style.overflow = "hidden";
-    navFlag = true;
-  } else {
-    nav.classList.remove("active");
-    togglerNav.classList.remove("active");
-    // document.querySelector("body").style.overflow = "inherit";
-    navFlag = false;
-  }
+const togglers = document.querySelectorAll(".js-navbar__toggler")
+togglers.forEach((item) => {
+  item.addEventListener("click", () => {
+    if (navFlag == false) {
+      nav.classList.add("active");
+      togglers.forEach((item) => {
+        item.classList.add("active");
+      });
+      navFlag = true;
+    } else {
+      nav.classList.remove("active");
+      // togglerNav.classList.remove("active");
+      togglers.forEach((item) => {
+        item.classList.remove("active");
+      });
+      navFlag = false;
+    }
+  });
 });
+// togglerNav.addEventListener("click", () => {
+//   if (navFlag == false) {
+//     nav.classList.add("active");
+//     togglerNav.classList.add("active");
+//     // document.querySelector("body").style.overflow = "hidden";
+//     navFlag = true;
+//   } else {
+//     nav.classList.remove("active");
+//     togglerNav.classList.remove("active");
+//     // document.querySelector("body").style.overflow = "inherit";
+//     navFlag = false;
+//   }
+// });
 
 // sticy nabvbar
 const navbar = document.querySelector(".js-navbar");

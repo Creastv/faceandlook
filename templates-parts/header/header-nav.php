@@ -12,7 +12,15 @@
 		'menu_class' 	  => 'header-nav-list',
 		'container' 	  => false,
 		'echo' 			  => false,
-		'items_wrap' 	  => '<div class="header-nav"><ul id="%1$s" class="%2$s js-header-nav-list " itemscope itemtype="https://www.schema.org/SiteNavigationElement">%3$s </ul></div>',
+		'items_wrap' 	  => '<div class="header-nav"><ul id="%1$s" class="%2$s js-header-nav-list " itemscope itemtype="https://www.schema.org/SiteNavigationElement">%3$s </ul> <div class="toggler-sm">
+        <div class="navbar__toggler js-navbar__toggler">
+    <div class="navbar__toggler__btn">
+        <span></span>
+        <span></span>
+        <span></span>
+    </div>
+</div>
+    </div></div>',
 	));
 	$temp_menu = str_replace("<a", "<a itemprop='url' ", $temp_menu); // We set an attribute for menu items through replacement
 
@@ -32,5 +40,4 @@
 	echo $temp_menu;
 
 	?>
-
 </nav>

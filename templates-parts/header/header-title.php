@@ -10,6 +10,9 @@ $displayHeaderCat = get_field('wyswietlaj_custome_header', $termCat);
 <?php if (!is_product()) : ?>
 	<?php if (($displayHeader === NULL || $displayHeader == true)) : ?>
 		<header class="entry-header  ">
+			<?php if (is_category() && !$displayHeaderCat) : ?>
+				<span class="spacer-header"></span>
+			<?php endif; ?>
 			<h1 class="entry-title">
 				<?php if (is_category()) :
 					single_cat_title();

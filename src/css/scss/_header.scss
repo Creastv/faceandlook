@@ -74,7 +74,7 @@
         transform: scale(0.8);
         // padding: 0px;
       }
-      @media #{$xs} {
+      @media #{$sm} {
         padding: 0px;
       }
       span {
@@ -118,6 +118,12 @@
     @media #{$sm} {
       order: 4;
     }
+    @media #{$xx} {
+      order: 4;
+      display: flex;
+      justify-content: flex-end;
+      // width: 100%;
+    }
     .fkcart-mini-toggler {
       width: 90px;
       flex-wrap: wrap;
@@ -133,6 +139,7 @@
       }
       @media #{$xs} {
         padding: 10px 0;
+        width: 100%;
       }
       .fkcart-shortcode-icon-wrap {
         svg {
@@ -152,6 +159,7 @@
     flex: auto;
     align-self: center;
     @media #{$sm} {
+      // position: relative;
       order: 5;
     }
     .header-nav {
@@ -285,7 +293,7 @@
       }
     }
     @media #{$sm} {
-      width: 50%;
+      width: 100%;
     }
   }
 }
@@ -375,6 +383,21 @@
   }
 }
 
+.toggler-sm {
+  position: absolute;
+  z-index: 999;
+  top: 10px;
+  right: 10px;
+  display: none;
+  .navbar__toggler__btn {
+    span {
+      background-color: $main;
+    }
+  }
+  @media #{$sm} {
+    display: block;
+  }
+}
 .container-sub-nav {
   float: none !important;
   max-width: 1480px !important;

@@ -35,6 +35,14 @@ body.blog,
 body.archive {
   .entry-header {
     text-align: left;
+    display: block;
+    .spacer-header {
+      height: 50px;
+      display: block;
+      @media #{$sm} {
+        height: 30px;
+      }
+    }
     .rank-math-breadcrumb {
       p {
         justify-content: flex-start !important;
