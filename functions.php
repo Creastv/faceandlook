@@ -37,36 +37,6 @@ if (!function_exists('go_register_nav_menu')) {
 	}
 	add_action('after_setup_theme', 'go_register_nav_menu', 0);
 }
-// Menu locations
-// add_action('rest_api_init', function () {
-// 	register_rest_route('nav', '/menu/', array(
-// 		'methods' => 'GET',
-// 		'callback' => 'wp_menu_route',
-// 	));
-// });
-
-// function wp_menu_route()
-// {
-// 	$menuLocations = get_nav_menu_locations(); // Get nav locations set in theme, usually functions.php)
-// 	return $menuLocations;
-// }
-
-// // Individual menus
-// add_action('rest_api_init', function () {
-// 	register_rest_route('nav', '/menu/(?P<id>\d+)', array(
-// 		'methods' => 'GET',
-// 		'callback' => 'wp_menu_single',
-// 	));
-// });
-
-// function wp_menu_single($data)
-// {
-// 	$menuID = $data['id']; // Get the menu from the ID
-// 	$primaryNav = wp_get_nav_menu_items($menuID); // Get the array of wp objects, the nav items for our queried location.
-// 	return $primaryNav;
-// }
-
-
 
 function go_widgets_init()
 {
@@ -128,6 +98,7 @@ add_action('widgets_init', 'go_widgets_init');
 require_once get_template_directory() . '/func/enqueue-styles.php';
 require_once get_template_directory() . '/func/enqueue-scripts.php';
 require_once  get_template_directory() . '/func/woocommerce.php';
+require  get_template_directory() . '/func/klubowiczki.php';
 require get_template_directory() . '/func/clean-up.php';
 require get_template_directory() . '/func/cpt.php';
 require get_template_directory() . '/blocks/blocks.php';
@@ -181,29 +152,6 @@ if (function_exists('acf_add_options_page')) {
 }
 
 
-// Dodanie zdecia wyrózniającego dla postów w tabeli
-// add_filter('manage_posts_columns', 'add_img_column');
-// add_filter('manage_posts_custom_column', 'manage_img_column', 10, 2);
-// add_filter('manage_pages_custom_column', 'manage_img_column', 10, 2);
-
-// function add_img_column($columns)
-// {
-// 	$columns = array_slice($columns, 0, 1, true) + array("links" => "Image") + array_slice($columns, 1, count($columns) - 1, true);
-// 	return $columns;
-// }
-
-// function manage_img_column($column_name, $post_id)
-// {
-// 	if ($column_name == 'links') {
-// 		echo get_the_post_thumbnail($post_id, 'thumbnail');
-// 	}
-// 	return $column_name;
-// }
-
-
-
-// Dodaj ten kod do pliku functions.php swojego motywu lub do pliku custom plugin'a.
-
 // Dodaj ten kod do pliku functions.php swojego motywu lub do pliku custom plugin'a.
 
 function zapisz_ostatnio_ogladane_produkty()
@@ -235,30 +183,6 @@ function zapisz_ostatnio_ogladane_produkty()
 
 add_action('wp', 'zapisz_ostatnio_ogladane_produkty');
 
-
-
-
-
-add_role('klubowiczki', __('Klubowiczki'), array());
-add_action('init', 'blockusers_init');
-function blockusers_init()
-{
-	if (is_admin() && !current_user_can('administrator') && !(defined('DOING_AJAX') && DOING_AJAX)) {
-		// wp_redirect(home_url());
-		exit;
-	}
-}
-
-add_action('after_setup_theme', 'remove_admin_bar');
-function remove_admin_bar()
-{
-	if (!current_user_can('administrator') && !is_admin()) {
-		show_admin_bar(false);
-	}
-}
-
-
-
 /**
  * Reload after Consent. 
  * Only necessary for incomplete integrations, or plugins which handle consent serverside
@@ -266,19 +190,19 @@ function remove_admin_bar()
 function cmplz_reload_after_consent()
 {
 ?>
-<script>
-document.addEventListener('cmplz_status_change', function(e) {
-    // if (e.detail.category === 'marketing' && e.detail.value === 'allow') {
-    location.reload();
-    // }
-});
+	<script>
+		document.addEventListener('cmplz_status_change', function(e) {
+			// if (e.detail.category === 'marketing' && e.detail.value === 'allow') {
+			location.reload();
+			// }
+		});
 
-document.addEventListener('cmplz_status_change_service', function(e) {
-    if (e.detail.value) {
-        location.reload();
-    }
-});
-</script>
+		document.addEventListener('cmplz_status_change_service', function(e) {
+			if (e.detail.value) {
+				location.reload();
+			}
+		});
+	</script>
 <?php
 }
 add_action('wp_footer', 'cmplz_reload_after_consent');
