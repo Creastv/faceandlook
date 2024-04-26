@@ -3038,4 +3038,28 @@ body.woocommerce-page .entry-content {
 
 .tabcontent.active {
   display: block;
+}
+
+.wlr-product-message {
+  color: #c2995e;
+  padding: 20px;
+  margin-bottom: 20px;
+}
+
+.card-product-top-buttons .wlr-product-message {
+  display: none !important;
+}
+
+.wll-home-container .wll-earn-points-container {
+  width: 100% !important;
+}
+.wll-home-container .wll-rewards-container {
+  display: none !important;
+}
+
+.wlr-user-details .wlr-available-points {
+  width: 100% !important;
+}
+.wlr-user-details .wlr-redeemed-points {
+  display: none !important;
 }/*# sourceMappingURL=go-main.css.map */

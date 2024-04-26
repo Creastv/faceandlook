@@ -35,7 +35,7 @@ if (!defined('ABSPATH')) {
 
 
 
-<?php if (getUserPoints() > 1000) : ?>
+<?php if (getUserPoints() > 100) : ?>
     <h1>Gratulacje! Jesteś w klubie!</h1>
     <h1>Twoje punkty: <?php echo getUserPoints(); ?></h1>
 <?php else : ?>
@@ -45,6 +45,6 @@ if (!defined('ABSPATH')) {
 <?php endif; ?>
 
 <?php
-userRole();
-// userChangeRole()
+echo userRole();
+// userChangeRole();
 ?>

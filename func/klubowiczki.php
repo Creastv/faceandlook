@@ -18,38 +18,28 @@ function remove_admin_bar()
 }
 
 
-
-
 // Change user role based on points
-function userRole()
+add_action('wp_head', 'userChangeRole');
+function userChangeRole()
 {
-    $user_id = get_the_author_meta('ID'); //assume we are in The Loop
-    $user_obj = get_userdata($user_id);
+    $user = new WP_User(get_current_user_id());
+    $u = new WP_User($user->ID);
     $points = getUserPoints();
-    if (!empty($user_obj->roles)) {
-        foreach ($user_obj->roles as $role) {
-            echo '<br>';
-            echo $role;
-            echo '<br>';
-            echo $points;
+    if ($u->roles[1] == 'klubowiczki' || $u->roles[1] == 'customer') {
+        if ($points > 10) {
+            $u->set_role('klubowiczki');
+        } else {
+            $u->set_role('customer');
         }
     }
 }
-add_action('wp_head', 'userChangeRole');
-
-function userChangeRole()
+// User role
+function userRole()
 {
-    $user_id = get_the_author_meta('ID'); //assume we are in The Loop
-    $user_obj = get_userdata($user_id);
+    $user = new WP_User(get_current_user_id());
+    $u = new WP_User($user->ID);
     $points = getUserPoints();
-    if (!empty($user_obj->roles)) {
-
-        if ($points > 1000) {
-            $user_obj->set_role('klubowiczki');
-        } else {
-            $user_obj->set_role('customer');
-        }
-    }
+    return $u->roles[1];
 }
 
 // function getUserPoints()
@@ -65,3 +55,18 @@ function getUserPoints()
         }
     }
 };
+
+// // Applying conditionally a discount for a specific user role
+add_action('woocommerce_cart_calculate_fees', 'discount_based_on_user_role', 20, 1);
+function discount_based_on_user_role($cart)
+{
+    $user = userRole();
+    if ($user === 'klubowiczki') {
+        $percentage = 10;
+        $discount = $cart->get_subtotal() * $percentage / 100; // Calculation
+        // Applying discount
+        $cart->add_fee(sprintf(__("Rabat dla klubowicza (%s)", "woocommerce"), $percentage . '%' . $price . ''), -$discount, true);
+        return;
+    }
+    return;
+}
