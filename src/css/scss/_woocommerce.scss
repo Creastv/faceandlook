@@ -317,6 +317,12 @@ body.woocommerce-page {
         }
       }
     }
+    .is-active {
+      a {
+        background-color: $main;
+        color: #fff;
+      }
+    }
   }
 }
 
@@ -432,4 +438,13 @@ body.woocommerce-page {
 }
 .woocommerce-form-login-toggle {
   width: 100%;
+}
+
+.woocommerce-order-received {
+  .entry-header {
+    text-align: center !important;
+  }
+  .rank-math-breadcrumb {
+    display: none;
+  }
 }

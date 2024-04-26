@@ -1996,6 +1996,10 @@ body.woocommerce-page .entry-content {
   border: 1px solid #c2995e;
   color: #c2995e;
 }
+.woocommerce-MyAccount-navigation ul .is-active a {
+  background-color: #c2995e;
+  color: #fff;
+}
 
 .checkout.woocommerce-checkout {
   display: flex;
@@ -2116,6 +2120,13 @@ body.woocommerce-page .entry-content {
 
 .woocommerce-form-login-toggle {
   width: 100%;
+}
+
+.woocommerce-order-received .entry-header {
+  text-align: center !important;
+}
+.woocommerce-order-received .rank-math-breadcrumb {
+  display: none;
 }
 
 .posts-wraper {
@@ -3057,9 +3068,15 @@ body.woocommerce-page .entry-content {
   display: none !important;
 }
 
-.wlr-user-details .wlr-available-points {
+.wlr-myaccount-page #wlr-points #wlr-available-points {
   width: 100% !important;
 }
-.wlr-user-details .wlr-redeemed-points {
+.wlr-myaccount-page #wlr-points #wlr-redeemed-points {
   display: none !important;
+}
+.wlr-myaccount-page #wlr-transaction-details-table {
+  width: 100% !important;
+}
+.wlr-myaccount-page #wlr-transaction-details-table table {
+  width: 100% !important;
 }/*# sourceMappingURL=go-main.css.map */

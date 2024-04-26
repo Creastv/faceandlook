@@ -20,13 +20,15 @@ function remove_admin_bar()
 
 // Change user role based on points
 add_action('wp_head', 'userChangeRole');
+
 function userChangeRole()
 {
     $user = new WP_User(get_current_user_id());
     $u = new WP_User($user->ID);
+    $uR = $u->roles;
     $points = getUserPoints();
-    if ($u->roles[1] == 'klubowiczki' || $u->roles[1] == 'customer') {
-        if ($points > 10) {
+    if (in_array('klubowiczki', $uR, true) || in_array('customer', $uR, true)) {
+        if ($points > 100) {
             $u->set_role('klubowiczki');
         } else {
             $u->set_role('customer');
@@ -39,7 +41,18 @@ function userRole()
     $user = new WP_User(get_current_user_id());
     $u = new WP_User($user->ID);
     $points = getUserPoints();
-    return $u->roles[1];
+    return $u->roles[0];
+}
+function userRoleName()
+{
+    $user = new WP_User(get_current_user_id());
+    $u = new WP_User($user->ID);
+    $u = $u->roles;
+    if (in_array('klubowiczki', $u, true)) {
+        return 'klubowiczki';
+    } elseif (in_array('customer', $u, true)) {
+        return 'customer';
+    }
 }
 
 // function getUserPoints()
@@ -60,8 +73,10 @@ function getUserPoints()
 add_action('woocommerce_cart_calculate_fees', 'discount_based_on_user_role', 20, 1);
 function discount_based_on_user_role($cart)
 {
-    $user = userRole();
-    if ($user === 'klubowiczki') {
+
+    $role = userRoleName();
+    if (is_admin() && !defined('DOING_AJAX')) return; // Exit
+    if ($role == 'klubowiczki') {
         $percentage = 10;
         $discount = $cart->get_subtotal() * $percentage / 100; // Calculation
         // Applying discount

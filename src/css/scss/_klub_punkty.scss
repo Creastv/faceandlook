@@ -16,12 +16,21 @@
     display: none !important;
   }
 }
-
-.wlr-user-details {
-  .wlr-available-points {
-    width: 100% !important;
+.wlr-myaccount-page {
+  #wlr-points {
+    #wlr-available-points {
+      width: 100% !important;
+    }
+    #wlr-redeemed-points {
+      display: none !important;
+    }
   }
-  .wlr-redeemed-points {
-    display: none !important;
+
+  #wlr-transaction-details-table {
+    // background-color: red;
+    width: 100% !important;
+    table {
+      width: 100% !important;
+    }
   }
 }

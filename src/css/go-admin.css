@@ -1694,6 +1694,10 @@ body.woocommerce-page .entry-content {
   border: 1px solid #c2995e;
   color: #c2995e;
 }
+.woocommerce-MyAccount-navigation ul .is-active a {
+  background-color: #c2995e;
+  color: #fff;
+}
 
 .checkout.woocommerce-checkout {
   display: flex;
@@ -1814,6 +1818,13 @@ body.woocommerce-page .entry-content {
 
 .woocommerce-form-login-toggle {
   width: 100%;
+}
+
+.woocommerce-order-received .entry-header {
+  text-align: center !important;
+}
+.woocommerce-order-received .rank-math-breadcrumb {
+  display: none;
 }
 
 .posts-wraper {
