@@ -89,7 +89,7 @@ body {
 }
 
 #go-to-top.active {
-  transform: translate(0, 50px);
+  transform: translate(0, -50px);
 }
 
 .go-pagination {
