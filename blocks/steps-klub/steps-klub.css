@@ -1,0 +1,67 @@
+.steps-klub {
+  margin-bottom: 50px;
+}
+.steps-klub .steps-klub__wrap {
+  position: relative;
+  display: flex;
+  justify-content: space-around;
+  text-align: center;
+  margin-bottom: 30px;
+  flex-wrap: wrap;
+}
+@media only screen and (max-width: 768px) {
+  .steps-klub .steps-klub__wrap {
+    justify-content: center;
+  }
+}
+.steps-klub .steps-klub__wrap:before {
+  content: "";
+  position: absolute;
+  z-index: -1;
+  width: 100%;
+  height: 1px;
+  background-color: #c2995e;
+  top: 0%;
+  bottom: 0;
+  left: 0;
+  transform: translateY(40px);
+  z-index: 1;
+  visibility: visible;
+}
+.steps-klub .steps-klub__wrap .item {
+  max-width: 20%;
+  display: flex;
+  position: relative;
+  gap: 10px;
+}
+@media only screen and (max-width: 768px) {
+  .steps-klub .steps-klub__wrap .item {
+    max-width: 100%;
+    width: 100%;
+    justify-content: center;
+  }
+}
+.steps-klub .steps-klub__wrap .item p b {
+  color: #161514;
+}
+.steps-klub .steps-klub__wrap .item .num {
+  position: relative;
+  z-index: 4;
+  font-family: "Sorts Mill Goudy", serif;
+  font-weight: 400;
+  font-style: normal;
+  font-size: 63px;
+  color: #c2995e;
+  margin-bottom: 20px;
+}
+.steps-klub .steps-klub__wrap .item i {
+  position: absolute;
+  z-index: 3;
+  width: 50px;
+  height: 50px;
+  top: 0px;
+  left: 50%;
+  transform: translateX(-50%);
+  background-color: #fff;
+  border-radius: 100%;
+}/*# sourceMappingURL=steps-klub.css.map */

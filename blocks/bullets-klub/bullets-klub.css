@@ -1,0 +1,190 @@
+.bullets-klub {
+  position: relative;
+  width: calc(100vw - 90px);
+  left: -50vw;
+  margin-left: 50%;
+  margin-bottom: 50px;
+}
+@media only screen and (max-width: 768px) {
+  .bullets-klub {
+    width: 100%;
+    left: 0px;
+    margin-left: 0px;
+  }
+}
+.bullets-klub .row {
+  padding-left: 50px;
+  display: flex;
+  justify-content: center;
+  align-items: stretch;
+}
+@media only screen and (max-width: 998px) {
+  .bullets-klub .row {
+    flex-wrap: wrap;
+  }
+}
+@media only screen and (max-width: 768px) {
+  .bullets-klub .row {
+    padding-left: 0;
+    flex-wrap: wrap;
+    display: block;
+  }
+}
+.bullets-klub .row .col {
+  padding: 10px;
+  align-self: stretch;
+}
+@media only screen and (max-width: 1300px) {
+  .bullets-klub .row:nth-child(1) {
+    flex-wrap: wrap;
+  }
+}
+.bullets-klub .row:nth-child(1) .col:nth-child(1), .bullets-klub .row:nth-child(1) .col:nth-child(2) {
+  width: 20%;
+}
+@media only screen and (max-width: 1300px) {
+  .bullets-klub .row:nth-child(1) .col:nth-child(1), .bullets-klub .row:nth-child(1) .col:nth-child(2) {
+    width: 50%;
+  }
+}
+@media only screen and (max-width: 998px) {
+  .bullets-klub .row:nth-child(1) .col:nth-child(1), .bullets-klub .row:nth-child(1) .col:nth-child(2) {
+    width: 50%;
+  }
+}
+.bullets-klub .row:nth-child(1) .col:nth-child(3) {
+  width: 60%;
+}
+@media only screen and (max-width: 1300px) {
+  .bullets-klub .row:nth-child(1) .col:nth-child(3) {
+    width: 100%;
+  }
+}
+@media only screen and (max-width: 768px) {
+  .bullets-klub .row:nth-child(1) .col {
+    width: 100% !important;
+  }
+}
+@media only screen and (max-width: 1300px) {
+  .bullets-klub .row:nth-child(2) {
+    flex-wrap: wrap;
+  }
+}
+@media only screen and (max-width: 1300px) {
+  .bullets-klub .row:nth-child(2) .col {
+    width: 33.333%;
+  }
+}
+@media only screen and (max-width: 998px) {
+  .bullets-klub .row:nth-child(2) .col {
+    width: 50%;
+  }
+}
+@media only screen and (max-width: 768px) {
+  .bullets-klub .row:nth-child(2) .col {
+    width: 100% !important;
+  }
+}
+.bullets-klub .bullet-klub__item {
+  position: relative;
+  height: 100%;
+  padding: 30px 20px;
+  background-color: #f7f7f5;
+  display: flex;
+  align-items: center;
+}
+@media only screen and (max-width: 768px) {
+  .bullets-klub .bullet-klub__item {
+    width: 100%;
+    padding: 30px 15px;
+    display: block;
+  }
+}
+.bullets-klub .bullet-klub__item b {
+  color: #161514 !important;
+}
+.bullets-klub .bullet-klub__item .label {
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  background-color: #c2995e;
+  font-size: 12px;
+  padding: 5px;
+  color: #fff;
+}
+.bullets-klub .bullet-klub__item .title {
+  font-family: "Sorts Mill Goudy", serif;
+  font-weight: 400;
+  font-style: normal;
+  font-size: 43px;
+  line-height: 1;
+  margin-bottom: 10px;
+  color: #161514;
+}
+.bullets-klub .bullet-klub__item .title--small {
+  font-size: 28px;
+}
+.bullets-klub .bullet-klub__item p {
+  margin-bottom: 10px;
+}
+.bullets-klub .bullet-klub__item .title--big {
+  font-size: 61px;
+}
+.bullets-klub .bullet-klub__item--img {
+  display: flex;
+  align-items: center;
+  padding: 0;
+}
+@media only screen and (max-width: 768px) {
+  .bullets-klub .bullet-klub__item--img {
+    flex-wrap: wrap;
+  }
+}
+.bullets-klub .bullet-klub__item--img .content {
+  width: 50%;
+  padding: 30px 20px 20px;
+}
+@media only screen and (max-width: 768px) {
+  .bullets-klub .bullet-klub__item--img .content {
+    width: 100%;
+  }
+}
+.bullets-klub .bullet-klub__item--img .img {
+  position: relative;
+  width: 50%;
+  height: 100%;
+  overflow: hidden;
+}
+@media only screen and (max-width: 768px) {
+  .bullets-klub .bullet-klub__item--img .img {
+    width: 100%;
+    height: 150px;
+  }
+}
+.bullets-klub .bullet-klub__item--img .img img {
+  width: 100%;
+  height: 100%;
+  display: block;
+  -o-object-fit: cover;
+  object-fit: cover;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+.bullets-klub .bullet-klub__item--bg {
+  background-color: #f3ebdf;
+}
+.bullets-klub .bullet-klub__item--icon {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+.bullets-klub .bullet-klub__item--icon .icon {
+  width: 30%;
+}
+@media only screen and (max-width: 768px) {
+  .bullets-klub .bullet-klub__item--nopadding {
+    padding: 10px;
+  }
+}/*# sourceMappingURL=bullets-klub.css.map */

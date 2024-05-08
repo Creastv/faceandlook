@@ -1,0 +1,173 @@
+@import "../../src/css/scss/variable";
+.bullets-klub {
+  position: relative;
+  width: calc(100vw - 90px);
+  left: -50vw;
+  margin-left: 50%;
+  margin-bottom: 50px;
+  @media #{$sm} {
+    width: 100%;
+    left: 0px;
+    margin-left: 0px;
+  }
+  .row {
+    padding-left: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: stretch;
+    @media #{$md} {
+      flex-wrap: wrap;
+    }
+    @media #{$sm} {
+      padding-left: 0;
+      flex-wrap: wrap;
+      display: block;
+    }
+    .col {
+      padding: 10px;
+      align-self: stretch;
+    }
+    &:nth-child(1) {
+      @media #{$lg} {
+        flex-wrap: wrap;
+      }
+      .col {
+        &:nth-child(1),
+        &:nth-child(2) {
+          width: 20%;
+          @media #{$lg} {
+            width: 50%;
+          }
+          @media #{$md} {
+            width: 50%;
+          }
+        }
+        &:nth-child(3) {
+          width: 60%;
+          @media #{$lg} {
+            width: 100%;
+          }
+        }
+        // @media #{$md} {
+        //   width: 50% !important;
+        // }
+        @media #{$sm} {
+          width: 100% !important;
+        }
+      }
+    }
+    &:nth-child(2) {
+      @media #{$lg} {
+        flex-wrap: wrap;
+      }
+      .col {
+        @media #{$lg} {
+          width: 33.333%;
+        }
+        @media #{$md} {
+          width: 50%;
+        }
+        @media #{$sm} {
+          width: 100% !important;
+        }
+      }
+    }
+  }
+  .bullet-klub__item {
+    position: relative;
+    height: 100%;
+    padding: 30px 20px;
+    background-color: #f7f7f5;
+    display: flex;
+    align-items: center;
+    @media #{$sm} {
+      width: 100%;
+      padding: 30px 15px;
+      display: block;
+    }
+    b {
+      color: $black !important;
+    }
+    .label {
+      position: absolute;
+      top: 0px;
+      left: 0px;
+      background-color: $main;
+      font-size: 12px;
+      padding: 5px;
+      color: #fff;
+    }
+    .title {
+      font-family: "Sorts Mill Goudy", serif;
+      font-weight: 400;
+      font-style: normal;
+      font-size: 43px;
+      line-height: 1;
+      margin-bottom: 10px;
+      color: $black;
+    }
+    .title--small {
+      font-size: 28px;
+    }
+    p {
+      margin-bottom: 10px;
+    }
+    .title--big {
+      font-size: 61px;
+    }
+  }
+  .bullet-klub__item--img {
+    display: flex;
+    align-items: center;
+    padding: 0;
+    @media #{$sm} {
+      flex-wrap: wrap;
+    }
+    .content {
+      width: 50%;
+      padding: 30px 20px 20px;
+      @media #{$sm} {
+        width: 100%;
+      }
+    }
+    .img {
+      position: relative;
+      width: 50%;
+      height: 100%;
+      overflow: hidden;
+      @media #{$sm} {
+        width: 100%;
+        height: 150px;
+      }
+
+      img {
+        width: 100%;
+        height: 100%;
+        display: block;
+        -o-object-fit: cover;
+        object-fit: cover;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        // padding: 10px;
+      }
+    }
+  }
+  .bullet-klub__item--bg {
+    background-color: #f3ebdf;
+  }
+  .bullet-klub__item--icon {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    .icon {
+      width: 30%;
+    }
+  }
+  .bullet-klub__item--nopadding {
+    @media #{$sm} {
+      padding: 10px;
+    }
+  }
+}

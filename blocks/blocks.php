@@ -60,6 +60,57 @@ function register_acf_block_types()
     },
   ));
   acf_register_block_type(array(
+    'name'              => 'header-klub',
+    'title'             => __('Nagłówek LP Klub'),
+    'render_template'   => 'blocks/header-klub/header-klub.php',
+    'category'          => 'formatting',
+    'icon' => array(
+      'background' => '#122b4f',
+      'foreground' => '#fff',
+      'src' => 'ellipsis',
+    ),
+    'mode'            => 'preview',
+    'keywords'          => array('Aktualności'),
+    'supports' => array('align' => false),
+    'enqueue_assets'    => function () {
+      wp_enqueue_style('go-header-klub',  get_template_directory_uri() . '/blocks/header-klub/header-klub.min.css');
+    },
+  ));
+  acf_register_block_type(array(
+    'name'              => 'bullets-klub',
+    'title'             => __('Bullets LP Klub'),
+    'render_template'   => 'blocks/bullets-klub/bullets-klub.php',
+    'category'          => 'formatting',
+    'icon' => array(
+      'background' => '#122b4f',
+      'foreground' => '#fff',
+      'src' => 'ellipsis',
+    ),
+    'mode'            => 'preview',
+    'keywords'          => array('Aktualności'),
+    'supports' => array('align' => false),
+    'enqueue_assets'    => function () {
+      wp_enqueue_style('go-bullets-klub',  get_template_directory_uri() . '/blocks/bullets-klub/bullets-klub.min.css');
+    },
+  ));
+  acf_register_block_type(array(
+    'name'              => 'steps-klub',
+    'title'             => __('Jak się zarejestrować LP Klub'),
+    'render_template'   => 'blocks/steps-klub/steps-klub.php',
+    'category'          => 'formatting',
+    'icon' => array(
+      'background' => '#122b4f',
+      'foreground' => '#fff',
+      'src' => 'ellipsis',
+    ),
+    'mode'            => 'preview',
+    'keywords'          => array('Aktualności'),
+    'supports' => array('align' => false),
+    'enqueue_assets'    => function () {
+      wp_enqueue_style('go-steps-klub',  get_template_directory_uri() . '/blocks/steps-klub/steps-klub.min.css');
+    },
+  ));
+  acf_register_block_type(array(
     'name'              => 'faq',
     'title'             => __('Najczęściej zadawane pytania'),
     'render_template'   => 'blocks/faq/faq.php',
